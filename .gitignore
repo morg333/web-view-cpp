@@ -3,6 +3,7 @@
 /osc_simlog
 /gpio_out.txt
 *~
+/web_view_cpp.app
 
 # generated files
 *.gdb

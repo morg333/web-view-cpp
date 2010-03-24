@@ -20,7 +20,7 @@ endif
 ##--------------------------------------------------------------------------
 
 # Name for the application to produce.
-APP_NAME := opencv_sample_c++
+APP_NAME := web_view_cpp
 
 # Name of the directory the application should be deployed to on the target.
 DEPLOY_DIR := /mnt/app/
