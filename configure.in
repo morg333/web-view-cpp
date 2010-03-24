@@ -1,0 +1,97 @@
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty. This file is offered as-is,
+# without any warranty.
+
+CONFIGS='PRIVATE_FRAMEWORK FRAMEWORK_PATH TARGET_IP ENABLE_DEBUG ENABLE_SIMULATION USE_OSCAR_CC OSCAR_CC_PATH USE_OPENCV OPENCV_PATH USE_GPP_COMPILER'
+
+CONFIG_PRIVATE_FRAMEWORK() {
+	enabled() { true; }
+	prompt() { echo 'Is the Oscar Framework already in the folder ./oscar? (y/n)'; }
+	default() { echo 'n'; }
+	check() { grep -xqE 'y|n'; }
+	
+	[ "$1" ] && "$1"
+}
+
+CONFIG_FRAMEWORK_PATH() {
+	enabled() { [ "$CONFIG_PRIVATE_FRAMEWORK" == 'n' ]; }
+	prompt() { echo 'Enter the path to the Oscar Framework.'; }
+	default() { echo '../oscar'; }
+	check() { grep -xqE '.+'; }
+	
+	[ "$1" ] && "$1"
+}
+
+CONFIG_TARGET_IP() {
+	enabled() { true; }
+	prompt() { echo "Enter the IP Address of the target device."; }
+	default() { echo '192.168.1.10'; }
+	check() { grep -xqE '[0-9a-zA-Z.:-]*'; }
+	
+	[ "$1" ] && "$1"
+}
+
+CONFIG_ENABLE_DEBUG() {
+	enabled() { true; }
+	prompt() { echo 'Do you want to enable debugging symbols? (y/n)'; }
+	default() { echo 'y'; }
+	check() { grep -xqE 'y|n'; }
+	
+	[ "$1" ] && "$1"
+}
+
+CONFIG_ENABLE_SIMULATION() {
+	enabled() { true; }
+	prompt() { echo 'Do you want to enable IO simulation on the target? (y/n)'; }
+	default() { echo 'n'; }
+	check() { grep -xqE 'y|n'; }
+	
+	[ "$1" ] && "$1"
+}
+
+CONFIG_USE_OSCAR_CC() {
+	enabled() { true; }
+	prompt() { echo 'Are you using Oscar Code Collection? (y/n)'; }
+	default() { echo 'n'; }
+	check() { grep -xqE 'y|n'; }
+	
+	[ "$1" ] && "$1"
+}
+CONFIG_OSCAR_CC_PATH() {
+	enabled() { [ "$CONFIG_USE_OSCAR_CC" == 'y' ]; }
+	prompt() { echo 'Enter the path to the Oscar Code Collection.'; }
+	default() { echo './osc-cc'; }
+	check() { grep -xqE '.+'; }
+	
+	[ "$1" ] && "$1"
+}
+
+
+CONFIG_USE_OPENCV() {
+	enabled() { true; }
+	prompt() { echo 'Are you using OpenCV? (y/n)'; }
+	default() { echo 'n'; }
+	check() { grep -xqE 'y|n'; }
+	
+	[ "$1" ] && "$1"
+}
+CONFIG_OPENCV_PATH() {
+	enabled() { [ "$CONFIG_USE_OPENCV" == 'y' ]; }
+	prompt() { echo 'Enter the path to the OpenCV Library.'; }
+	default() { echo './opencv-2.x.x'; }
+	check() { grep -xqE '.+'; }
+	
+	[ "$1" ] && "$1"
+}
+
+CONFIG_USE_GPP_COMPILER() {
+	enabled() { true; }
+	prompt() { echo 'Use g++ compiler instead of gcc (with .cpp src files)? (y/n)'; }
+	default() { echo 'n'; }
+	check() { grep -xqE 'y|n'; }
+	
+	[ "$1" ] && "$1"
+}
+
+
+

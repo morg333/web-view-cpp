@@ -1,0 +1,102 @@
+
+#include "main_class.h"
+#include "ipc.h"
+
+
+#include <unistd.h>
+
+
+CMain::CMain() {
+}
+
+
+CMain::~CMain() {
+	OscDestroy();
+}
+
+OSC_ERR CMain::Init(int argc, char ** argv) {
+	
+	OSC_ERR err;
+	
+	/******* Create the framework **********/
+	if((err=OscCreate(
+			&OscModule_log, 
+			&OscModule_sup, 
+			&OscModule_bmp, 
+			&OscModule_cam,  
+			&OscModule_vis,
+			&OscModule_gpio
+			))!=SUCCESS)
+		return(err);
+	
+	
+	OscLogSetConsoleLogLevel(INFO);
+	OscLogSetFileLogLevel(WARN);
+	
+	OscGpioConfigSensorLedOut(true);
+	
+
+#if defined(OSC_HOST) || defined(OSC_SIM)
+	{
+		void * hFileNameReader;
+		
+		if((err=OscFrdCreateConstantReader(&hFileNameReader, TEST_IMAGE_FN))!=SUCCESS)
+			return(err);
+		if((err=OscCamSetFileNameReader(hFileNameReader))!=SUCCESS)
+			return(err);
+	}
+#endif /* OSC_HOST or OSC_SIM */
+	
+	/* init the camera */
+	if((err=m_camera.Init(ROI(), 2))!=SUCCESS)
+		return(err);
+	
+	//m_camera.setColorType(m_camera.getAppropriateColorType());
+	
+	return(SUCCESS);
+}
+
+OSC_ERR CMain::MainLoop() {
+	OSC_ERR err=SUCCESS;
+	
+	CIPC ipc(m_camera);
+	err=ipc.Init();
+	
+	OscSimInitialize();
+	
+	/* read one image ahead */
+	m_camera.CapturePicture();
+	m_camera.ReadPicture();
+	
+	int i=0;
+	
+	
+	uint32 startCyc=OscSupCycGet();
+	
+	while(err==SUCCESS) { /* infinite loop if no error occurs */
+		
+		err=ipc.handleIpcRequests();
+		
+		/* Allow other processes to run. Due to kernel tick rate of 250Hz this
+		 * call will return in 4ms. */
+		usleep(500);
+		
+		/* Advance the simulation step counter. */
+		OscSimStep();
+		
+		if((++i)%200 == 0) printf("loop 200x\n");
+		
+		
+		uint32 delta_time_us=OscSupCycToMicroSecs(OscSupCycGet() - startCyc);
+		if(delta_time_us/1000 > 1000) {
+			startCyc=OscSupCycGet();
+			printf("#####################\n");
+			printf("sent %i images in %i ms\n", ipc.img_count, (int) delta_time_us/1000);
+			ipc.img_count=0;
+		}
+	}
+	return(err);
+}
+
+
+
