@@ -31,7 +31,7 @@ void copyAll(int outFd, int inFd, int* num_written) {
 			if(num_written) *num_written+=num;
 			while(write(outFd, buffer, num) == -1 
 					&& (errno == EWOULDBLOCK || errno == EAGAIN || errno == EINTR)) {
-				//usleep(1000);
+				usleep(1000);
 			}
 		}
 	}

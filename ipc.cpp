@@ -92,8 +92,6 @@ OSC_ERR CIPC::handleIpcRequests() {
 	struct sockaddr remoteAddr;
 	unsigned int remoteAddrLen = sizeof(struct sockaddr);
 	
-	//printf("fd accepting\n");
-	
 	m_fd = accept(m_socket_fd, &remoteAddr, &remoteAddrLen);
 	OSC_ERR err=SUCCESS;
 	
@@ -105,7 +103,6 @@ OSC_ERR CIPC::handleIpcRequests() {
 			OscMark_format("Error setting O_NONBLOCK: %s", strerror(errno));
 			return(EASSERT);
 		}
-		printf("fd open\n");
 		
 		ssize_t numRead, remaining=BUFFER_SIZE;
 		char buffer[BUFFER_SIZE+1];
@@ -121,11 +118,9 @@ OSC_ERR CIPC::handleIpcRequests() {
 			ProcessRequest(buffer);
 		}
 		WriteHtmlHeader(HEADER_IMAGE_BMP); //will be written if not written already
-		printf("fd closing\n");
 		
 		if(m_fd!=-1) close(m_fd);
 		m_fd=-1;
-		printf("fd closed\n");
 	}
 	
 	return(err);
@@ -164,12 +159,11 @@ void CIPC::ProcessRequest(char* request) {
 	
 	char * header;
 	
-	printf("handle proc request:%s\n", request);
-	//return;
+	OscLog(INFO, "IPC Request:%s\n", request);
 	
 	if(!(header=ReadHeader(&request))) return; /* wrong formated */
 	
-	//note: call WriteHtmlHeader before calling writeArgument
+	//Note: call WriteHtmlHeader BEFORE calling writeArgument
 	
 	if(strcmp(header, "SetOptions") == 0) {
 		while (*request) {
@@ -231,7 +225,7 @@ void CIPC::ProcessRequest(char* request) {
 			uint32 startCyc=OscSupCycGet();
 			m_img_process.DoProcess(img);
 			uint32 delta_time_us=OscSupCycToMicroSecs(OscSupCycGet() - startCyc);
-			OscLog(INFO, "delta time for img processing=%uus\n", delta_time_us);
+			OscLog(INFO, "Image processing required %uus\n", delta_time_us);
 			
 			if(WriteBMP(img) !=SUCCESS) {
 				OscLog(ERROR, "Image could not be sent\n");
@@ -317,8 +311,6 @@ OSC_ERR CIPC::WriteBMP(const IplImage* img) {
 	
 	WriteHtmlHeader(HEADER_IMAGE_BMP, header_size+img->imageSize);
 	
-	printf("image size=%i\n", header_size+img->imageSize);
-	
 	//write image header
 	if(IpcWrite(header, (size_t)header_size) <= 0) return(EGENERAL);
 	//write image data
@@ -335,7 +327,7 @@ int CIPC::IpcWrite(const void* buf, size_t count) {
 	while((ret=write(m_fd, buf, count)) == -1 
 			&& (errno == EWOULDBLOCK || errno == EAGAIN || errno == EINTR)) {
 		//resource temp. unavailable -> just try again
-		//usleep(1000);
+		usleep(1000);
 	}
 	if(ret==-1) {
 		close(m_fd);

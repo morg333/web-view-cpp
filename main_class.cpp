@@ -68,8 +68,6 @@ OSC_ERR CMain::MainLoop() {
 	m_camera.CapturePicture();
 	m_camera.ReadPicture();
 	
-	int i=0;
-	
 	
 	uint32 startCyc=OscSupCycGet();
 	
@@ -84,14 +82,11 @@ OSC_ERR CMain::MainLoop() {
 		/* Advance the simulation step counter. */
 		OscSimStep();
 		
-		if((++i)%200 == 0) printf("loop 200x\n");
-		
 		
 		uint32 delta_time_us=OscSupCycToMicroSecs(OscSupCycGet() - startCyc);
 		if(delta_time_us/1000 > 1000) {
 			startCyc=OscSupCycGet();
-			printf("#####################\n");
-			printf("sent %i images in %i ms\n", ipc.img_count, (int) delta_time_us/1000);
+			printf("Sent %i images in %i ms\n", ipc.img_count, (int) delta_time_us/1000);
 			ipc.img_count=0;
 		}
 	}
