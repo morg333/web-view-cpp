@@ -2,7 +2,7 @@
 # are permitted in any medium without royalty. This file is offered as-is,
 # without any warranty.
 
-CONFIGS='PRIVATE_FRAMEWORK FRAMEWORK_PATH TARGET_IP ENABLE_DEBUG ENABLE_SIMULATION USE_OSCAR_CC OSCAR_CC_PATH USE_OPENCV OPENCV_PATH USE_GPP_COMPILER'
+CONFIGS='PRIVATE_FRAMEWORK FRAMEWORK_PATH TARGET_IP ENABLE_DEBUG ENABLE_SIMULATION USE_OPENCV OPENCV_PATH USE_GPP_COMPILER USE_OSCAR_CC OSCAR_CC_PATH'
 
 CONFIG_PRIVATE_FRAMEWORK() {
 	enabled() { true; }
@@ -49,23 +49,14 @@ CONFIG_ENABLE_SIMULATION() {
 	[ "$1" ] && "$1"
 }
 
-CONFIG_USE_OSCAR_CC() {
+CONFIG_USE_GPP_COMPILER() {
 	enabled() { true; }
-	prompt() { echo 'Are you using Oscar Code Collection? (y/n)'; }
-	default() { echo 'n'; }
+	prompt() { echo 'Use g++ compiler instead of gcc (with .cpp src files)? Say no if this is a C only project. (y/n)'; }
+	default() { echo 'y'; }
 	check() { grep -xqE 'y|n'; }
 	
 	[ "$1" ] && "$1"
 }
-CONFIG_OSCAR_CC_PATH() {
-	enabled() { [ "$CONFIG_USE_OSCAR_CC" == 'y' ]; }
-	prompt() { echo 'Enter the path to the Oscar Code Collection.'; }
-	default() { echo './osc-cc'; }
-	check() { grep -xqE '.+'; }
-	
-	[ "$1" ] && "$1"
-}
-
 
 CONFIG_USE_OPENCV() {
 	enabled() { true; }
@@ -84,14 +75,21 @@ CONFIG_OPENCV_PATH() {
 	[ "$1" ] && "$1"
 }
 
-CONFIG_USE_GPP_COMPILER() {
+CONFIG_USE_OSCAR_CC() {
 	enabled() { true; }
-	prompt() { echo 'Use g++ compiler instead of gcc (with .cpp src files)? (y/n)'; }
+	prompt() { echo 'Are you using Oscar Code Collection? (y/n)'; }
 	default() { echo 'n'; }
 	check() { grep -xqE 'y|n'; }
 	
 	[ "$1" ] && "$1"
 }
-
+CONFIG_OSCAR_CC_PATH() {
+	enabled() { [ "$CONFIG_USE_OSCAR_CC" == 'y' ]; }
+	prompt() { echo 'Enter the path to the Oscar Code Collection.'; }
+	default() { echo './osc-cc'; }
+	check() { grep -xqE '.+'; }
+	
+	[ "$1" ] && "$1"
+}
 
 
