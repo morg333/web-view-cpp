@@ -150,6 +150,19 @@ ColorType CCamera::getAppropriateColorType() {
 }
 
 
+void CCamera::setAutoExposure(bool bEnabled) {
+	uint16 reg_val;
+	OscCamGetRegisterValue(REG_AEC_AGC_ENABLE, &reg_val);
+	OscCamSetRegisterValue(REG_AEC_AGC_ENABLE, reg_val & ~0x1 | (uint16)bEnabled);
+}
+
+bool CCamera::getAutoExposure() const {
+	uint16 reg_val;
+	OscCamGetRegisterValue(REG_AEC_AGC_ENABLE, &reg_val);
+	return(reg_val & 0x1);
+}
+
+
 
 
 

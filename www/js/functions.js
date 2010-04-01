@@ -84,6 +84,11 @@ function setLanguage(lang) {
 		if(this.getAttribute(g_lang))
 			this.text = this.getAttribute(g_lang);
 	});
+	//checkboxes
+	$("input").filter("[type=checkbox]").each(function () {
+		if(this.getAttribute(g_lang))
+			this.nextSibling.nodeValue= this.getAttribute(g_lang);
+	});
 }
 
 
@@ -241,6 +246,16 @@ var outputValueHooks = {
 		$("#exposureTime-slider").slider("option", "value", x);
 		$("#exposureTime-ms").text(ival.toPrecision2(2)+" ms");
 		return(value);
+	}, 
+	autoExposure: function(value) {
+		ival=parseInt(value);
+		if(ival) {
+			$("#exposureTime-slider").slider("disable");
+		} else {
+			$("#exposureTime-slider").slider("enable");
+		}
+		document.getElementsByName("autoExposure")[0].checked=ival;
+		return(null);
 	}
 };
 
@@ -325,6 +340,16 @@ var g_changed_values = new Object();
 
 function settingChanged(key, setting) {
 	g_changed_values[key]=setting;
+}
+
+function autoExposureChanged(key, setting) {
+	settingChanged(key, setting);
+	
+	if(setting) {
+		$("#exposureTime-slider").slider("disable");
+	} else {
+		$("#exposureTime-slider").slider("enable");
+	}
 }
 
 function updateCycle() {

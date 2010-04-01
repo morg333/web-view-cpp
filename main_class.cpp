@@ -14,6 +14,8 @@ CMain::~CMain() {
 	OscDestroy();
 }
 
+
+
 OSC_ERR CMain::Init(int argc, char ** argv) {
 	
 	OSC_ERR err;
@@ -51,7 +53,7 @@ OSC_ERR CMain::Init(int argc, char ** argv) {
 	if((err=m_camera.Init(ROI(), 2))!=SUCCESS)
 		return(err);
 	
-	//m_camera.setColorType(m_camera.getAppropriateColorType());
+	m_camera.setAutoExposure(true);
 	
 	return(SUCCESS);
 }

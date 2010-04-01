@@ -80,32 +80,48 @@
 			<span lang="de">Optionen</span>
 			<span lang="en">Options</span>
 		</h3>
-		<p id="colorType-section">
-			<div class="input" name="colorType" type="radio" value="debayered">
-				<span lang="de">Farbbild</span>
-				<span lang="en">Color image</span>
+		<div class="split">
+			<div>
+				<div>
+					<p id="colorType-section">
+						<div class="input" name="colorType" type="radio" value="debayered">
+							<span lang="de">Farbbild</span>
+							<span lang="en">Color image</span>
+						</div>
+						<div class="input" name="colorType" type="radio" value="raw">
+							<span lang="de">Sensorbild</span>
+							<span lang="en">Sensor image</span>
+						</div>
+					</p>
+					<p>
+						<div class="input" name="exposureTime" id="exposureTime-slider" type="slider" value="1 1000 log">
+							<span lang="de">Belichtungszeit:</span>
+							<span lang="en">Exposure time:</span>
+						</div><span id="exposureTime-ms"></span>
+					</p>
+					<p>
+						<span lang="de">Ansicht:</span>
+						<span lang="en">View:</span>
+						<select name="perspective" id="perspective-id" size="1" onchange="settingChanged(this.name, this.selectedIndex)">
+							<option de="Standard" en="Default"></option>
+							<option de="Horizontal spiegeln" en="Flip horizontal"></option>
+							<option de="Vertikal spiegeln" en="Flip vertical"></option>
+							<option de="180 Grad drehen" en="Rotate 180 degree"></option>
+						</select>
+					</p>
+				</div>
 			</div>
-			<div class="input" name="colorType" type="radio" value="raw">
-				<span lang="de">Sensorbild</span>
-				<span lang="en">Sensor image</span>
+			<div>
+				<div>
+					<p>
+						&nbsp;
+					</p>
+					<p>
+						<input type="checkbox" name="autoExposure" en="Auto Exposure" de="Automatische Belichtungszeit" onClick="autoExposureChanged(this.name, this.checked*1)">a<br>
+					</p>
+				</div>
 			</div>
-		</p>
-		<p>
-			<div class="input" name="exposureTime" id="exposureTime-slider" type="slider" value="1 1000 log">
-				<span lang="de">Belichtungszeit:</span>
-				<span lang="en">Exposure time:</span>
-			</div><span id="exposureTime-ms"></span>
-		</p>
-		<p>
-			<span lang="de">Ansicht:</span>
-			<span lang="en">View:</span>
-			<select name="perspective" id="perspective-id" size="1" onchange="settingChanged(this.name, this.selectedIndex)">
-				<option de="Standard" en="Default"></option>
-				<option de="Horizontal spiegeln" en="Flip horizontal"></option>
-				<option de="Vertikal spiegeln" en="Flip vertical"></option>
-				<option de="180 Grad drehen" en="Rotate 180 degree"></option>
-			</select>
-		</p>
+		</div>
 	</div>
 	<div id="info-box" class="big-box">
 		<h3>

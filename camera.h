@@ -11,6 +11,9 @@
 #include "includes.h"
 
 
+#define REG_AEC_AGC_ENABLE 0xAF
+
+
 /* @brief struct ROI. Region of Interest, default values are for the whole picture */
 struct ROI {
 	ROI(uint16 low_x=0, uint16 low_y=0, uint16 width=OSC_CAM_MAX_IMAGE_WIDTH, uint16 height=OSC_CAM_MAX_IMAGE_HEIGHT)
@@ -85,6 +88,9 @@ public:
 		m_perspective=perspective;
 		OscCamSetupPerspective(m_perspective);
 	}
+	
+	void setAutoExposure(bool bEnabled);
+	bool getAutoExposure() const;
 	
 	
 	/*! @brief Align an image pointer to a multiple of PICTURE_ALIGNMENT

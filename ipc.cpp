@@ -170,7 +170,9 @@ void CIPC::ProcessRequest(char* request) {
 			char * key, * value;
 			if(ReadArgument(&request, &key, &value)==SUCCESS) {
 			
-				if (strcmp(key, "exposureTime") == 0) {
+				if(strcmp(key, "autoExposure") == 0) {
+					m_camera.setAutoExposure(strtol(value, NULL, 10));
+				} else if (strcmp(key, "exposureTime") == 0) {
 					m_web_settings.exposure_time = strtol(value, NULL, 10)*1000;
 					OscCamSetShutterWidth(m_web_settings.exposure_time);
 				} else if (strcmp(key, "colorType") == 0) {
@@ -209,6 +211,7 @@ void CIPC::ProcessRequest(char* request) {
 		}
 		WriteArgument("colorType", pEnumBuf);
 		WriteArgument("perspective", m_camera.getPerspective());
+		WriteArgument("autoExposure", m_camera.getAutoExposure() ? 1 : 0);
 		
 	} else if (strncmp(header, "GetImage", 8) == 0) {
 		
