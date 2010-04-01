@@ -149,15 +149,14 @@ install: cgi/cgi_host
 	chmod -Rf a+rX /var/www/ || true
 
 reconfigure:
-ifeq '$(CONFIG_PRIVATE_FRAMEWORK)' 'n'
-	@ ! [ -e "oscar" ] || [ -h "oscar" ] && ln -sfn $(CONFIG_FRAMEWORK_PATH) oscar || echo "The symlink to the lgx module could not be created as the file ./lgx already exists and is something other than a symlink. Pleas remove it and run 'make reconfigure' to create the symlink."
-endif
-	@ ! [ -d "oscar" ] || $(MAKE) -C oscar config
-#configure oscar cc
 ifeq '$(CONFIG_USE_OSCAR_CC)' 'y'
 	cd $(CONFIG_OSCAR_CC_PATH) && ./configure CONFIG_CC_PRIVATE_FRAMEWORK=n CONFIG_CC_FRAMEWORK_PATH='$(ABS_OSCAR_PATH)'
 endif
 
+ifeq '$(CONFIG_PRIVATE_FRAMEWORK)' 'n'
+	@ ! [ -e "oscar" ] || [ -h "oscar" ] && ln -sfn $(CONFIG_FRAMEWORK_PATH) oscar || echo "The symlink to the lgx module could not be created as the file ./lgx already exists and is something other than a symlink. Pleas remove it and run 'make reconfigure' to create the symlink."
+endif
+	@ ! [ -d "oscar" ] || $(MAKE) -C oscar config
 oscar/%:
 	$(MAKE) -C oscar $*
 
@@ -184,7 +183,7 @@ define LINK
 $(1)_host: $(patsubst %$(SRC_FILES), build/%_host.o, $(SOURCES_$(1))) $(LIBS_host)
 	$(LD_host) -o $$@ $$^ $(OSC_CC_LIBS_INC) -lm $(OSC_CC_LIBS_host) $(OPENCV_LIBS_host)
 $(1)_target: $(patsubst %$(SRC_FILES), build/%_target.o, $(SOURCES_$(1))) $(LIBS_target)
-	$(LD_target) -o $$@ $$^ $(OSC_CC_LIBS_INC) -lm $(OSC_CC_LIBS_target) $(OPENCV_LIBS_target)
+	$(LD_target) -o $$@ $$^ $(OSC_CC_LIBS_INC) -lm -lbfdsp $(OSC_CC_LIBS_target) $(OPENCV_LIBS_target)
 endef
 $(foreach i, $(PRODUCTS), $(eval $(call LINK,$i)))
 
@@ -198,4 +197,3 @@ $(APP_NAME).app: $(addsuffix _target, $(PRODUCTS))
 clean:
 	rm -rf build *.gdb $(BINARIES) $(APP_NAME).app
 	$(foreach i, $(SUB_PRODUCTS), make -C $i clean)
-	
