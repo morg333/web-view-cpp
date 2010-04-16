@@ -25,7 +25,7 @@ APP_NAME := web_view_cpp
 # Name of the directory the application should be deployed to on the target.
 DEPLOY_DIR := /mnt/app/
 
-# Binary executables to generate.
+# Binary executables to generate (make sure it's the same as in the run.sh script).
 PRODUCTS := app
 # subproduct folders: for each folder, make will be called
 SUB_PRODUCTS := cgi
@@ -144,9 +144,12 @@ run:
 	ssh root@$(CONFIG_TARGET_IP) $(DEPLOY_DIR)$(APP_NAME).app/run.sh || true
 
 install: cgi/cgi_host
+#install only if folder exists
+ifneq "$(wildcard www )" ""
 	cp -RL www/* /var/www
 	cp $< /var/www/cgi-bin/cgi
 	chmod -Rf a+rX /var/www/ || true
+endif
 
 reconfigure:
 ifeq '$(CONFIG_USE_OSCAR_CC)' 'y'
@@ -191,7 +194,9 @@ $(foreach i, $(PRODUCTS), $(eval $(call LINK,$i)))
 $(APP_NAME).app: $(addsuffix _target, $(PRODUCTS))
 	rm -rf $@
 	cp -rL app $@
+ifneq "$(wildcard www )" ""
 	tar c -h -C www . | gzip > $@/www.tar.gz
+endif
 
 # Cleans the module.
 clean:
