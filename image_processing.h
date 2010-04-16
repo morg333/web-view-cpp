@@ -17,7 +17,7 @@ public:
 	CImageProcesser();
 	~CImageProcesser();
 	
-	int DoProcess(IplImage* img);
+	int DoProcess(IplImage** image);
 private:
 	char* m_tmp_img_data;
 	char* m_tmp_img;

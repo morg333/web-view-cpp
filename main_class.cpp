@@ -88,7 +88,8 @@ OSC_ERR CMain::MainLoop() {
 		uint32 delta_time_us=OscSupCycToMicroSecs(OscSupCycGet() - startCyc);
 		if(delta_time_us/1000 > 1000) {
 			startCyc=OscSupCycGet();
-			printf("Sent %i images in %i ms\n", ipc.img_count, (int) delta_time_us/1000);
+			if(ipc.img_count > 0)
+				printf("Sent %i images in %i ms\n", ipc.img_count, (int) delta_time_us/1000);
 			ipc.img_count=0;
 		}
 	}

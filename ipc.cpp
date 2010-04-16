@@ -32,9 +32,6 @@ using namespace std;
 #define HTTP_DIR "/home/httpd/"
 #endif
 
-#define CGI_IMAGE_NAME HTTP_DIR "image.bmp"
-
-
 
 
 CIPC::CIPC(CCamera& camera) : m_camera(camera), m_bInit(false) {
@@ -226,7 +223,7 @@ void CIPC::ProcessRequest(char* request) {
 			++img_count;
 			
 			uint32 startCyc=OscSupCycGet();
-			m_img_process.DoProcess(img);
+			m_img_process.DoProcess(&img);
 			uint32 delta_time_us=OscSupCycToMicroSecs(OscSupCycGet() - startCyc);
 			OscLog(INFO, "Image processing required %uus\n", delta_time_us);
 			
