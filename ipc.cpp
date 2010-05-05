@@ -114,7 +114,7 @@ OSC_ERR CIPC::handleIpcRequests() {
 		if(remaining < BUFFER_SIZE) {
 			ProcessRequest(buffer);
 		}
-		WriteHtmlHeader(HEADER_IMAGE_BMP); //will be written if not written already
+		WriteHtmlHeader(HEADER_TEXT_PLAIN); //will be written if not written already
 		
 		if(m_fd!=-1) close(m_fd);
 		m_fd=-1;
