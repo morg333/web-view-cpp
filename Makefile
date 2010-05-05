@@ -36,6 +36,9 @@ SOURCES_app := $(wildcard *.cpp) $(wildcard *.c)
 # Listings of source files for the different applications.
 SOURCES_$(APP_NAME) := $(wildcard *.cpp) $(wildcard *.c)
 
+# statically linked libraries
+LIBS_host := oscar/library/libosc_host
+LIBS_target := oscar/library/libosc_target
 
 ##--------------------------------------------------------------------------
 #  Common part
@@ -113,22 +116,17 @@ endif
 
 APPS := $(patsubst SOURCES_%, %, $(filter SOURCES_%, $(.VARIABLES)))
 
-LIBS_host := oscar/library/libosc_host
-LIBS_target := oscar/library/libosc_target
-
 ifeq '$(CONFIG_ENABLE_SIMULATION)' 'y'
 LIBS_target := $(LIBS_target)_sim
 endif
 ifeq '$(CONFIG_ENABLE_DEBUG)' 'y'
-LIBS_host := $(LIBS_host)_dbg
-LIBS_target := $(LIBS_target)_dbg
+LIBS_host := $(addsuffix _dbg, $(LIBS_host))
+LIBS_target := $(addsuffix _dbg, $(LIBS_target))
 OSC_CC_LIBS_host := $(addsuffix _dbg, $(OSC_CC_LIBS_host))
 OSC_CC_LIBS_target := $(addsuffix _dbg, $(OSC_CC_LIBS_target))
 endif
-LIBS_host := $(LIBS_host).a
-LIBS_target := $(LIBS_target).a
-#OSC_CC_LIBS_host := $(addsuffix .a, $(OSC_CC_LIBS_host))
-#OSC_CC_LIBS_target := $(addsuffix .a, $(OSC_CC_LIBS_target))
+LIBS_host := $(addsuffix .a, $(LIBS_host))
+LIBS_target := $(addsuffix .a, $(LIBS_target))
 
 BINARIES := $(addsuffix _host, $(PRODUCTS)) $(addsuffix _target, $(PRODUCTS))
 
