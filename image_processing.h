@@ -12,10 +12,10 @@
 
 
 
-class CImageProcesser {
+class CImageProcessor {
 public:
-	CImageProcesser();
-	~CImageProcesser();
+	CImageProcessor();
+	~CImageProcessor();
 	
 	int DoProcess(IplImage** image);
 private:

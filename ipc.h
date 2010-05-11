@@ -82,7 +82,7 @@ private:
 	
 	bool m_bInit;
 	WEB_SETTINGS m_web_settings;
-	CImageProcesser m_img_process;
+	CImageProcessor m_img_process;
 };
 
 
