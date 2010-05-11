@@ -130,10 +130,15 @@ LIBS_target := $(addsuffix .a, $(LIBS_target))
 
 BINARIES := $(addsuffix _host, $(PRODUCTS)) $(addsuffix _target, $(PRODUCTS))
 
-.PHONY: all clean host target install deploy run reconfigure
+.PHONY: all clean host target install deploy run reconfigure opencv
 all: $(BINARIES)
 	$(foreach i, $(SUB_PRODUCTS), make -C $i)
 host target: %: $(addsuffix _%, $(PRODUCTS))
+
+opencv:
+ifeq '$(CONFIG_USE_OPENCV)' 'y'
+	cd $(CONFIG_OPENCV_PATH) && ./do-build
+endif
 
 deploy: $(APP_NAME).app
 	tar c $< | ssh root@$(CONFIG_TARGET_IP) 'rm -rf $< && tar x -C $(DEPLOY_DIR)' || true
