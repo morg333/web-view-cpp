@@ -87,10 +87,6 @@ else
 SRC_FILES := .c
 CFLAGS += -std=gnu99
 GCC := gcc
-ifeq '$(CONFIG_USE_OPENCV)' 'y'
-OPENCV_LIBS_host += -lstdc++ -lz
-OPENCV_LIBS_target += -lstdc++ -lm # -lz  ???
-endif
 endif
 
 CC_host := $(GCC) $(CFLAGS) -DOSC_HOST

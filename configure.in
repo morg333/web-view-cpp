@@ -2,7 +2,7 @@
 # are permitted in any medium without royalty. This file is offered as-is,
 # without any warranty.
 
-CONFIGS='PRIVATE_FRAMEWORK FRAMEWORK_PATH TARGET_IP ENABLE_DEBUG ENABLE_SIMULATION USE_OPENCV OPENCV_PATH USE_GPP_COMPILER USE_OSCAR_CC OSCAR_CC_PATH'
+CONFIGS='PRIVATE_FRAMEWORK FRAMEWORK_PATH TARGET_IP ENABLE_DEBUG ENABLE_SIMULATION USE_GPP_COMPILER USE_OPENCV OPENCV_PATH USE_OSCAR_CC OSCAR_CC_PATH'
 
 CONFIG_PRIVATE_FRAMEWORK() {
 	enabled() { true; }
@@ -59,7 +59,7 @@ CONFIG_USE_GPP_COMPILER() {
 }
 
 CONFIG_USE_OPENCV() {
-	enabled() { true; }
+	enabled() { [ "$CONFIG_USE_GPP_COMPILER" == 'y' ]; }
 	prompt() { echo 'Are you using OpenCV? (y/n)'; }
 	default() { echo 'n'; }
 	check() { grep -xqE 'y|n'; }
