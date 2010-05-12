@@ -60,7 +60,7 @@ OSC_ERR CMain::Init(int argc, char ** argv) {
 	
 	char* osc_version;
 	OscGetVersionString(&osc_version);
-	string welcome_msg="###  Web-View-Cpp "+getAppVersion().toStr()+"  OSCAR "+osc_version+"  ###\n";
+	string welcome_msg="###  "APP_NAME" "+getAppVersion().toStr()+"  OSCAR "+osc_version+"  ###\n";
 	OscLog(INFO, welcome_msg.c_str());
 	
 	
