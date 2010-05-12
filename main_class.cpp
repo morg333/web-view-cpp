@@ -1,6 +1,8 @@
 
 #include "main_class.h"
+#include "version.h"
 #include "ipc.h"
+
 
 
 #include <unistd.h>
@@ -54,6 +56,13 @@ OSC_ERR CMain::Init(int argc, char ** argv) {
 		return(err);
 	
 	m_camera.setAutoExposure(true);
+	
+	
+	char* osc_version;
+	OscGetVersionString(&osc_version);
+	string welcome_msg="###  Web-View-Cpp "+getAppVersion().toStr()+"  OSCAR "+osc_version+"  ###\n";
+	OscLog(INFO, welcome_msg.c_str());
+	
 	
 	return(SUCCESS);
 }

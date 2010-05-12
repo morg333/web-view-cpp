@@ -9,7 +9,7 @@ echo ""
 echo "Now do the following steps to build the application:"
 
 if [ $(get_config "$CONF_FILE" "CONFIG_USE_OPENCV") == 'y' ]; then
-	echo "   $ make opencv"
+	echo "   $ make opencv (if it isn't built already)"
 fi
 
 echo "   $ make oscar"

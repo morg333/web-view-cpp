@@ -3,8 +3,13 @@
  * @brief Main file. Contains the Program Entry Point
  */
 
+#include "version.h"
 #include "includes.h"
 #include "main_class.h"
+
+VERSION getAppVersion() {
+	return(VERSION((int)VERSION_MAJOR, (int)VERSION_MINOR, (int)VERSION_PATCH));
+}
 
 
 /*********************************************************************//*!
