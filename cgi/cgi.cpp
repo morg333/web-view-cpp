@@ -68,8 +68,8 @@ int main(int argc, char ** argv) {
 	
 	if(num_written==0) { //no POST data -> try GET variables
 		for(int arg=1; arg<argc; ++arg) {
-			write(fd, argv[arg], strlen(argv[arg]));
-			write(fd, "\n", 1);
+			int ret = write(fd, argv[arg], strlen(argv[arg]));
+			ret = write(fd, "\n", 1);
 		}
 	}
 	
