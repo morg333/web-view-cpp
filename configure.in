@@ -78,7 +78,7 @@ CONFIG_OPENCV_PATH() {
 CONFIG_USE_OSCAR_CC() {
 	enabled() { true; }
 	prompt() { echo 'Are you using Oscar Code Collection? (y/n)'; }
-	default() { echo 'n'; }
+	default() { echo 'y'; }
 	check() { grep -xqE 'y|n'; }
 	
 	[ "$1" ] && "$1"
