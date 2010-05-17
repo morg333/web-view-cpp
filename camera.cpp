@@ -67,7 +67,7 @@ OSC_ERR CCamera::Init(const ROI& region_of_interest, uint8 buffer_count
 }
 
 uint8* CCamera::AlignPicture(const uint8* pic) {
-	return((uint8*)(((uint32)pic + PICTURE_ALIGNMENT-1) & -PICTURE_ALIGNMENT));
+  return((uint8*)(((ptrdiff_t)pic + (ptrdiff_t)PICTURE_ALIGNMENT-1) & -(ptrdiff_t)PICTURE_ALIGNMENT));
 }
 
 uint32 CCamera::AlignSize(uint32 size) {
@@ -79,7 +79,7 @@ uint32 CCamera::AlignSize(uint32 size) {
 
 IplImage* CCamera::ReadLatestPicture() {
 	
-	uint8* pic_data;
+	uint8* pic_data = NULL;
 #ifdef OSC_HOST
 	/* wait for the picture to be captured -> otherwise it could run too fast on the host */
 	OscCamReadPicture(m_buffer_count>1 ? OSC_CAM_MULTI_BUFFER : 0, &pic_data, 0, 0);
@@ -92,7 +92,7 @@ IplImage* CCamera::ReadLatestPicture() {
 
 IplImage* CCamera::ReadPicture( uint16 max_age, uint16 timeout) {
 	
-	uint8** pic_data;
+	uint8** pic_data = NULL;
 	if(OscCamReadPicture(m_buffer_count>1 ? OSC_CAM_MULTI_BUFFER : 0, pic_data, max_age, timeout)==SUCCESS) 
 		return(HandlePictureColoringAndSize(*pic_data));
 	return(NULL);
@@ -153,7 +153,7 @@ ColorType CCamera::getAppropriateColorType() {
 void CCamera::setAutoExposure(bool bEnabled) {
 	uint16 reg_val;
 	OscCamGetRegisterValue(REG_AEC_AGC_ENABLE, &reg_val);
-	OscCamSetRegisterValue(REG_AEC_AGC_ENABLE, reg_val & ~0x1 | (uint16)bEnabled);
+	OscCamSetRegisterValue(REG_AEC_AGC_ENABLE, (reg_val & ~0x1) | (uint16)bEnabled);
 }
 
 bool CCamera::getAutoExposure() const {
