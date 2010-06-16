@@ -124,7 +124,7 @@ LIBS_target := $(addsuffix .a, $(LIBS_target))
 
 BINARIES := $(addsuffix _host, $(PRODUCTS)) $(addsuffix _target, $(PRODUCTS))
 
-.PHONY: all clean host target install deploy run reconfigure opencv
+.PHONY: all clean host target install deploy run reconfigure opencv oscar
 all: $(BINARIES)
 	$(foreach i, $(SUB_PRODUCTS), make -C $i APP_NAME=$(APP_NAME) PRODUCT=$i)
 host target: %: $(addsuffix _%, $(PRODUCTS))
@@ -157,9 +157,11 @@ ifeq '$(CONFIG_PRIVATE_FRAMEWORK)' 'n'
 	@ ! [ -e "oscar" ] || [ -h "oscar" ] && ln -sfn $(CONFIG_FRAMEWORK_PATH) oscar || echo "The symlink to the lgx module could not be created as the file ./lgx already exists and is something other than a symlink. Pleas remove it and run 'make reconfigure' to create the symlink."
 endif
 	@ ! [ -d "oscar" ] || $(MAKE) -C oscar config
+	
+oscar:
+	$(MAKE) -C oscar
 oscar/%:
 	$(MAKE) -C oscar $*
-
 osc-cc:
 ifeq '$(CONFIG_USE_OSCAR_CC)' 'y'
 	$(MAKE) -C $(CONFIG_OSCAR_CC_PATH) $*
