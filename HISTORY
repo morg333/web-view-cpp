@@ -1,2 +1,7 @@
++ Release v1.0-p1
+! Fixed error message at startup (NULL-Pointer)
+! The 'make oscar' build target should always work
+
+
 + Release v1.0
 A Web-View written in C++ with OpenCV support
