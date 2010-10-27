@@ -92,9 +92,9 @@ IplImage* CCamera::ReadLatestPicture() {
 
 IplImage* CCamera::ReadPicture( uint16 max_age, uint16 timeout) {
 	
-	uint8** pic_data = NULL;
-	if(OscCamReadPicture(m_buffer_count>1 ? OSC_CAM_MULTI_BUFFER : 0, pic_data, max_age, timeout)==SUCCESS) 
-		return(HandlePictureColoringAndSize(*pic_data));
+	uint8* pic_data = NULL;
+	if(OscCamReadPicture(m_buffer_count>1 ? OSC_CAM_MULTI_BUFFER : 0, &pic_data, max_age, timeout)==SUCCESS) 
+		return(HandlePictureColoringAndSize(pic_data));
 	return(NULL);
 }
 
