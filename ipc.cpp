@@ -219,6 +219,7 @@ void CIPC::ProcessRequest(char* request) {
 		if(e!=SUCCESS) OscLog(ERROR, "Could not Capture Picture (Error=%i)", e);
 		
 		if(img) {
+			//lcvBmpWrite(img, "img.bmp");
 			
 			++img_count;
 			

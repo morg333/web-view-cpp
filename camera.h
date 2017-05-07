@@ -33,7 +33,7 @@ enum ColorType {
 	ColorType_debayered // Debayered image from a color sensor
 };
 
-#define PICTURE_ALIGNMENT LCV_IMG_ALIGN
+#define PICTURE_ALIGNMENT 1
 
 
 
@@ -45,7 +45,7 @@ public:
 	/*! @brief Initializes the camera module 
 	 * NOTE: Oscar Framework must be initialized before this call!
 	 */
-	OSC_ERR Init(const ROI& region_of_interest, uint8 buffer_count=2
+	OSC_ERR Init(const ROI& region_of_interest, uint8 buffer_count=3
 			, EnOscCamPerspective perspective=OSC_CAM_PERSPECTIVE_DEFAULT);
 	
 	

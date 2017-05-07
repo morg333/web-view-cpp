@@ -1,5 +1,6 @@
 
 #include "camera.h"
+#include <fstream>
 
 
 CCamera::CCamera() : m_img(NULL), m_frame_buffer_ids(NULL), m_frame_buffers(NULL)
@@ -29,7 +30,7 @@ OSC_ERR CCamera::Init(const ROI& region_of_interest, uint8 buffer_count
 	
 	/* create the frame buffers */
 	if(m_frame_buffers) delete[](m_frame_buffers);
-	const unsigned int buffer_size=region_of_interest.width*region_of_interest.height;
+	const unsigned int buffer_size=3*region_of_interest.width*region_of_interest.height;
 	const unsigned int buffer_size_al=AlignSize(buffer_size);
 	m_frame_buffers=new uint8_t[buffer_count*buffer_size_al+PICTURE_ALIGNMENT];
 	uint8_t* frame_buffers_al=(uint8_t*)AlignPicture((uint8*)m_frame_buffers);
@@ -93,8 +94,11 @@ IplImage* CCamera::ReadLatestPicture() {
 IplImage* CCamera::ReadPicture( uint16 max_age, uint16 timeout) {
 	
 	uint8* pic_data = NULL;
-	if(OscCamReadPicture(m_buffer_count>1 ? OSC_CAM_MULTI_BUFFER : 0, &pic_data, max_age, timeout)==SUCCESS) 
+	if(OscCamReadPicture(m_buffer_count>1 ? OSC_CAM_MULTI_BUFFER : 0, &pic_data, max_age, timeout)==SUCCESS) {
 		return(HandlePictureColoringAndSize(pic_data));
+
+	}
+
 	return(NULL);
 }
 
@@ -104,18 +108,33 @@ IplImage* CCamera::HandlePictureColoringAndSize(uint8* pic_data) {
 	
 	
 	if(m_color_type == ColorType_debayered) {
-		
-		OscVisDebayer(pic_data, m_roi.width, m_roi.height, (EnBayerOrder)0, m_al_img_data);
-		
+
 		AdjustImageHeader(&m_img, 3);
 		
-		m_img->imageDataOrigin=m_img->imageData=(char*)m_al_img_data;
+		m_img->imageDataOrigin=m_img->imageData=(char*)pic_data;
 	} else {
 		// 1 channel
 		AdjustImageHeader(&m_img, 1);
-		m_img->imageData=(char*)pic_data;
+		for(uint32 i0 = 0; i0 < OSC_CAM_MAX_IMAGE_HEIGHT*OSC_CAM_MAX_IMAGE_WIDTH; i0++) {
+			double R = pic_data[3*i0 + 0];
+			double G = pic_data[3*i0 + 1];
+			double B = pic_data[3*i0 + 2];
+
+			m_img_data[i0] = (uint8) (0.299 * R + 0.587 * G + 0.114 * B);
+		}
+		m_img->imageData=(char*)m_img_data;
+/*
+		static int count = 0;
+
+		if(count < 5) {
+			std::ofstream o("out.raw", std::ios::out | std::ios::binary | std::ios::trunc);
+			o.write((const char*)pic_data, 2*OSC_CAM_MAX_IMAGE_HEIGHT*OSC_CAM_MAX_IMAGE_WIDTH);
+			o.close();
+			printf("file written\n");
+		}
+		count++;*/
 	}
-	
+
 	return(m_img);
 }
 

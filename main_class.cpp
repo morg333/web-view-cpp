@@ -22,14 +22,15 @@ OSC_ERR CMain::Init(int argc, char ** argv) {
 	
 	OSC_ERR err;
 	
+
 	/******* Create the framework **********/
 	if((err=OscCreate(
 			&OscModule_log, 
 			&OscModule_sup, 
 			&OscModule_bmp, 
 			&OscModule_cam,  
-			&OscModule_vis,
-			&OscModule_gpio
+			&OscModule_vis
+			//,&OscModule_gpio
 			))!=SUCCESS)
 		return(err);
 	
@@ -37,9 +38,8 @@ OSC_ERR CMain::Init(int argc, char ** argv) {
 	OscLogSetConsoleLogLevel(INFO);
 	OscLogSetFileLogLevel(WARN);
 	
-	OscGpioConfigSensorLedOut(true);
+	//OscGpioConfigSensorLedOut(true);
 	
-
 #if defined(OSC_HOST) || defined(OSC_SIM)
 	{
 		void * hFileNameReader;
@@ -51,8 +51,9 @@ OSC_ERR CMain::Init(int argc, char ** argv) {
 	}
 #endif /* OSC_HOST or OSC_SIM */
 	
+
 	/* init the camera */
-	if((err=m_camera.Init(ROI(), 2))!=SUCCESS)
+	if((err=m_camera.Init(ROI(), 3))!=SUCCESS)
 		return(err);
 	
 	m_camera.setAutoExposure(true);
@@ -79,6 +80,7 @@ OSC_ERR CMain::MainLoop() {
 	m_camera.CapturePicture();
 	m_camera.ReadPicture();
 	
+	printf("read\n");
 	
 	uint32 startCyc=OscSupCycGet();
 	

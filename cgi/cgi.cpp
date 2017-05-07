@@ -16,7 +16,7 @@ using namespace std;
 #include <errno.h>
 
 #include "cgi.h"
-
+#include <fstream>
 
 
 void copyAll(int outFd, int inFd, int* num_written) {
@@ -43,10 +43,14 @@ int main(int argc, char ** argv) {
 	/* process request */
 	int fd, err, num_written;
 	
+	std::ofstream o("msg.log", std::ios::out | std::ios::app);
+
 	
 	fd = socket(AF_UNIX, SOCK_STREAM, 0);
 	if(fd < 0) {
 		fprintf(stderr, "Error creating the socket: %s", strerror(errno));
+		o << "Error creating the socket" << std::endl;
+		o.close();
 		return(-1);
 	}
 	
@@ -60,6 +64,8 @@ int main(int argc, char ** argv) {
 		if(err != 0) {
 			fprintf(stderr, "Error connecting to the server: %s", strerror(errno));
 			close(fd);
+			o << "Error connecting to the server" << std::endl;
+			o.close();
 			return(-1);
 		}
 	}
@@ -77,6 +83,8 @@ int main(int argc, char ** argv) {
 	err = shutdown(fd, 1);
 	if(err != 0) {
 		fprintf(stderr, "Error closing the writing part of the connection: %s", strerror(errno));
+		o << "Error closing the writing part of the connection" << std::endl;
+		o.close();
 		close(fd);
 		return(-1);
 	}
@@ -93,6 +101,10 @@ int main(int argc, char ** argv) {
 	err = close(fd);
 	if(err != 0) {
 		fprintf(stderr, "Error closing the writing part of the connection: %s", strerror(errno));
+		o << "Error closing the writing part of the connection" << std::endl;
+		o.close();
 		return(-1);
 	}
+
+	o.close();
 }
