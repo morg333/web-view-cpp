@@ -130,7 +130,7 @@ LIBS_target := $(addsuffix .a, $(LIBS_target))
 
 
 ifeq '$(CONFIG_BOARD)' 'raspi-cam'
- LIBS_target := $(LIBS_target) /usr/arm-linux-gnueabihf/lib/libm.a /usr/arm-linux-gnueabihf/lib/libpthread.so
+ LIBS_target := $(LIBS_target)
  else
  LIBS_target := $(LIBS_target) -lm -lbfdsp
 endif
