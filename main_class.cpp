@@ -35,7 +35,7 @@ OSC_ERR CMain::Init(int argc, char ** argv) {
 		return(err);
 	
 	
-	OscLogSetConsoleLogLevel(INFO);
+	OscLogSetConsoleLogLevel(NOTICE);
 	OscLogSetFileLogLevel(WARN);
 	
 	//OscGpioConfigSensorLedOut(true);

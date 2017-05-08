@@ -33,7 +33,7 @@ enum ColorType {
 	ColorType_debayered // Debayered image from a color sensor
 };
 
-#define PICTURE_ALIGNMENT 1
+#define PICTURE_ALIGNMENT 16
 
 
 
@@ -45,8 +45,7 @@ public:
 	/*! @brief Initializes the camera module 
 	 * NOTE: Oscar Framework must be initialized before this call!
 	 */
-	OSC_ERR Init(const ROI& region_of_interest, uint8 buffer_count=3
-			, EnOscCamPerspective perspective=OSC_CAM_PERSPECTIVE_DEFAULT);
+	OSC_ERR Init(const ROI& region_of_interest, uint8 buffer_count=3);
 	
 	
 	
@@ -83,10 +82,9 @@ public:
 	ColorType getAppropriateColorType();
 	
 	
-	EnOscCamPerspective getPerspective() { return(m_perspective); }
-	void setPerspective(EnOscCamPerspective perspective) { 
+	int getPerspective() { return(m_perspective); }
+	void setPerspective(int perspective) {
 		m_perspective=perspective;
-		OscCamSetupPerspective(m_perspective);
 	}
 	
 	void setAutoExposure(bool bEnabled);
@@ -116,7 +114,7 @@ private:
 	
 	int m_buffer_count;
 	ColorType m_color_type;
-	EnOscCamPerspective m_perspective;
+	int m_perspective; /* different processing images can be shown */
 };
 
 

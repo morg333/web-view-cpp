@@ -168,7 +168,7 @@ void CIPC::ProcessRequest(char* request) {
 			if(ReadArgument(&request, &key, &value)==SUCCESS) {
 			
 				if(strcmp(key, "autoExposure") == 0) {
-					m_camera.setAutoExposure(strtol(value, NULL, 10));
+					OscCamSetShutterWidth(0);
 				} else if (strcmp(key, "exposureTime") == 0) {
 					m_web_settings.exposure_time = strtol(value, NULL, 10)*1000;
 					OscCamSetShutterWidth(m_web_settings.exposure_time);
@@ -182,7 +182,7 @@ void CIPC::ProcessRequest(char* request) {
 					else if (strcmp(value, "debayered") == 0)
 						m_camera.setColorType(ColorType_debayered);
 				} else if(strcmp(key, "perspective") == 0) {
-					m_camera.setPerspective((EnOscCamPerspective)atoi(value));
+					m_camera.setPerspective(atoi(value));
 				}
 			} else {
 				*request=0;
@@ -228,7 +228,15 @@ void CIPC::ProcessRequest(char* request) {
 			uint32 delta_time_us=OscSupCycToMicroSecs(OscSupCycGet() - startCyc);
 			OscLog(INFO, "Image processing required %uus\n", delta_time_us);
 			
-			if(WriteBMP(img) !=SUCCESS) {
+			IplImage* img_write;
+			if(m_camera.getPerspective() == 0) {
+				/* we show the camera image */
+				img_write=img;
+			} else {
+				img_write=m_img_process.GetProcImage(m_camera.getPerspective()-1);
+			}
+
+			if(WriteBMP(img_write) !=SUCCESS) {
 				OscLog(ERROR, "Image could not be sent\n");
 			}
 			
@@ -242,9 +250,9 @@ void CIPC::ProcessRequest(char* request) {
 		struct OscSystemInfo * pInfo;
 		OscCfgGetSystemInfo(&pInfo);
 		
-		WriteArgument("cameraModel", pInfo->hardware.board.revision);
-		WriteArgument("imageSensor", (pInfo->hardware.imageSensor.hasBayernPattern ? (char*)"Color" : (char*)"Grayscale"));
-		WriteArgument("uClinuxVersion", pInfo->software.uClinux.version);
+		WriteArgument("cameraModel", (char*)"Raspberry Pi Camera");
+		WriteArgument("imageSensor", (char*)"Color");
+		WriteArgument("uClinuxVersion", (char*)"0.9.0");
 	}
 }
 

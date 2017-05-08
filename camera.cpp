@@ -4,7 +4,7 @@
 
 
 CCamera::CCamera() : m_img(NULL), m_frame_buffer_ids(NULL), m_frame_buffers(NULL)
-	, m_bRoi_changed(false), m_color_type(ColorType_gray) {
+	, m_bRoi_changed(false), m_color_type(ColorType_gray), m_perspective(0) {
 	
 	m_img_data=new uint8[3*OSC_CAM_MAX_IMAGE_HEIGHT*OSC_CAM_MAX_IMAGE_WIDTH + PICTURE_ALIGNMENT];
 	m_al_img_data=AlignPicture(m_img_data);
@@ -17,8 +17,7 @@ CCamera::~CCamera() {
 	delete[](m_img_data);
 }
 
-OSC_ERR CCamera::Init(const ROI& region_of_interest, uint8 buffer_count
-		, EnOscCamPerspective perspective) {
+OSC_ERR CCamera::Init(const ROI& region_of_interest, uint8 buffer_count) {
 	
 	
 	if(buffer_count==0 || region_of_interest.width==0
@@ -60,9 +59,6 @@ OSC_ERR CCamera::Init(const ROI& region_of_interest, uint8 buffer_count
 		if((err=OscCamCreateMultiBuffer(buffer_count, m_frame_buffer_ids))!=SUCCESS) 
 			return(err);
 	}
-	
-	if((err=OscCamSetupPerspective(m_perspective=perspective))!=SUCCESS) 
-			return(err);
 	
 	return(SUCCESS);
 }
