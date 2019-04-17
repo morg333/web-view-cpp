@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name=".settings">
+      </df>
+      <df name="app">
+      </df>
+      <df name="build">
+      </df>
+      <df name="cgi">
+        <in>cgi.cpp</in>
+        <in>cgi.h</in>
+      </df>
+      <df name="oscar">
+        <df name="bmp">
+          <df name="build">
+          </df>
+          <in>bmp.c</in>
+          <in>bmp.h</in>
+        </df>
+        <df name="boards">
+          <in>Mesa-SR4k.h</in>
+          <in>indXcam.h</in>
+          <in>leanXcam.h</in>
+          <in>leanXradio.h</in>
+          <in>raspi-cam.h</in>
+        </df>
+        <df name="build">
+        </df>
+        <df name="cam">
+          <df name="build">
+          </df>
+          <in>cam.h</in>
+          <in>cam_host.c</in>
+          <in>cam_multibuffer.c</in>
+          <in>cam_multibuffer.h</in>
+          <in>cam_shared.c</in>
+          <in>cam_target.c</in>
+          <in>mt9v032.h</in>
+        </df>
+        <df name="cfg">
+          <df name="build">
+          </df>
+          <in>cfg.c</in>
+        </df>
+        <df name="cpld">
+          <df name="build">
+          </df>
+          <in>cpld.h</in>
+          <in>cpld_host.c</in>
+          <in>cpld_target.c</in>
+        </df>
+        <df name="dma">
+          <df name="build">
+          </df>
+          <in>dma.h</in>
+          <in>dma_host.c</in>
+          <in>dma_shared.c</in>
+          <in>dma_target.c</in>
+        </df>
+        <df name="documentation">
+          <df name="images">
+          </df>
+        </df>
+        <df name="dspl">
+          <df name="build">
+          </df>
+          <in>dspl.h</in>
+          <in>dspl_host.c</in>
+          <in>dspl_target.c</in>
+        </df>
+        <df name="framework-test">
+          <in>cgitest.c</in>
+          <in>test.c</in>
+        </df>
+        <df name="frd">
+          <df name="build">
+          </df>
+          <in>frd.c</in>
+        </df>
+        <df name="gpio">
+          <df name="build">
+          </df>
+          <in>gpio.h</in>
+          <in>gpio_host.c</in>
+          <in>gpio_shared.c</in>
+          <in>gpio_target.c</in>
+        </df>
+        <df name="hsm">
+          <df name="build">
+          </df>
+          <in>hsm.c</in>
+        </df>
+        <df name="include">
+          <in>bmp.h</in>
+          <in>board.h</in>
+          <in>cam.h</in>
+          <in>cfg.h</in>
+          <in>clb.h</in>
+          <in>cpld.h</in>
+          <in>dma.h</in>
+          <in>dspl.h</in>
+          <in>error.h</in>
+          <in>frd.h</in>
+          <in>gpio.h</in>
+          <in>hsm.h</in>
+          <in>ipc.h</in>
+          <in>jpg.h</in>
+          <in>list.h</in>
+          <in>log.h</in>
+          <in>nih.h</in>
+          <in>oscar.h</in>
+          <in>pool.h</in>
+          <in>sim.h</in>
+          <in>srd.h</in>
+          <in>sup.h</in>
+          <in>support.h</in>
+          <in>swr.h</in>
+          <in>version.h</in>
+          <in>vis.h</in>
+        </df>
+        <df name="ipc">
+          <df name="build">
+          </df>
+          <in>ipc.h</in>
+          <in>ipc_host.c</in>
+          <in>ipc_shared.c</in>
+          <in>ipc_target.c</in>
+        </df>
+        <df name="jpg">
+          <df name="build">
+          </df>
+          <in>jpg.c</in>
+          <in>jpg.h</in>
+          <in>jpg_dct.c</in>
+          <in>jpg_encoder.c</in>
+          <in>jpg_huffdata.h</in>
+          <in>jpg_huffman.c</in>
+          <in>jpg_markdata.h</in>
+          <in>jpg_marker.c</in>
+          <in>jpg_quant.c</in>
+          <in>jpg_quantdata.h</in>
+          <in>jpg_readYUV.c</in>
+        </df>
+        <df name="library">
+        </df>
+        <df name="log">
+          <df name="build">
+          </df>
+          <in>log.h</in>
+          <in>log_host.c</in>
+          <in>log_target.c</in>
+        </df>
+        <df name="sim">
+          <df name="build">
+          </df>
+          <in>sim.h</in>
+          <in>sim_host.c</in>
+          <in>sim_target.c</in>
+        </df>
+        <df name="srd">
+          <df name="build">
+          </df>
+          <in>srd.h</in>
+          <in>srd_host.c</in>
+          <in>srd_target.c</in>
+        </df>
+        <df name="sup">
+          <df name="build">
+          </df>
+          <in>sup.h</in>
+          <in>sup_host.c</in>
+          <in>sup_target.c</in>
+        </df>
+        <df name="swr">
+          <df name="build">
+          </df>
+          <in>swr.c</in>
+        </df>
+        <df name="vis">
+          <df name="build">
+          </df>
+          <in>DebayerBilinear.h</in>
+          <in>DebayerBilinearBGR.c</in>
+          <in>DebayerBilinearBGR_host.c</in>
+          <in>DebayerBilinearBGR_target.asm</in>
+          <in>DebayerBilinearBGR_target.c</in>
+          <in>DebayerBilinearShared_host.c</in>
+          <in>bayer_fast.c</in>
+          <in>bayer_lincorr.c</in>
+          <in>conversions.c</in>
+          <in>filters.c</in>
+          <in>morphology.c</in>
+          <in>segmentation.c</in>
+          <in>transform.c</in>
+          <in>vector_debayer_grey_target.asm</in>
+          <in>vector_debayer_grey_target.c</in>
+          <in>vis.c</in>
+          <in>vis.h</in>
+        </df>
+        <in>oscar.c</in>
+        <in>oscar.h</in>
+      </df>
+      <df name="www">
+        <df name="cgi-bin">
+        </df>
+        <df name="css">
+          <df name="images">
+          </df>
+        </df>
+        <df name="imgs">
+        </df>
+        <df name="js">
+        </df>
+      </df>
+      <in>camera.cpp</in>
+      <in>camera.h</in>
+      <in>image_processing.cpp</in>
+      <in>image_processing.h</in>
+      <in>includes.h</in>
+      <in>ipc.cpp</in>
+      <in>ipc.h</in>
+      <in>main.cpp</in>
+      <in>main_class.cpp</in>
+      <in>main_class.h</in>
+      <in>version.h</in>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+            <option name="symbol_file" value="./app_host"/>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+          <runcommandpicklistitem>./app_host</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>./app_host</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+    <conf name="Debug_Host" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_signals>
+        </gdb_signals>
+        <gdb_options>
+          <DebugOptions>
+            <option name="symbol_file" value="./app_host"/>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+          <runcommandpicklistitem>./app_host</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>./app_host</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+    <conf name="Release_Target" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+            <option name="symbol_file" value="./app_host"/>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+          <runcommandpicklistitem>./app_host</runcommandpicklistitem>
+          <runcommandpicklistitem>${MAKE} -f Makefile run</runcommandpicklistitem>
+          <runcommandpicklistitem>make run</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>make run</runcommand>
+        <rundir></rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

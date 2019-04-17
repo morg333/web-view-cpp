@@ -7,6 +7,7 @@
 
 #include "includes.h"
 #include "camera.h"
+#include "image_processing.h"
 
 
 #define TEST_IMAGE_FN "test.bmp"
@@ -29,7 +30,7 @@ public:
 	
 private:
 	CCamera m_camera;
-	
+	CImageProcessor m_img_process;
 };
 
 #endif /* MAIN_CLASS_H_ */

@@ -4,17 +4,12 @@
 
 
 CCamera::CCamera() : m_img(NULL), m_frame_buffer_ids(NULL), m_frame_buffers(NULL)
-	, m_bRoi_changed(false), m_color_type(ColorType_gray), m_perspective(0) {
-	
-	m_img_data=new uint8[3*OSC_CAM_MAX_IMAGE_HEIGHT*OSC_CAM_MAX_IMAGE_WIDTH + PICTURE_ALIGNMENT];
-	m_al_img_data=AlignPicture(m_img_data);
-}
+	, m_bRoi_changed(false), m_color_type(ColorType_gray), m_perspective(0) {}
 
 CCamera::~CCamera() {
 	if(m_frame_buffer_ids) delete[](m_frame_buffer_ids);
 	if(m_frame_buffers) delete[](m_frame_buffers);
-	if(m_img) lcvReleaseImageHeader(&m_img);
-	delete[](m_img_data);
+	if(m_img) {delete m_img;m_img = NULL;}
 }
 
 OSC_ERR CCamera::Init(const ROI& region_of_interest, uint8 buffer_count) {
@@ -74,7 +69,7 @@ uint32 CCamera::AlignSize(uint32 size) {
 
 
 
-IplImage* CCamera::ReadLatestPicture() {
+cv::Mat* CCamera::ReadLatestPicture() {
 	
 	uint8* pic_data = NULL;
 #ifdef OSC_HOST
@@ -87,7 +82,7 @@ IplImage* CCamera::ReadLatestPicture() {
 	return(NULL);
 }
 
-IplImage* CCamera::ReadPicture( uint16 max_age, uint16 timeout) {
+cv::Mat* CCamera::ReadPicture( uint16 max_age, uint16 timeout) {
 	
 	uint8* pic_data = NULL;
 	if(OscCamReadPicture(m_buffer_count>1 ? OSC_CAM_MULTI_BUFFER : 0, &pic_data, max_age, timeout)==SUCCESS) {
@@ -98,27 +93,24 @@ IplImage* CCamera::ReadPicture( uint16 max_age, uint16 timeout) {
 	return(NULL);
 }
 
-IplImage* CCamera::HandlePictureColoringAndSize(uint8* pic_data) {
+cv::Mat* CCamera::HandlePictureColoringAndSize(uint8* pic_data) {
 	
 	if(m_color_type == ColorType_none || !pic_data) return(0);
-	
-	
-	if(m_color_type == ColorType_debayered) {
+        
+        if(m_color_type == ColorType_debayered) {
 
-		AdjustImageHeader(&m_img, 3);
+		AdjustImageHeader(m_img, 3);
 		
-		m_img->imageDataOrigin=m_img->imageData=(char*)pic_data;
+		*m_img = cv::Mat(m_img->rows, m_img->cols, CV_8UC3, pic_data).clone();
 	} else {
 		// 1 channel
-		AdjustImageHeader(&m_img, 1);
-		for(uint32 i0 = 0; i0 < OSC_CAM_MAX_IMAGE_HEIGHT*OSC_CAM_MAX_IMAGE_WIDTH; i0++) {
-			double R = pic_data[3*i0 + 0];
-			double G = pic_data[3*i0 + 1];
-			double B = pic_data[3*i0 + 2];
-
-			m_img_data[i0] = (uint8) (0.299 * R + 0.587 * G + 0.114 * B);
-		}
-		m_img->imageData=(char*)m_img_data;
+		AdjustImageHeader(m_img, 1);
+                
+                cv::Mat col_img = cv::Mat(m_img->rows, m_img->cols, CV_8UC3, pic_data);
+                
+                cv::cvtColor(col_img, *m_img, cv::COLOR_RGB2GRAY);
+                //cv::imwrite("orig.png", col_img);
+		
 /*
 		static int count = 0;
 
@@ -130,6 +122,8 @@ IplImage* CCamera::HandlePictureColoringAndSize(uint8* pic_data) {
 		}
 		count++;*/
 	}
+        
+        //cv::imwrite("gray.png", *m_img);
 
 	return(m_img);
 }
@@ -144,13 +138,19 @@ OSC_ERR CCamera::CapturePicture() {
 }
 
 
-void CCamera::AdjustImageHeader(IplImage** img, int channel_count) {
+void CCamera::AdjustImageHeader(cv::Mat*& img, int channel_count) {
 	
-	if(!(*img) || m_bRoi_changed || (*img)->nChannels!=channel_count) {
+	if(!(img) || m_bRoi_changed || img->channels()!=channel_count) {
 		m_bRoi_changed=false;
 		
-		if(*img) lcvReleaseImageHeader(img);
-		*img=lcvCreateImageHeader(cvSize(m_roi.width, m_roi.height), IPL_DEPTH_8U, channel_count);
+		if(img) delete img;
+                if(channel_count==1){
+                    img=new cv::Mat(cvSize(m_roi.width, m_roi.height), CV_8UC1);
+                } else if(channel_count==3){
+                    img=new cv::Mat(cvSize(m_roi.width, m_roi.height), CV_8UC3);
+                } else {
+                    OscLog(ERROR, "channel_count not supported");
+                }
 		
 	}
 }
@@ -159,9 +159,10 @@ void CCamera::AdjustImageHeader(IplImage** img, int channel_count) {
 ColorType CCamera::getAppropriateColorType() { 
 	
 	struct OscSystemInfo * pInfo;
-	OscCfgGetSystemInfo(&pInfo);
-	return(pInfo->hardware.imageSensor.hasBayernPattern ? ColorType_debayered : ColorType_gray);
-	
+	if(OscCfgGetSystemInfo(&pInfo)==SUCCESS) {
+            return(pInfo->hardware.imageSensor.hasBayernPattern ? ColorType_debayered : ColorType_gray);
+	}
+        return ColorType_gray;//default is grey
 }
 
 

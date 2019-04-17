@@ -1,0 +1,3983 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="leancv"
+                   displayName="leancv"
+                   projectFiles="true"
+                   root="../osc-cc/modules/leancv">
+      <itemPath>../osc-cc/modules/leancv/bmp.c</itemPath>
+      <itemPath>../osc-cc/modules/leancv/lcv.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="pi" displayName="pi" projectFiles="true" root="..">
+      <logicalFolder name="image_proc_agent"
+                     displayName="image_proc_agent"
+                     projectFiles="true">
+        <logicalFolder name="externals" displayName="externals" projectFiles="true">
+          <logicalFolder name="OpenCV3.0.0.linux.x86"
+                         displayName="OpenCV3.0.0.linux.x86"
+                         projectFiles="true">
+            <logicalFolder name="build" displayName="build" projectFiles="true">
+              <logicalFolder name="arm-obj_rel" displayName="arm-obj_rel" projectFiles="true">
+                <logicalFolder name="include" displayName="include" projectFiles="true">
+                  <logicalFolder name="opencv2" displayName="opencv2" projectFiles="true">
+                    <logicalFolder name="calib3d" displayName="calib3d" projectFiles="true">
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/calib3d/calib3d_c.h</itemPath>
+                    </logicalFolder>
+                    <logicalFolder name="core" displayName="core" projectFiles="true">
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/core/affine.hpp</itemPath>
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/core/base.hpp</itemPath>
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/core/bufferpool.hpp</itemPath>
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/core/core_c.h</itemPath>
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/core/cvdef.h</itemPath>
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/core/cvstd.hpp</itemPath>
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/core/cvstd.inl.hpp</itemPath>
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/core/mat.hpp</itemPath>
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/core/mat.inl.hpp</itemPath>
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/core/matx.hpp</itemPath>
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/core/operations.hpp</itemPath>
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/core/optim.hpp</itemPath>
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/core/persistence.hpp</itemPath>
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/core/ptr.inl.hpp</itemPath>
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/core/sse_utils.hpp</itemPath>
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/core/traits.hpp</itemPath>
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/core/types.hpp</itemPath>
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/core/types_c.h</itemPath>
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/core/utility.hpp</itemPath>
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/core/version.hpp</itemPath>
+                    </logicalFolder>
+                    <logicalFolder name="flann" displayName="flann" projectFiles="true">
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/flann/config.h</itemPath>
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/flann/defines.h</itemPath>
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/flann/miniflann.hpp</itemPath>
+                    </logicalFolder>
+                    <logicalFolder name="hal" displayName="hal" projectFiles="true">
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/hal/defs.h</itemPath>
+                    </logicalFolder>
+                    <logicalFolder name="highgui" displayName="highgui" projectFiles="true">
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/highgui/highgui_c.h</itemPath>
+                    </logicalFolder>
+                    <logicalFolder name="imgcodecs" displayName="imgcodecs" projectFiles="true">
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/imgcodecs/imgcodecs_c.h</itemPath>
+                    </logicalFolder>
+                    <logicalFolder name="imgproc" displayName="imgproc" projectFiles="true">
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/imgproc/imgproc_c.h</itemPath>
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/imgproc/types_c.h</itemPath>
+                    </logicalFolder>
+                    <logicalFolder name="objdetect" displayName="objdetect" projectFiles="true">
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/objdetect/detection_based_tracker.hpp</itemPath>
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/objdetect/objdetect_c.h</itemPath>
+                    </logicalFolder>
+                    <logicalFolder name="photo" displayName="photo" projectFiles="true">
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/photo/photo_c.h</itemPath>
+                    </logicalFolder>
+                    <logicalFolder name="video" displayName="video" projectFiles="true">
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/video/background_segm.hpp</itemPath>
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/video/tracking.hpp</itemPath>
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/video/tracking_c.h</itemPath>
+                    </logicalFolder>
+                    <logicalFolder name="videoio" displayName="videoio" projectFiles="true">
+                      <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/videoio/videoio_c.h</itemPath>
+                    </logicalFolder>
+                    <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/calib3d.hpp</itemPath>
+                    <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/core.hpp</itemPath>
+                    <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/features2d.hpp</itemPath>
+                    <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/hal.hpp</itemPath>
+                    <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/highgui.hpp</itemPath>
+                    <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/imgcodecs.hpp</itemPath>
+                    <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/imgproc.hpp</itemPath>
+                    <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/ml.hpp</itemPath>
+                    <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/objdetect.hpp</itemPath>
+                    <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/opencv.hpp</itemPath>
+                    <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/photo.hpp</itemPath>
+                    <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/video.hpp</itemPath>
+                    <itemPath>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/videoio.hpp</itemPath>
+                  </logicalFolder>
+                </logicalFolder>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="osc-cc" displayName="osc-cc" projectFiles="true">
+        <logicalFolder name="modules" displayName="modules" projectFiles="true">
+          <logicalFolder name="leancv" displayName="leancv" projectFiles="true">
+            <logicalFolder name="include" displayName="include" projectFiles="true">
+              <logicalFolder name="opencv" displayName="opencv" projectFiles="true">
+                <itemPath>../osc-cc/modules/leancv/include/opencv/cxtypes.h</itemPath>
+              </logicalFolder>
+              <itemPath>../osc-cc/modules/leancv/include/lcv_bmp.h</itemPath>
+              <itemPath>../osc-cc/modules/leancv/include/leancv.h</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="oscar" displayName="oscar" projectFiles="true">
+        <logicalFolder name="include" displayName="include" projectFiles="true">
+          <itemPath>../oscar/include/board.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+    </logicalFolder>
+    <df root="." name="0">
+      <df name="cgi">
+        <in>cgi.cpp</in>
+      </df>
+      <df name="oscar">
+        <df name="bmp">
+          <in>bmp.c</in>
+        </df>
+        <df name="cam">
+          <in>cam_host.c</in>
+          <in>cam_multibuffer.c</in>
+          <in>cam_shared.c</in>
+          <in>cam_target.c</in>
+        </df>
+        <df name="cfg">
+          <in>cfg.c</in>
+        </df>
+        <df name="cpld">
+          <in>cpld_host.c</in>
+          <in>cpld_target.c</in>
+        </df>
+        <df name="dma">
+          <in>dma_host.c</in>
+          <in>dma_shared.c</in>
+          <in>dma_target.c</in>
+        </df>
+        <df name="dspl">
+          <in>dspl_host.c</in>
+          <in>dspl_target.c</in>
+        </df>
+        <df name="framework-test">
+          <in>cgitest.c</in>
+          <in>test.c</in>
+        </df>
+        <df name="frd">
+          <in>frd.c</in>
+        </df>
+        <df name="gpio">
+          <in>gpio_host.c</in>
+          <in>gpio_shared.c</in>
+          <in>gpio_target.c</in>
+        </df>
+        <df name="hsm">
+          <in>hsm.c</in>
+        </df>
+        <df name="ipc">
+          <in>ipc_host.c</in>
+          <in>ipc_shared.c</in>
+          <in>ipc_target.c</in>
+        </df>
+        <df name="jpg">
+          <in>jpg.c</in>
+          <in>jpg_dct.c</in>
+          <in>jpg_encoder.c</in>
+          <in>jpg_huffman.c</in>
+          <in>jpg_marker.c</in>
+          <in>jpg_quant.c</in>
+          <in>jpg_readYUV.c</in>
+        </df>
+        <df name="log">
+          <in>log_host.c</in>
+          <in>log_target.c</in>
+        </df>
+        <df name="sim">
+          <in>sim_host.c</in>
+          <in>sim_target.c</in>
+        </df>
+        <df name="srd">
+          <in>srd_host.c</in>
+          <in>srd_target.c</in>
+        </df>
+        <df name="sup">
+          <in>sup_host.c</in>
+          <in>sup_target.c</in>
+        </df>
+        <df name="swr">
+          <in>swr.c</in>
+        </df>
+        <df name="vis">
+          <in>DebayerBilinearBGR.c</in>
+          <in>DebayerBilinearBGR_host.c</in>
+          <in>DebayerBilinearBGR_target.c</in>
+          <in>DebayerBilinearShared_host.c</in>
+          <in>bayer_fast.c</in>
+          <in>bayer_lincorr.c</in>
+          <in>conversions.c</in>
+          <in>filters.c</in>
+          <in>morphology.c</in>
+          <in>segmentation.c</in>
+          <in>transform.c</in>
+          <in>vector_debayer_grey_target.c</in>
+          <in>vis.c</in>
+        </df>
+        <in>oscar.c</in>
+      </df>
+      <in>camera.cpp</in>
+      <in>image_processing.cpp</in>
+      <in>ipc.cpp</in>
+      <in>main.cpp</in>
+      <in>main_class.cpp</in>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>configure</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-Os"/>
+        <element flagsID="1"
+                 commonFlags="-march=armv7-a -g -std=gnu99 -fstack-protector-strong"/>
+        <element flagsID="2"
+                 commonFlags="-march=armv7-a -ggdb3 -std=gnu99 -fstack-protector-strong"/>
+        <element flagsID="3"
+                 commonFlags="-mtune=generic -march=x86-64 -g -std=gnu99 -fgnu89-inline -fstack-protector-strong"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+          <ccTool>
+            <preprocessorList>
+              <Elem>APP_NAME="web_view_cpp"</Elem>
+            </preprocessorList>
+          </ccTool>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand>./configure CC=${IDE_CC} CXX=${IDE_CXX} CFLAGS="-g3 -gdwarf-2" CXXFLAGS="-g3 -gdwarf-2"</preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <item path="../osc-cc/modules/leancv/bmp.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../osc-cc/modules/leancv/include</pElem>
+            <pElem>../osc-cc/modules/leancv</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../osc-cc/modules/leancv/lcv.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../osc-cc/modules/leancv</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="camera.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>oscar/include</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/linux-obj_rel/include</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/linux-obj_rel/include/opencv2</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>OSC_HOST</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="cgi/cgi.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <folder path="0/oscar/bmp">
+        <cTool>
+          <incDir>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/bmp</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/oscar/cfg">
+        <cTool>
+          <incDir>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/linux</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm-generic</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/cfg</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/oscar/cpld">
+        <cTool>
+          <incDir>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/oscar/frd">
+        <cTool>
+          <incDir>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/linux</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm-generic</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/frd</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/oscar/gpio">
+        <cTool>
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/oscar/hsm">
+        <cTool>
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/hsm</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/oscar/sim">
+        <cTool>
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/oscar/srd">
+        <cTool>
+          <incDir>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/oscar/swr">
+        <cTool>
+          <incDir>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/swr</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="leancv">
+        <cTool>
+          <incDir>
+            <pElem>../osc-cc/modules/leancv/include/opencv</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <item path="image_processing.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>oscar/include</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/linux-obj_rel/include</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/linux-obj_rel/include/opencv2</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>OSC_HOST</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="ipc.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>oscar/include</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2</pElem>
+            <pElem>../osc-cc/modules/leancv/include</pElem>
+            <pElem>../osc-cc/modules/leanXoverlay/include</pElem>
+            <pElem>../osc-cc/modules/vchecker/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>OSC_HOST</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>oscar/include</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2</pElem>
+            <pElem>../osc-cc/modules/leancv/include</pElem>
+            <pElem>../osc-cc/modules/leanXoverlay/include</pElem>
+            <pElem>../osc-cc/modules/vchecker/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>OSC_HOST</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="main_class.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>oscar/include</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/linux-obj_rel/include</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/linux-obj_rel/include/opencv2</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>OSC_HOST</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="oscar/bmp/bmp.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+        </cTool>
+      </item>
+      <item path="oscar/cam/cam_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/cam</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/cam/cam_multibuffer.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/cam</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/cam/cam_shared.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm-generic</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/linux</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm</pElem>
+            <pElem>../oscar/cam</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/cam/cam_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm-generic</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/linux</pElem>
+            <pElem>../oscar/cam</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/cfg/cfg.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+        </cTool>
+      </item>
+      <item path="oscar/cpld/cpld_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/cpld</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/cpld/cpld_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../oscar/cpld</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/dma/dma_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/dma</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/dma/dma_shared.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/dma</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/dma/dma_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/dma</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/dspl/dspl_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/dspl</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/dspl/dspl_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/dspl</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/frd/frd.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+        </cTool>
+      </item>
+      <item path="oscar/gpio/gpio_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/gpio</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/gpio/gpio_shared.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/gpio</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/gpio/gpio_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../oscar/gpio</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/hsm/hsm.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+        </cTool>
+      </item>
+      <item path="oscar/ipc/ipc_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/ipc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/ipc/ipc_shared.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm-generic</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/netinet</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/linux</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/ipc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/ipc/ipc_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/linux</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm-generic</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/ipc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/jpg/jpg.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/jpg</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/jpg/jpg_dct.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/jpg</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/jpg/jpg_encoder.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/jpg</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/jpg/jpg_huffman.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/jpg</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/jpg/jpg_marker.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/jpg</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/jpg/jpg_quant.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/jpg</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/jpg/jpg_readYUV.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/jpg</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/log/log_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/log</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/log/log_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/log</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/oscar.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/sim/sim_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/sim</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/sim/sim_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../oscar/sim</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/srd/srd_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/srd</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/srd/srd_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../oscar/srd</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/sup/sup_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/sup</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/sup/sup_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/sup</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/swr/swr.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+        </cTool>
+      </item>
+      <item path="oscar/vis/DebayerBilinearBGR.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/DebayerBilinearBGR_host.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/DebayerBilinearBGR_target.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/DebayerBilinearShared_host.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/bayer_fast.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/bayer_lincorr.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/conversions.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/filters.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/morphology.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/segmentation.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/transform.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/vector_debayer_grey_target.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/vis.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+    </conf>
+    <conf name="Debug_Host" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-Os"/>
+        <element flagsID="1"
+                 commonFlags="-march=armv7-a -g -std=gnu99 -fstack-protector-strong"/>
+        <element flagsID="2"
+                 commonFlags="-march=armv7-a -ggdb3 -std=gnu99 -fstack-protector-strong"/>
+        <element flagsID="3"
+                 commonFlags="-mtune=generic -march=x86-64 -g -std=gnu99 -fgnu89-inline -fstack-protector-strong"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+          <ccTool>
+            <preprocessorList>
+              <Elem>APP_NAME="web_view_cpp"</Elem>
+            </preprocessorList>
+          </ccTool>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand>sed -i "s/CONFIG_ENABLE_DEBUG.*/CONFIG_ENABLE_DEBUG = y/" .config</preBuildCommand>
+          <preBuildFirst>true</preBuildFirst>
+        </preBuild>
+      </makefileType>
+      <item path="../osc-cc/modules/leancv/bmp.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../osc-cc/modules/leancv/include</pElem>
+            <pElem>../osc-cc/modules/leancv</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../osc-cc/modules/leancv/lcv.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../osc-cc/modules/leancv</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="camera.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>oscar/include</pElem>
+            <pElem>../OpenCV3.0.0/linux-obj_rel/include</pElem>
+            <pElem>../OpenCV3.0.0/linux-obj_rel/include/opencv2</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>OSC_HOST</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="cgi/cgi.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <folder path="0/oscar/bmp">
+        <cTool>
+          <incDir>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/bmp</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/oscar/cfg">
+        <cTool>
+          <incDir>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/linux</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm-generic</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/cfg</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/oscar/cpld">
+        <cTool>
+          <incDir>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/oscar/frd">
+        <cTool>
+          <incDir>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/linux</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm-generic</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/frd</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/oscar/gpio">
+        <cTool>
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/oscar/hsm">
+        <cTool>
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/hsm</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/oscar/sim">
+        <cTool>
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/oscar/srd">
+        <cTool>
+          <incDir>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/oscar/swr">
+        <cTool>
+          <incDir>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/swr</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="leancv">
+        <cTool>
+          <incDir>
+            <pElem>../osc-cc/modules/leancv/include/opencv</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <item path="image_processing.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>oscar/include</pElem>
+            <pElem>../OpenCV3.0.0/linux-obj_rel/include</pElem>
+            <pElem>../OpenCV3.0.0/linux-obj_rel/include/opencv2</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>OSC_HOST</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="ipc.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>oscar/include</pElem>
+            <pElem>../OpenCV3.0.0/linux-obj_rel/include</pElem>
+            <pElem>../OpenCV3.0.0/linux-obj_rel/include/opencv2</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>OSC_HOST</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>oscar/include</pElem>
+            <pElem>../OpenCV3.0.0/linux-obj_rel/include</pElem>
+            <pElem>../OpenCV3.0.0/linux-obj_rel/include/opencv2</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>OSC_HOST</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="main_class.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>oscar/include</pElem>
+            <pElem>../OpenCV3.0.0/linux-obj_rel/include</pElem>
+            <pElem>../OpenCV3.0.0/linux-obj_rel/include/opencv2</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>OSC_HOST</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="oscar/bmp/bmp.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+        </cTool>
+      </item>
+      <item path="oscar/cam/cam_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/cam</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/cam/cam_multibuffer.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/cam</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/cam/cam_shared.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm-generic</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/linux</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm</pElem>
+            <pElem>../oscar/cam</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/cam/cam_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm-generic</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/linux</pElem>
+            <pElem>../oscar/cam</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/cfg/cfg.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+        </cTool>
+      </item>
+      <item path="oscar/cpld/cpld_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/cpld</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/cpld/cpld_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../oscar/cpld</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/dma/dma_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/dma</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/dma/dma_shared.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/dma</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/dma/dma_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/dma</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/dspl/dspl_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/dspl</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/dspl/dspl_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/dspl</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/frd/frd.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+        </cTool>
+      </item>
+      <item path="oscar/gpio/gpio_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/gpio</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/gpio/gpio_shared.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/gpio</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/gpio/gpio_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../oscar/gpio</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/hsm/hsm.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+        </cTool>
+      </item>
+      <item path="oscar/ipc/ipc_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/ipc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/ipc/ipc_shared.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm-generic</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/netinet</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/linux</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/ipc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/ipc/ipc_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/linux</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm-generic</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/ipc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/jpg/jpg.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/jpg</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/jpg/jpg_dct.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/jpg</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/jpg/jpg_encoder.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/jpg</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/jpg/jpg_huffman.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/jpg</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/jpg/jpg_marker.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/jpg</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/jpg/jpg_quant.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/jpg</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/jpg/jpg_readYUV.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/jpg</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/log/log_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/log</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/log/log_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/log</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/oscar.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/sim/sim_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/sim</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/sim/sim_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../oscar/sim</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/srd/srd_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/srd</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/srd/srd_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../oscar/srd</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/sup/sup_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/sup</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/sup/sup_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/sup</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/swr/swr.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+        </cTool>
+      </item>
+      <item path="oscar/vis/DebayerBilinearBGR.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/DebayerBilinearBGR_host.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/DebayerBilinearBGR_target.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/DebayerBilinearShared_host.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/bayer_fast.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/bayer_lincorr.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/conversions.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/filters.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/morphology.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/segmentation.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/transform.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/vector_debayer_grey_target.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/vis.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+    </conf>
+    <conf name="Release_Target" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-Os"/>
+        <element flagsID="1" commonFlags="-march=armv7-a -fstack-protector-strong"/>
+        <element flagsID="2"
+                 commonFlags="-march=armv7-a -g -std=gnu99 -fstack-protector-strong"/>
+        <element flagsID="3"
+                 commonFlags="-march=armv7-a -ggdb3 -std=gnu99 -fstack-protector-strong"/>
+        <element flagsID="4"
+                 commonFlags="-mtune=generic -march=x86-64 -g -std=gnu99 -fgnu89-inline -fstack-protector-strong"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile deploy</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+          <ccTool>
+            <preprocessorList>
+              <Elem>APP_NAME="web_view_cpp"</Elem>
+            </preprocessorList>
+          </ccTool>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand>sed -i "s/CONFIG_ENABLE_DEBUG.*/CONFIG_ENABLE_DEBUG = n/" .config</preBuildCommand>
+          <preBuildFirst>true</preBuildFirst>
+        </preBuild>
+      </makefileType>
+      <item path="../osc-cc/modules/leancv/bmp.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>../osc-cc/modules/leancv/include</pElem>
+            <pElem>../osc-cc/modules/leancv</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../osc-cc/modules/leancv/lcv.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>../osc-cc/modules/leancv</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="camera.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/core</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/hal</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/arm-linux-gnueabihf/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/debug</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/ext</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/flann</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/imgcodecs</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/videoio</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/highgui</pElem>
+            <pElem>oscar/include</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include-fixed</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/linux</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/backward</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/imgproc</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/photo</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/video</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/objdetect</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/calib3d</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/arm-linux-gnueabihf</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>OSC_HOST=1</Elem>
+            <Elem>__ACCUM_EPSILON__=0x1P-15K</Elem>
+            <Elem>__ACCUM_FBIT__=15</Elem>
+            <Elem>__ACCUM_IBIT__=16</Elem>
+            <Elem>__ACCUM_MAX__=0X7FFFFFFFP-15K</Elem>
+            <Elem>__ACCUM_MIN__=(-0X1P15K-0X1P15K)</Elem>
+            <Elem>__APCS_32__=1</Elem>
+            <Elem>__ARMEL__=1</Elem>
+            <Elem>__ARM_32BIT_STATE=1</Elem>
+            <Elem>__ARM_ARCH=7</Elem>
+            <Elem>__ARM_ARCH_7A__=1</Elem>
+            <Elem>__ARM_ARCH_ISA_ARM=1</Elem>
+            <Elem>__ARM_ARCH_ISA_THUMB=2</Elem>
+            <Elem>__ARM_ARCH_PROFILE=65</Elem>
+            <Elem>__ARM_ASM_SYNTAX_UNIFIED__=1</Elem>
+            <Elem>__ARM_EABI__=1</Elem>
+            <Elem>__ARM_FEATURE_CLZ=1</Elem>
+            <Elem>__ARM_FEATURE_DSP=1</Elem>
+            <Elem>__ARM_FEATURE_LDREX=15</Elem>
+            <Elem>__ARM_FEATURE_QBIT=1</Elem>
+            <Elem>__ARM_FEATURE_SAT=1</Elem>
+            <Elem>__ARM_FEATURE_SIMD32=1</Elem>
+            <Elem>__ARM_FEATURE_UNALIGNED=1</Elem>
+            <Elem>__ARM_FP=12</Elem>
+            <Elem>__ARM_PCS_VFP=1</Elem>
+            <Elem>__ARM_SIZEOF_MINIMAL_ENUM=4</Elem>
+            <Elem>__ARM_SIZEOF_WCHAR_T=4</Elem>
+            <Elem>__BIGGEST_ALIGNMENT__=8</Elem>
+            <Elem>__CHAR_UNSIGNED__=1</Elem>
+            <Elem>__DA_FBIT__=31</Elem>
+            <Elem>__DA_IBIT__=32</Elem>
+            <Elem>__DBL_DENORM_MIN__=double(4.9406564584124654e-324L)</Elem>
+            <Elem>__DBL_EPSILON__=double(2.2204460492503131e-16L)</Elem>
+            <Elem>__DBL_MAX__=double(1.7976931348623157e+308L)</Elem>
+            <Elem>__DBL_MIN__=double(2.2250738585072014e-308L)</Elem>
+            <Elem>__DECIMAL_DIG__=17</Elem>
+            <Elem>__DQ_FBIT__=63</Elem>
+            <Elem>__DQ_IBIT__=0</Elem>
+            <Elem>__FLT_DENORM_MIN__=1.4012984643248171e-45F</Elem>
+            <Elem>__FLT_EPSILON__=1.1920928955078125e-7F</Elem>
+            <Elem>__FLT_MAX__=3.4028234663852886e+38F</Elem>
+            <Elem>__FLT_MIN__=1.1754943508222875e-38F</Elem>
+            <Elem>__FRACT_EPSILON__=0x1P-15R</Elem>
+            <Elem>__FRACT_FBIT__=15</Elem>
+            <Elem>__FRACT_IBIT__=0</Elem>
+            <Elem>__FRACT_MAX__=0X7FFFP-15R</Elem>
+            <Elem>__FRACT_MIN__=(-0.5R-0.5R)</Elem>
+            <Elem>__GXX_TYPEINFO_EQUALITY_INLINE=0</Elem>
+            <Elem>__HA_FBIT__=7</Elem>
+            <Elem>__HA_IBIT__=8</Elem>
+            <Elem>__HQ_FBIT__=15</Elem>
+            <Elem>__HQ_IBIT__=0</Elem>
+            <Elem>__INT64_C(c)=c ## LL</Elem>
+            <Elem>__INT64_MAX__=0x7fffffffffffffffLL</Elem>
+            <Elem>__INT64_TYPE__=long long int</Elem>
+            <Elem>__INTMAX_C(c)=c ## LL</Elem>
+            <Elem>__INTMAX_MAX__=0x7fffffffffffffffLL</Elem>
+            <Elem>__INTMAX_TYPE__=long long int</Elem>
+            <Elem>__INTPTR_MAX__=0x7fffffff</Elem>
+            <Elem>__INTPTR_TYPE__=int</Elem>
+            <Elem>__INT_FAST16_MAX__=0x7fffffff</Elem>
+            <Elem>__INT_FAST16_TYPE__=int</Elem>
+            <Elem>__INT_FAST32_MAX__=0x7fffffff</Elem>
+            <Elem>__INT_FAST32_TYPE__=int</Elem>
+            <Elem>__INT_FAST64_MAX__=0x7fffffffffffffffLL</Elem>
+            <Elem>__INT_FAST64_TYPE__=long long int</Elem>
+            <Elem>__INT_LEAST64_MAX__=0x7fffffffffffffffLL</Elem>
+            <Elem>__INT_LEAST64_TYPE__=long long int</Elem>
+            <Elem>__LACCUM_EPSILON__=0x1P-31LK</Elem>
+            <Elem>__LACCUM_FBIT__=31</Elem>
+            <Elem>__LACCUM_IBIT__=32</Elem>
+            <Elem>__LACCUM_MAX__=0X7FFFFFFFFFFFFFFFP-31LK</Elem>
+            <Elem>__LACCUM_MIN__=(-0X1P31LK-0X1P31LK)</Elem>
+            <Elem>__LDBL_DENORM_MIN__=4.9406564584124654e-324L</Elem>
+            <Elem>__LDBL_DIG__=15</Elem>
+            <Elem>__LDBL_EPSILON__=2.2204460492503131e-16L</Elem>
+            <Elem>__LDBL_MANT_DIG__=53</Elem>
+            <Elem>__LDBL_MAX_10_EXP__=308</Elem>
+            <Elem>__LDBL_MAX_EXP__=1024</Elem>
+            <Elem>__LDBL_MAX__=1.7976931348623157e+308L</Elem>
+            <Elem>__LDBL_MIN_10_EXP__=(-307)</Elem>
+            <Elem>__LDBL_MIN_EXP__=(-1021)</Elem>
+            <Elem>__LDBL_MIN__=2.2250738585072014e-308L</Elem>
+            <Elem>__LFRACT_EPSILON__=0x1P-31LR</Elem>
+            <Elem>__LFRACT_FBIT__=31</Elem>
+            <Elem>__LFRACT_IBIT__=0</Elem>
+            <Elem>__LFRACT_MAX__=0X7FFFFFFFP-31LR</Elem>
+            <Elem>__LFRACT_MIN__=(-0.5LR-0.5LR)</Elem>
+            <Elem>__LLACCUM_EPSILON__=0x1P-31LLK</Elem>
+            <Elem>__LLACCUM_FBIT__=31</Elem>
+            <Elem>__LLACCUM_IBIT__=32</Elem>
+            <Elem>__LLACCUM_MAX__=0X7FFFFFFFFFFFFFFFP-31LLK</Elem>
+            <Elem>__LLACCUM_MIN__=(-0X1P31LLK-0X1P31LLK)</Elem>
+            <Elem>__LLFRACT_EPSILON__=0x1P-63LLR</Elem>
+            <Elem>__LLFRACT_FBIT__=63</Elem>
+            <Elem>__LLFRACT_IBIT__=0</Elem>
+            <Elem>__LLFRACT_MAX__=0X7FFFFFFFFFFFFFFFP-63LLR</Elem>
+            <Elem>__LLFRACT_MIN__=(-0.5LLR-0.5LLR)</Elem>
+            <Elem>__LONG_MAX__=0x7fffffffL</Elem>
+            <Elem>__PTRDIFF_MAX__=0x7fffffff</Elem>
+            <Elem>__PTRDIFF_TYPE__=int</Elem>
+            <Elem>__QQ_FBIT__=7</Elem>
+            <Elem>__QQ_IBIT__=0</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__SACCUM_EPSILON__=0x1P-7HK</Elem>
+            <Elem>__SACCUM_FBIT__=7</Elem>
+            <Elem>__SACCUM_IBIT__=8</Elem>
+            <Elem>__SACCUM_MAX__=0X7FFFP-7HK</Elem>
+            <Elem>__SACCUM_MIN__=(-0X1P7HK-0X1P7HK)</Elem>
+            <Elem>__SA_FBIT__=15</Elem>
+            <Elem>__SA_IBIT__=16</Elem>
+            <Elem>__SFRACT_EPSILON__=0x1P-7HR</Elem>
+            <Elem>__SFRACT_FBIT__=7</Elem>
+            <Elem>__SFRACT_IBIT__=0</Elem>
+            <Elem>__SFRACT_MAX__=0X7FP-7HR</Elem>
+            <Elem>__SFRACT_MIN__=(-0.5HR-0.5HR)</Elem>
+            <Elem>__SIZEOF_LONG_DOUBLE__=8</Elem>
+            <Elem>__SIZEOF_LONG__=4</Elem>
+            <Elem>__SIZEOF_POINTER__=4</Elem>
+            <Elem>__SIZEOF_PTRDIFF_T__=4</Elem>
+            <Elem>__SIZEOF_SIZE_T__=4</Elem>
+            <Elem>__SIZE_MAX__=0xffffffffU</Elem>
+            <Elem>__SIZE_TYPE__=unsigned int</Elem>
+            <Elem>__SQ_FBIT__=31</Elem>
+            <Elem>__SQ_IBIT__=0</Elem>
+            <Elem>__TA_FBIT__=63</Elem>
+            <Elem>__TA_IBIT__=64</Elem>
+            <Elem>__THUMBEL__=1</Elem>
+            <Elem>__THUMB_INTERWORK__=1</Elem>
+            <Elem>__TQ_FBIT__=127</Elem>
+            <Elem>__TQ_IBIT__=0</Elem>
+            <Elem>__UACCUM_EPSILON__=0x1P-16UK</Elem>
+            <Elem>__UACCUM_FBIT__=16</Elem>
+            <Elem>__UACCUM_IBIT__=16</Elem>
+            <Elem>__UACCUM_MAX__=0XFFFFFFFFP-16UK</Elem>
+            <Elem>__UACCUM_MIN__=0.0UK</Elem>
+            <Elem>__UDA_FBIT__=32</Elem>
+            <Elem>__UDA_IBIT__=32</Elem>
+            <Elem>__UDQ_FBIT__=64</Elem>
+            <Elem>__UDQ_IBIT__=0</Elem>
+            <Elem>__UFRACT_EPSILON__=0x1P-16UR</Elem>
+            <Elem>__UFRACT_FBIT__=16</Elem>
+            <Elem>__UFRACT_IBIT__=0</Elem>
+            <Elem>__UFRACT_MAX__=0XFFFFP-16UR</Elem>
+            <Elem>__UFRACT_MIN__=0.0UR</Elem>
+            <Elem>__UHA_FBIT__=8</Elem>
+            <Elem>__UHA_IBIT__=8</Elem>
+            <Elem>__UHQ_FBIT__=16</Elem>
+            <Elem>__UHQ_IBIT__=0</Elem>
+            <Elem>__UINT64_C(c)=c ## ULL</Elem>
+            <Elem>__UINT64_MAX__=0xffffffffffffffffULL</Elem>
+            <Elem>__UINT64_TYPE__=long long unsigned int</Elem>
+            <Elem>__UINTMAX_C(c)=c ## ULL</Elem>
+            <Elem>__UINTMAX_MAX__=0xffffffffffffffffULL</Elem>
+            <Elem>__UINTMAX_TYPE__=long long unsigned int</Elem>
+            <Elem>__UINTPTR_MAX__=0xffffffffU</Elem>
+            <Elem>__UINTPTR_TYPE__=unsigned int</Elem>
+            <Elem>__UINT_FAST16_MAX__=0xffffffffU</Elem>
+            <Elem>__UINT_FAST16_TYPE__=unsigned int</Elem>
+            <Elem>__UINT_FAST32_MAX__=0xffffffffU</Elem>
+            <Elem>__UINT_FAST32_TYPE__=unsigned int</Elem>
+            <Elem>__UINT_FAST64_MAX__=0xffffffffffffffffULL</Elem>
+            <Elem>__UINT_FAST64_TYPE__=long long unsigned int</Elem>
+            <Elem>__UINT_LEAST64_MAX__=0xffffffffffffffffULL</Elem>
+            <Elem>__UINT_LEAST64_TYPE__=long long unsigned int</Elem>
+            <Elem>__ULACCUM_EPSILON__=0x1P-32ULK</Elem>
+            <Elem>__ULACCUM_FBIT__=32</Elem>
+            <Elem>__ULACCUM_IBIT__=32</Elem>
+            <Elem>__ULACCUM_MAX__=0XFFFFFFFFFFFFFFFFP-32ULK</Elem>
+            <Elem>__ULACCUM_MIN__=0.0ULK</Elem>
+            <Elem>__ULFRACT_EPSILON__=0x1P-32ULR</Elem>
+            <Elem>__ULFRACT_FBIT__=32</Elem>
+            <Elem>__ULFRACT_IBIT__=0</Elem>
+            <Elem>__ULFRACT_MAX__=0XFFFFFFFFP-32ULR</Elem>
+            <Elem>__ULFRACT_MIN__=0.0ULR</Elem>
+            <Elem>__ULLACCUM_EPSILON__=0x1P-32ULLK</Elem>
+            <Elem>__ULLACCUM_FBIT__=32</Elem>
+            <Elem>__ULLACCUM_IBIT__=32</Elem>
+            <Elem>__ULLACCUM_MAX__=0XFFFFFFFFFFFFFFFFP-32ULLK</Elem>
+            <Elem>__ULLACCUM_MIN__=0.0ULLK</Elem>
+            <Elem>__ULLFRACT_EPSILON__=0x1P-64ULLR</Elem>
+            <Elem>__ULLFRACT_FBIT__=64</Elem>
+            <Elem>__ULLFRACT_IBIT__=0</Elem>
+            <Elem>__ULLFRACT_MAX__=0XFFFFFFFFFFFFFFFFP-64ULLR</Elem>
+            <Elem>__ULLFRACT_MIN__=0.0ULLR</Elem>
+            <Elem>__UQQ_FBIT__=8</Elem>
+            <Elem>__UQQ_IBIT__=0</Elem>
+            <Elem>__USACCUM_EPSILON__=0x1P-8UHK</Elem>
+            <Elem>__USACCUM_FBIT__=8</Elem>
+            <Elem>__USACCUM_IBIT__=8</Elem>
+            <Elem>__USACCUM_MAX__=0XFFFFP-8UHK</Elem>
+            <Elem>__USACCUM_MIN__=0.0UHK</Elem>
+            <Elem>__USA_FBIT__=16</Elem>
+            <Elem>__USA_IBIT__=16</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+            <Elem>__USFRACT_EPSILON__=0x1P-8UHR</Elem>
+            <Elem>__USFRACT_FBIT__=8</Elem>
+            <Elem>__USFRACT_IBIT__=0</Elem>
+            <Elem>__USFRACT_MAX__=0XFFP-8UHR</Elem>
+            <Elem>__USFRACT_MIN__=0.0UHR</Elem>
+            <Elem>__USQ_FBIT__=32</Elem>
+            <Elem>__USQ_IBIT__=0</Elem>
+            <Elem>__UTA_FBIT__=64</Elem>
+            <Elem>__UTA_IBIT__=64</Elem>
+            <Elem>__UTQ_FBIT__=128</Elem>
+            <Elem>__UTQ_IBIT__=0</Elem>
+            <Elem>__VFP_FP__=1</Elem>
+            <Elem>__WCHAR_MAX__=0xffffffffU</Elem>
+            <Elem>__WCHAR_MIN__=0U</Elem>
+            <Elem>__WCHAR_TYPE__=unsigned int</Elem>
+            <Elem>__WCHAR_UNSIGNED__=1</Elem>
+            <Elem>__arm__=1</Elem>
+            <Elem>__thumb2__=1</Elem>
+            <Elem>__thumb__=1</Elem>
+          </preprocessorList>
+          <undefinedList>
+            <Elem>__ARM_ARCH_EXT_IDIV__</Elem>
+            <Elem>__ARM_FEATURE_IDIV</Elem>
+            <Elem>__ARM_FEATURE_QRDMX</Elem>
+          </undefinedList>
+        </ccTool>
+      </item>
+      <item path="cgi/cgi.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <folder path="0/oscar/bmp">
+        <cTool>
+          <incDir>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/bmp</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/oscar/cfg">
+        <cTool>
+          <incDir>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/linux</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm-generic</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/cfg</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/oscar/cpld">
+        <cTool>
+          <incDir>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/oscar/frd">
+        <cTool>
+          <incDir>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/linux</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm-generic</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/frd</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/oscar/gpio">
+        <cTool>
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/oscar/hsm">
+        <cTool>
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/hsm</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/oscar/sim">
+        <cTool>
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/oscar/srd">
+        <cTool>
+          <incDir>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/oscar/swr">
+        <cTool>
+          <incDir>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/swr</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="leancv">
+        <cTool>
+          <incDir>
+            <pElem>../osc-cc/modules/leancv/include/opencv</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <item path="image_processing.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/core</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/hal</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/arm-linux-gnueabihf/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/debug</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/ext</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/flann</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/imgcodecs</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/videoio</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/highgui</pElem>
+            <pElem>oscar/include</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include-fixed</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/linux</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/backward</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/imgproc</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/photo</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/video</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/objdetect</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/calib3d</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/arm-linux-gnueabihf</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>OSC_HOST=1</Elem>
+            <Elem>__ACCUM_EPSILON__=0x1P-15K</Elem>
+            <Elem>__ACCUM_FBIT__=15</Elem>
+            <Elem>__ACCUM_IBIT__=16</Elem>
+            <Elem>__ACCUM_MAX__=0X7FFFFFFFP-15K</Elem>
+            <Elem>__ACCUM_MIN__=(-0X1P15K-0X1P15K)</Elem>
+            <Elem>__APCS_32__=1</Elem>
+            <Elem>__ARMEL__=1</Elem>
+            <Elem>__ARM_32BIT_STATE=1</Elem>
+            <Elem>__ARM_ARCH=7</Elem>
+            <Elem>__ARM_ARCH_7A__=1</Elem>
+            <Elem>__ARM_ARCH_ISA_ARM=1</Elem>
+            <Elem>__ARM_ARCH_ISA_THUMB=2</Elem>
+            <Elem>__ARM_ARCH_PROFILE=65</Elem>
+            <Elem>__ARM_ASM_SYNTAX_UNIFIED__=1</Elem>
+            <Elem>__ARM_EABI__=1</Elem>
+            <Elem>__ARM_FEATURE_CLZ=1</Elem>
+            <Elem>__ARM_FEATURE_DSP=1</Elem>
+            <Elem>__ARM_FEATURE_LDREX=15</Elem>
+            <Elem>__ARM_FEATURE_QBIT=1</Elem>
+            <Elem>__ARM_FEATURE_SAT=1</Elem>
+            <Elem>__ARM_FEATURE_SIMD32=1</Elem>
+            <Elem>__ARM_FEATURE_UNALIGNED=1</Elem>
+            <Elem>__ARM_FP=12</Elem>
+            <Elem>__ARM_PCS_VFP=1</Elem>
+            <Elem>__ARM_SIZEOF_MINIMAL_ENUM=4</Elem>
+            <Elem>__ARM_SIZEOF_WCHAR_T=4</Elem>
+            <Elem>__BIGGEST_ALIGNMENT__=8</Elem>
+            <Elem>__CHAR_UNSIGNED__=1</Elem>
+            <Elem>__DA_FBIT__=31</Elem>
+            <Elem>__DA_IBIT__=32</Elem>
+            <Elem>__DBL_DENORM_MIN__=double(4.9406564584124654e-324L)</Elem>
+            <Elem>__DBL_EPSILON__=double(2.2204460492503131e-16L)</Elem>
+            <Elem>__DBL_MAX__=double(1.7976931348623157e+308L)</Elem>
+            <Elem>__DBL_MIN__=double(2.2250738585072014e-308L)</Elem>
+            <Elem>__DECIMAL_DIG__=17</Elem>
+            <Elem>__DQ_FBIT__=63</Elem>
+            <Elem>__DQ_IBIT__=0</Elem>
+            <Elem>__FLT_DENORM_MIN__=1.4012984643248171e-45F</Elem>
+            <Elem>__FLT_EPSILON__=1.1920928955078125e-7F</Elem>
+            <Elem>__FLT_MAX__=3.4028234663852886e+38F</Elem>
+            <Elem>__FLT_MIN__=1.1754943508222875e-38F</Elem>
+            <Elem>__FRACT_EPSILON__=0x1P-15R</Elem>
+            <Elem>__FRACT_FBIT__=15</Elem>
+            <Elem>__FRACT_IBIT__=0</Elem>
+            <Elem>__FRACT_MAX__=0X7FFFP-15R</Elem>
+            <Elem>__FRACT_MIN__=(-0.5R-0.5R)</Elem>
+            <Elem>__GXX_TYPEINFO_EQUALITY_INLINE=0</Elem>
+            <Elem>__HA_FBIT__=7</Elem>
+            <Elem>__HA_IBIT__=8</Elem>
+            <Elem>__HQ_FBIT__=15</Elem>
+            <Elem>__HQ_IBIT__=0</Elem>
+            <Elem>__INT64_C(c)=c ## LL</Elem>
+            <Elem>__INT64_MAX__=0x7fffffffffffffffLL</Elem>
+            <Elem>__INT64_TYPE__=long long int</Elem>
+            <Elem>__INTMAX_C(c)=c ## LL</Elem>
+            <Elem>__INTMAX_MAX__=0x7fffffffffffffffLL</Elem>
+            <Elem>__INTMAX_TYPE__=long long int</Elem>
+            <Elem>__INTPTR_MAX__=0x7fffffff</Elem>
+            <Elem>__INTPTR_TYPE__=int</Elem>
+            <Elem>__INT_FAST16_MAX__=0x7fffffff</Elem>
+            <Elem>__INT_FAST16_TYPE__=int</Elem>
+            <Elem>__INT_FAST32_MAX__=0x7fffffff</Elem>
+            <Elem>__INT_FAST32_TYPE__=int</Elem>
+            <Elem>__INT_FAST64_MAX__=0x7fffffffffffffffLL</Elem>
+            <Elem>__INT_FAST64_TYPE__=long long int</Elem>
+            <Elem>__INT_LEAST64_MAX__=0x7fffffffffffffffLL</Elem>
+            <Elem>__INT_LEAST64_TYPE__=long long int</Elem>
+            <Elem>__LACCUM_EPSILON__=0x1P-31LK</Elem>
+            <Elem>__LACCUM_FBIT__=31</Elem>
+            <Elem>__LACCUM_IBIT__=32</Elem>
+            <Elem>__LACCUM_MAX__=0X7FFFFFFFFFFFFFFFP-31LK</Elem>
+            <Elem>__LACCUM_MIN__=(-0X1P31LK-0X1P31LK)</Elem>
+            <Elem>__LDBL_DENORM_MIN__=4.9406564584124654e-324L</Elem>
+            <Elem>__LDBL_DIG__=15</Elem>
+            <Elem>__LDBL_EPSILON__=2.2204460492503131e-16L</Elem>
+            <Elem>__LDBL_MANT_DIG__=53</Elem>
+            <Elem>__LDBL_MAX_10_EXP__=308</Elem>
+            <Elem>__LDBL_MAX_EXP__=1024</Elem>
+            <Elem>__LDBL_MAX__=1.7976931348623157e+308L</Elem>
+            <Elem>__LDBL_MIN_10_EXP__=(-307)</Elem>
+            <Elem>__LDBL_MIN_EXP__=(-1021)</Elem>
+            <Elem>__LDBL_MIN__=2.2250738585072014e-308L</Elem>
+            <Elem>__LFRACT_EPSILON__=0x1P-31LR</Elem>
+            <Elem>__LFRACT_FBIT__=31</Elem>
+            <Elem>__LFRACT_IBIT__=0</Elem>
+            <Elem>__LFRACT_MAX__=0X7FFFFFFFP-31LR</Elem>
+            <Elem>__LFRACT_MIN__=(-0.5LR-0.5LR)</Elem>
+            <Elem>__LLACCUM_EPSILON__=0x1P-31LLK</Elem>
+            <Elem>__LLACCUM_FBIT__=31</Elem>
+            <Elem>__LLACCUM_IBIT__=32</Elem>
+            <Elem>__LLACCUM_MAX__=0X7FFFFFFFFFFFFFFFP-31LLK</Elem>
+            <Elem>__LLACCUM_MIN__=(-0X1P31LLK-0X1P31LLK)</Elem>
+            <Elem>__LLFRACT_EPSILON__=0x1P-63LLR</Elem>
+            <Elem>__LLFRACT_FBIT__=63</Elem>
+            <Elem>__LLFRACT_IBIT__=0</Elem>
+            <Elem>__LLFRACT_MAX__=0X7FFFFFFFFFFFFFFFP-63LLR</Elem>
+            <Elem>__LLFRACT_MIN__=(-0.5LLR-0.5LLR)</Elem>
+            <Elem>__LONG_MAX__=0x7fffffffL</Elem>
+            <Elem>__PTRDIFF_MAX__=0x7fffffff</Elem>
+            <Elem>__PTRDIFF_TYPE__=int</Elem>
+            <Elem>__QQ_FBIT__=7</Elem>
+            <Elem>__QQ_IBIT__=0</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__SACCUM_EPSILON__=0x1P-7HK</Elem>
+            <Elem>__SACCUM_FBIT__=7</Elem>
+            <Elem>__SACCUM_IBIT__=8</Elem>
+            <Elem>__SACCUM_MAX__=0X7FFFP-7HK</Elem>
+            <Elem>__SACCUM_MIN__=(-0X1P7HK-0X1P7HK)</Elem>
+            <Elem>__SA_FBIT__=15</Elem>
+            <Elem>__SA_IBIT__=16</Elem>
+            <Elem>__SFRACT_EPSILON__=0x1P-7HR</Elem>
+            <Elem>__SFRACT_FBIT__=7</Elem>
+            <Elem>__SFRACT_IBIT__=0</Elem>
+            <Elem>__SFRACT_MAX__=0X7FP-7HR</Elem>
+            <Elem>__SFRACT_MIN__=(-0.5HR-0.5HR)</Elem>
+            <Elem>__SIZEOF_LONG_DOUBLE__=8</Elem>
+            <Elem>__SIZEOF_LONG__=4</Elem>
+            <Elem>__SIZEOF_POINTER__=4</Elem>
+            <Elem>__SIZEOF_PTRDIFF_T__=4</Elem>
+            <Elem>__SIZEOF_SIZE_T__=4</Elem>
+            <Elem>__SIZE_MAX__=0xffffffffU</Elem>
+            <Elem>__SIZE_TYPE__=unsigned int</Elem>
+            <Elem>__SQ_FBIT__=31</Elem>
+            <Elem>__SQ_IBIT__=0</Elem>
+            <Elem>__TA_FBIT__=63</Elem>
+            <Elem>__TA_IBIT__=64</Elem>
+            <Elem>__THUMBEL__=1</Elem>
+            <Elem>__THUMB_INTERWORK__=1</Elem>
+            <Elem>__TQ_FBIT__=127</Elem>
+            <Elem>__TQ_IBIT__=0</Elem>
+            <Elem>__UACCUM_EPSILON__=0x1P-16UK</Elem>
+            <Elem>__UACCUM_FBIT__=16</Elem>
+            <Elem>__UACCUM_IBIT__=16</Elem>
+            <Elem>__UACCUM_MAX__=0XFFFFFFFFP-16UK</Elem>
+            <Elem>__UACCUM_MIN__=0.0UK</Elem>
+            <Elem>__UDA_FBIT__=32</Elem>
+            <Elem>__UDA_IBIT__=32</Elem>
+            <Elem>__UDQ_FBIT__=64</Elem>
+            <Elem>__UDQ_IBIT__=0</Elem>
+            <Elem>__UFRACT_EPSILON__=0x1P-16UR</Elem>
+            <Elem>__UFRACT_FBIT__=16</Elem>
+            <Elem>__UFRACT_IBIT__=0</Elem>
+            <Elem>__UFRACT_MAX__=0XFFFFP-16UR</Elem>
+            <Elem>__UFRACT_MIN__=0.0UR</Elem>
+            <Elem>__UHA_FBIT__=8</Elem>
+            <Elem>__UHA_IBIT__=8</Elem>
+            <Elem>__UHQ_FBIT__=16</Elem>
+            <Elem>__UHQ_IBIT__=0</Elem>
+            <Elem>__UINT64_C(c)=c ## ULL</Elem>
+            <Elem>__UINT64_MAX__=0xffffffffffffffffULL</Elem>
+            <Elem>__UINT64_TYPE__=long long unsigned int</Elem>
+            <Elem>__UINTMAX_C(c)=c ## ULL</Elem>
+            <Elem>__UINTMAX_MAX__=0xffffffffffffffffULL</Elem>
+            <Elem>__UINTMAX_TYPE__=long long unsigned int</Elem>
+            <Elem>__UINTPTR_MAX__=0xffffffffU</Elem>
+            <Elem>__UINTPTR_TYPE__=unsigned int</Elem>
+            <Elem>__UINT_FAST16_MAX__=0xffffffffU</Elem>
+            <Elem>__UINT_FAST16_TYPE__=unsigned int</Elem>
+            <Elem>__UINT_FAST32_MAX__=0xffffffffU</Elem>
+            <Elem>__UINT_FAST32_TYPE__=unsigned int</Elem>
+            <Elem>__UINT_FAST64_MAX__=0xffffffffffffffffULL</Elem>
+            <Elem>__UINT_FAST64_TYPE__=long long unsigned int</Elem>
+            <Elem>__UINT_LEAST64_MAX__=0xffffffffffffffffULL</Elem>
+            <Elem>__UINT_LEAST64_TYPE__=long long unsigned int</Elem>
+            <Elem>__ULACCUM_EPSILON__=0x1P-32ULK</Elem>
+            <Elem>__ULACCUM_FBIT__=32</Elem>
+            <Elem>__ULACCUM_IBIT__=32</Elem>
+            <Elem>__ULACCUM_MAX__=0XFFFFFFFFFFFFFFFFP-32ULK</Elem>
+            <Elem>__ULACCUM_MIN__=0.0ULK</Elem>
+            <Elem>__ULFRACT_EPSILON__=0x1P-32ULR</Elem>
+            <Elem>__ULFRACT_FBIT__=32</Elem>
+            <Elem>__ULFRACT_IBIT__=0</Elem>
+            <Elem>__ULFRACT_MAX__=0XFFFFFFFFP-32ULR</Elem>
+            <Elem>__ULFRACT_MIN__=0.0ULR</Elem>
+            <Elem>__ULLACCUM_EPSILON__=0x1P-32ULLK</Elem>
+            <Elem>__ULLACCUM_FBIT__=32</Elem>
+            <Elem>__ULLACCUM_IBIT__=32</Elem>
+            <Elem>__ULLACCUM_MAX__=0XFFFFFFFFFFFFFFFFP-32ULLK</Elem>
+            <Elem>__ULLACCUM_MIN__=0.0ULLK</Elem>
+            <Elem>__ULLFRACT_EPSILON__=0x1P-64ULLR</Elem>
+            <Elem>__ULLFRACT_FBIT__=64</Elem>
+            <Elem>__ULLFRACT_IBIT__=0</Elem>
+            <Elem>__ULLFRACT_MAX__=0XFFFFFFFFFFFFFFFFP-64ULLR</Elem>
+            <Elem>__ULLFRACT_MIN__=0.0ULLR</Elem>
+            <Elem>__UQQ_FBIT__=8</Elem>
+            <Elem>__UQQ_IBIT__=0</Elem>
+            <Elem>__USACCUM_EPSILON__=0x1P-8UHK</Elem>
+            <Elem>__USACCUM_FBIT__=8</Elem>
+            <Elem>__USACCUM_IBIT__=8</Elem>
+            <Elem>__USACCUM_MAX__=0XFFFFP-8UHK</Elem>
+            <Elem>__USACCUM_MIN__=0.0UHK</Elem>
+            <Elem>__USA_FBIT__=16</Elem>
+            <Elem>__USA_IBIT__=16</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+            <Elem>__USFRACT_EPSILON__=0x1P-8UHR</Elem>
+            <Elem>__USFRACT_FBIT__=8</Elem>
+            <Elem>__USFRACT_IBIT__=0</Elem>
+            <Elem>__USFRACT_MAX__=0XFFP-8UHR</Elem>
+            <Elem>__USFRACT_MIN__=0.0UHR</Elem>
+            <Elem>__USQ_FBIT__=32</Elem>
+            <Elem>__USQ_IBIT__=0</Elem>
+            <Elem>__UTA_FBIT__=64</Elem>
+            <Elem>__UTA_IBIT__=64</Elem>
+            <Elem>__UTQ_FBIT__=128</Elem>
+            <Elem>__UTQ_IBIT__=0</Elem>
+            <Elem>__VFP_FP__=1</Elem>
+            <Elem>__WCHAR_MAX__=0xffffffffU</Elem>
+            <Elem>__WCHAR_MIN__=0U</Elem>
+            <Elem>__WCHAR_TYPE__=unsigned int</Elem>
+            <Elem>__WCHAR_UNSIGNED__=1</Elem>
+            <Elem>__arm__=1</Elem>
+            <Elem>__thumb2__=1</Elem>
+            <Elem>__thumb__=1</Elem>
+          </preprocessorList>
+          <undefinedList>
+            <Elem>__ARM_ARCH_EXT_IDIV__</Elem>
+            <Elem>__ARM_FEATURE_IDIV</Elem>
+            <Elem>__ARM_FEATURE_QRDMX</Elem>
+          </undefinedList>
+        </ccTool>
+      </item>
+      <item path="ipc.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/core</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/ext</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/arm-linux-gnueabihf/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/debug</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/hal</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/flann</pElem>
+            <pElem>oscar/include</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/imgcodecs</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/backward</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include-fixed</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/linux</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/imgproc</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/photo</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/video</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/objdetect</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/calib3d</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/highgui</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/videoio</pElem>
+            <pElem>cgi</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm-generic</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/arm-linux-gnueabihf</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>OSC_HOST=1</Elem>
+            <Elem>__ACCUM_EPSILON__=0x1P-15K</Elem>
+            <Elem>__ACCUM_FBIT__=15</Elem>
+            <Elem>__ACCUM_IBIT__=16</Elem>
+            <Elem>__ACCUM_MAX__=0X7FFFFFFFP-15K</Elem>
+            <Elem>__ACCUM_MIN__=(-0X1P15K-0X1P15K)</Elem>
+            <Elem>__APCS_32__=1</Elem>
+            <Elem>__ARMEL__=1</Elem>
+            <Elem>__ARM_32BIT_STATE=1</Elem>
+            <Elem>__ARM_ARCH=7</Elem>
+            <Elem>__ARM_ARCH_7A__=1</Elem>
+            <Elem>__ARM_ARCH_ISA_ARM=1</Elem>
+            <Elem>__ARM_ARCH_ISA_THUMB=2</Elem>
+            <Elem>__ARM_ARCH_PROFILE=65</Elem>
+            <Elem>__ARM_ASM_SYNTAX_UNIFIED__=1</Elem>
+            <Elem>__ARM_EABI__=1</Elem>
+            <Elem>__ARM_FEATURE_CLZ=1</Elem>
+            <Elem>__ARM_FEATURE_DSP=1</Elem>
+            <Elem>__ARM_FEATURE_LDREX=15</Elem>
+            <Elem>__ARM_FEATURE_QBIT=1</Elem>
+            <Elem>__ARM_FEATURE_SAT=1</Elem>
+            <Elem>__ARM_FEATURE_SIMD32=1</Elem>
+            <Elem>__ARM_FEATURE_UNALIGNED=1</Elem>
+            <Elem>__ARM_FP=12</Elem>
+            <Elem>__ARM_PCS_VFP=1</Elem>
+            <Elem>__ARM_SIZEOF_MINIMAL_ENUM=4</Elem>
+            <Elem>__ARM_SIZEOF_WCHAR_T=4</Elem>
+            <Elem>__BIGGEST_ALIGNMENT__=8</Elem>
+            <Elem>__CHAR_UNSIGNED__=1</Elem>
+            <Elem>__DA_FBIT__=31</Elem>
+            <Elem>__DA_IBIT__=32</Elem>
+            <Elem>__DBL_DENORM_MIN__=double(4.9406564584124654e-324L)</Elem>
+            <Elem>__DBL_EPSILON__=double(2.2204460492503131e-16L)</Elem>
+            <Elem>__DBL_MAX__=double(1.7976931348623157e+308L)</Elem>
+            <Elem>__DBL_MIN__=double(2.2250738585072014e-308L)</Elem>
+            <Elem>__DECIMAL_DIG__=17</Elem>
+            <Elem>__DQ_FBIT__=63</Elem>
+            <Elem>__DQ_IBIT__=0</Elem>
+            <Elem>__FLT_DENORM_MIN__=1.4012984643248171e-45F</Elem>
+            <Elem>__FLT_EPSILON__=1.1920928955078125e-7F</Elem>
+            <Elem>__FLT_MAX__=3.4028234663852886e+38F</Elem>
+            <Elem>__FLT_MIN__=1.1754943508222875e-38F</Elem>
+            <Elem>__FRACT_EPSILON__=0x1P-15R</Elem>
+            <Elem>__FRACT_FBIT__=15</Elem>
+            <Elem>__FRACT_IBIT__=0</Elem>
+            <Elem>__FRACT_MAX__=0X7FFFP-15R</Elem>
+            <Elem>__FRACT_MIN__=(-0.5R-0.5R)</Elem>
+            <Elem>__GXX_TYPEINFO_EQUALITY_INLINE=0</Elem>
+            <Elem>__HA_FBIT__=7</Elem>
+            <Elem>__HA_IBIT__=8</Elem>
+            <Elem>__HQ_FBIT__=15</Elem>
+            <Elem>__HQ_IBIT__=0</Elem>
+            <Elem>__INT64_C(c)=c ## LL</Elem>
+            <Elem>__INT64_MAX__=0x7fffffffffffffffLL</Elem>
+            <Elem>__INT64_TYPE__=long long int</Elem>
+            <Elem>__INTMAX_C(c)=c ## LL</Elem>
+            <Elem>__INTMAX_MAX__=0x7fffffffffffffffLL</Elem>
+            <Elem>__INTMAX_TYPE__=long long int</Elem>
+            <Elem>__INTPTR_MAX__=0x7fffffff</Elem>
+            <Elem>__INTPTR_TYPE__=int</Elem>
+            <Elem>__INT_FAST16_MAX__=0x7fffffff</Elem>
+            <Elem>__INT_FAST16_TYPE__=int</Elem>
+            <Elem>__INT_FAST32_MAX__=0x7fffffff</Elem>
+            <Elem>__INT_FAST32_TYPE__=int</Elem>
+            <Elem>__INT_FAST64_MAX__=0x7fffffffffffffffLL</Elem>
+            <Elem>__INT_FAST64_TYPE__=long long int</Elem>
+            <Elem>__INT_LEAST64_MAX__=0x7fffffffffffffffLL</Elem>
+            <Elem>__INT_LEAST64_TYPE__=long long int</Elem>
+            <Elem>__LACCUM_EPSILON__=0x1P-31LK</Elem>
+            <Elem>__LACCUM_FBIT__=31</Elem>
+            <Elem>__LACCUM_IBIT__=32</Elem>
+            <Elem>__LACCUM_MAX__=0X7FFFFFFFFFFFFFFFP-31LK</Elem>
+            <Elem>__LACCUM_MIN__=(-0X1P31LK-0X1P31LK)</Elem>
+            <Elem>__LDBL_DENORM_MIN__=4.9406564584124654e-324L</Elem>
+            <Elem>__LDBL_DIG__=15</Elem>
+            <Elem>__LDBL_EPSILON__=2.2204460492503131e-16L</Elem>
+            <Elem>__LDBL_MANT_DIG__=53</Elem>
+            <Elem>__LDBL_MAX_10_EXP__=308</Elem>
+            <Elem>__LDBL_MAX_EXP__=1024</Elem>
+            <Elem>__LDBL_MAX__=1.7976931348623157e+308L</Elem>
+            <Elem>__LDBL_MIN_10_EXP__=(-307)</Elem>
+            <Elem>__LDBL_MIN_EXP__=(-1021)</Elem>
+            <Elem>__LDBL_MIN__=2.2250738585072014e-308L</Elem>
+            <Elem>__LFRACT_EPSILON__=0x1P-31LR</Elem>
+            <Elem>__LFRACT_FBIT__=31</Elem>
+            <Elem>__LFRACT_IBIT__=0</Elem>
+            <Elem>__LFRACT_MAX__=0X7FFFFFFFP-31LR</Elem>
+            <Elem>__LFRACT_MIN__=(-0.5LR-0.5LR)</Elem>
+            <Elem>__LLACCUM_EPSILON__=0x1P-31LLK</Elem>
+            <Elem>__LLACCUM_FBIT__=31</Elem>
+            <Elem>__LLACCUM_IBIT__=32</Elem>
+            <Elem>__LLACCUM_MAX__=0X7FFFFFFFFFFFFFFFP-31LLK</Elem>
+            <Elem>__LLACCUM_MIN__=(-0X1P31LLK-0X1P31LLK)</Elem>
+            <Elem>__LLFRACT_EPSILON__=0x1P-63LLR</Elem>
+            <Elem>__LLFRACT_FBIT__=63</Elem>
+            <Elem>__LLFRACT_IBIT__=0</Elem>
+            <Elem>__LLFRACT_MAX__=0X7FFFFFFFFFFFFFFFP-63LLR</Elem>
+            <Elem>__LLFRACT_MIN__=(-0.5LLR-0.5LLR)</Elem>
+            <Elem>__LONG_MAX__=0x7fffffffL</Elem>
+            <Elem>__PTRDIFF_MAX__=0x7fffffff</Elem>
+            <Elem>__PTRDIFF_TYPE__=int</Elem>
+            <Elem>__QQ_FBIT__=7</Elem>
+            <Elem>__QQ_IBIT__=0</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__SACCUM_EPSILON__=0x1P-7HK</Elem>
+            <Elem>__SACCUM_FBIT__=7</Elem>
+            <Elem>__SACCUM_IBIT__=8</Elem>
+            <Elem>__SACCUM_MAX__=0X7FFFP-7HK</Elem>
+            <Elem>__SACCUM_MIN__=(-0X1P7HK-0X1P7HK)</Elem>
+            <Elem>__SA_FBIT__=15</Elem>
+            <Elem>__SA_IBIT__=16</Elem>
+            <Elem>__SFRACT_EPSILON__=0x1P-7HR</Elem>
+            <Elem>__SFRACT_FBIT__=7</Elem>
+            <Elem>__SFRACT_IBIT__=0</Elem>
+            <Elem>__SFRACT_MAX__=0X7FP-7HR</Elem>
+            <Elem>__SFRACT_MIN__=(-0.5HR-0.5HR)</Elem>
+            <Elem>__SIZEOF_LONG_DOUBLE__=8</Elem>
+            <Elem>__SIZEOF_LONG__=4</Elem>
+            <Elem>__SIZEOF_POINTER__=4</Elem>
+            <Elem>__SIZEOF_PTRDIFF_T__=4</Elem>
+            <Elem>__SIZEOF_SIZE_T__=4</Elem>
+            <Elem>__SIZE_MAX__=0xffffffffU</Elem>
+            <Elem>__SIZE_TYPE__=unsigned int</Elem>
+            <Elem>__SQ_FBIT__=31</Elem>
+            <Elem>__SQ_IBIT__=0</Elem>
+            <Elem>__TA_FBIT__=63</Elem>
+            <Elem>__TA_IBIT__=64</Elem>
+            <Elem>__THUMBEL__=1</Elem>
+            <Elem>__THUMB_INTERWORK__=1</Elem>
+            <Elem>__TQ_FBIT__=127</Elem>
+            <Elem>__TQ_IBIT__=0</Elem>
+            <Elem>__UACCUM_EPSILON__=0x1P-16UK</Elem>
+            <Elem>__UACCUM_FBIT__=16</Elem>
+            <Elem>__UACCUM_IBIT__=16</Elem>
+            <Elem>__UACCUM_MAX__=0XFFFFFFFFP-16UK</Elem>
+            <Elem>__UACCUM_MIN__=0.0UK</Elem>
+            <Elem>__UDA_FBIT__=32</Elem>
+            <Elem>__UDA_IBIT__=32</Elem>
+            <Elem>__UDQ_FBIT__=64</Elem>
+            <Elem>__UDQ_IBIT__=0</Elem>
+            <Elem>__UFRACT_EPSILON__=0x1P-16UR</Elem>
+            <Elem>__UFRACT_FBIT__=16</Elem>
+            <Elem>__UFRACT_IBIT__=0</Elem>
+            <Elem>__UFRACT_MAX__=0XFFFFP-16UR</Elem>
+            <Elem>__UFRACT_MIN__=0.0UR</Elem>
+            <Elem>__UHA_FBIT__=8</Elem>
+            <Elem>__UHA_IBIT__=8</Elem>
+            <Elem>__UHQ_FBIT__=16</Elem>
+            <Elem>__UHQ_IBIT__=0</Elem>
+            <Elem>__UINT64_C(c)=c ## ULL</Elem>
+            <Elem>__UINT64_MAX__=0xffffffffffffffffULL</Elem>
+            <Elem>__UINT64_TYPE__=long long unsigned int</Elem>
+            <Elem>__UINTMAX_C(c)=c ## ULL</Elem>
+            <Elem>__UINTMAX_MAX__=0xffffffffffffffffULL</Elem>
+            <Elem>__UINTMAX_TYPE__=long long unsigned int</Elem>
+            <Elem>__UINTPTR_MAX__=0xffffffffU</Elem>
+            <Elem>__UINTPTR_TYPE__=unsigned int</Elem>
+            <Elem>__UINT_FAST16_MAX__=0xffffffffU</Elem>
+            <Elem>__UINT_FAST16_TYPE__=unsigned int</Elem>
+            <Elem>__UINT_FAST32_MAX__=0xffffffffU</Elem>
+            <Elem>__UINT_FAST32_TYPE__=unsigned int</Elem>
+            <Elem>__UINT_FAST64_MAX__=0xffffffffffffffffULL</Elem>
+            <Elem>__UINT_FAST64_TYPE__=long long unsigned int</Elem>
+            <Elem>__UINT_LEAST64_MAX__=0xffffffffffffffffULL</Elem>
+            <Elem>__UINT_LEAST64_TYPE__=long long unsigned int</Elem>
+            <Elem>__ULACCUM_EPSILON__=0x1P-32ULK</Elem>
+            <Elem>__ULACCUM_FBIT__=32</Elem>
+            <Elem>__ULACCUM_IBIT__=32</Elem>
+            <Elem>__ULACCUM_MAX__=0XFFFFFFFFFFFFFFFFP-32ULK</Elem>
+            <Elem>__ULACCUM_MIN__=0.0ULK</Elem>
+            <Elem>__ULFRACT_EPSILON__=0x1P-32ULR</Elem>
+            <Elem>__ULFRACT_FBIT__=32</Elem>
+            <Elem>__ULFRACT_IBIT__=0</Elem>
+            <Elem>__ULFRACT_MAX__=0XFFFFFFFFP-32ULR</Elem>
+            <Elem>__ULFRACT_MIN__=0.0ULR</Elem>
+            <Elem>__ULLACCUM_EPSILON__=0x1P-32ULLK</Elem>
+            <Elem>__ULLACCUM_FBIT__=32</Elem>
+            <Elem>__ULLACCUM_IBIT__=32</Elem>
+            <Elem>__ULLACCUM_MAX__=0XFFFFFFFFFFFFFFFFP-32ULLK</Elem>
+            <Elem>__ULLACCUM_MIN__=0.0ULLK</Elem>
+            <Elem>__ULLFRACT_EPSILON__=0x1P-64ULLR</Elem>
+            <Elem>__ULLFRACT_FBIT__=64</Elem>
+            <Elem>__ULLFRACT_IBIT__=0</Elem>
+            <Elem>__ULLFRACT_MAX__=0XFFFFFFFFFFFFFFFFP-64ULLR</Elem>
+            <Elem>__ULLFRACT_MIN__=0.0ULLR</Elem>
+            <Elem>__UQQ_FBIT__=8</Elem>
+            <Elem>__UQQ_IBIT__=0</Elem>
+            <Elem>__USACCUM_EPSILON__=0x1P-8UHK</Elem>
+            <Elem>__USACCUM_FBIT__=8</Elem>
+            <Elem>__USACCUM_IBIT__=8</Elem>
+            <Elem>__USACCUM_MAX__=0XFFFFP-8UHK</Elem>
+            <Elem>__USACCUM_MIN__=0.0UHK</Elem>
+            <Elem>__USA_FBIT__=16</Elem>
+            <Elem>__USA_IBIT__=16</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+            <Elem>__USFRACT_EPSILON__=0x1P-8UHR</Elem>
+            <Elem>__USFRACT_FBIT__=8</Elem>
+            <Elem>__USFRACT_IBIT__=0</Elem>
+            <Elem>__USFRACT_MAX__=0XFFP-8UHR</Elem>
+            <Elem>__USFRACT_MIN__=0.0UHR</Elem>
+            <Elem>__USQ_FBIT__=32</Elem>
+            <Elem>__USQ_IBIT__=0</Elem>
+            <Elem>__UTA_FBIT__=64</Elem>
+            <Elem>__UTA_IBIT__=64</Elem>
+            <Elem>__UTQ_FBIT__=128</Elem>
+            <Elem>__UTQ_IBIT__=0</Elem>
+            <Elem>__VFP_FP__=1</Elem>
+            <Elem>__WCHAR_MAX__=0xffffffffU</Elem>
+            <Elem>__WCHAR_MIN__=0U</Elem>
+            <Elem>__WCHAR_TYPE__=unsigned int</Elem>
+            <Elem>__WCHAR_UNSIGNED__=1</Elem>
+            <Elem>__arm__=1</Elem>
+            <Elem>__thumb2__=1</Elem>
+            <Elem>__thumb__=1</Elem>
+          </preprocessorList>
+          <undefinedList>
+            <Elem>__ARM_ARCH_EXT_IDIV__</Elem>
+            <Elem>__ARM_FEATURE_IDIV</Elem>
+            <Elem>__ARM_FEATURE_QRDMX</Elem>
+          </undefinedList>
+        </ccTool>
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/arm-linux-gnueabihf/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/debug</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/ext</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>oscar/include</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/hal</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/core</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/flann</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/imgcodecs</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/videoio</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/highgui</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/backward</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include-fixed</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/linux</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/imgproc</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/photo</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/video</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/objdetect</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/calib3d</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/arm-linux-gnueabihf</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>OSC_HOST=1</Elem>
+            <Elem>__ACCUM_EPSILON__=0x1P-15K</Elem>
+            <Elem>__ACCUM_FBIT__=15</Elem>
+            <Elem>__ACCUM_IBIT__=16</Elem>
+            <Elem>__ACCUM_MAX__=0X7FFFFFFFP-15K</Elem>
+            <Elem>__ACCUM_MIN__=(-0X1P15K-0X1P15K)</Elem>
+            <Elem>__APCS_32__=1</Elem>
+            <Elem>__ARMEL__=1</Elem>
+            <Elem>__ARM_32BIT_STATE=1</Elem>
+            <Elem>__ARM_ARCH=7</Elem>
+            <Elem>__ARM_ARCH_7A__=1</Elem>
+            <Elem>__ARM_ARCH_ISA_ARM=1</Elem>
+            <Elem>__ARM_ARCH_ISA_THUMB=2</Elem>
+            <Elem>__ARM_ARCH_PROFILE=65</Elem>
+            <Elem>__ARM_ASM_SYNTAX_UNIFIED__=1</Elem>
+            <Elem>__ARM_EABI__=1</Elem>
+            <Elem>__ARM_FEATURE_CLZ=1</Elem>
+            <Elem>__ARM_FEATURE_DSP=1</Elem>
+            <Elem>__ARM_FEATURE_LDREX=15</Elem>
+            <Elem>__ARM_FEATURE_QBIT=1</Elem>
+            <Elem>__ARM_FEATURE_SAT=1</Elem>
+            <Elem>__ARM_FEATURE_SIMD32=1</Elem>
+            <Elem>__ARM_FEATURE_UNALIGNED=1</Elem>
+            <Elem>__ARM_FP=12</Elem>
+            <Elem>__ARM_PCS_VFP=1</Elem>
+            <Elem>__ARM_SIZEOF_MINIMAL_ENUM=4</Elem>
+            <Elem>__ARM_SIZEOF_WCHAR_T=4</Elem>
+            <Elem>__BIGGEST_ALIGNMENT__=8</Elem>
+            <Elem>__CHAR_UNSIGNED__=1</Elem>
+            <Elem>__DA_FBIT__=31</Elem>
+            <Elem>__DA_IBIT__=32</Elem>
+            <Elem>__DBL_DENORM_MIN__=double(4.9406564584124654e-324L)</Elem>
+            <Elem>__DBL_EPSILON__=double(2.2204460492503131e-16L)</Elem>
+            <Elem>__DBL_MAX__=double(1.7976931348623157e+308L)</Elem>
+            <Elem>__DBL_MIN__=double(2.2250738585072014e-308L)</Elem>
+            <Elem>__DECIMAL_DIG__=17</Elem>
+            <Elem>__DQ_FBIT__=63</Elem>
+            <Elem>__DQ_IBIT__=0</Elem>
+            <Elem>__FLT_DENORM_MIN__=1.4012984643248171e-45F</Elem>
+            <Elem>__FLT_EPSILON__=1.1920928955078125e-7F</Elem>
+            <Elem>__FLT_MAX__=3.4028234663852886e+38F</Elem>
+            <Elem>__FLT_MIN__=1.1754943508222875e-38F</Elem>
+            <Elem>__FRACT_EPSILON__=0x1P-15R</Elem>
+            <Elem>__FRACT_FBIT__=15</Elem>
+            <Elem>__FRACT_IBIT__=0</Elem>
+            <Elem>__FRACT_MAX__=0X7FFFP-15R</Elem>
+            <Elem>__FRACT_MIN__=(-0.5R-0.5R)</Elem>
+            <Elem>__GXX_TYPEINFO_EQUALITY_INLINE=0</Elem>
+            <Elem>__HA_FBIT__=7</Elem>
+            <Elem>__HA_IBIT__=8</Elem>
+            <Elem>__HQ_FBIT__=15</Elem>
+            <Elem>__HQ_IBIT__=0</Elem>
+            <Elem>__INT64_C(c)=c ## LL</Elem>
+            <Elem>__INT64_MAX__=0x7fffffffffffffffLL</Elem>
+            <Elem>__INT64_TYPE__=long long int</Elem>
+            <Elem>__INTMAX_C(c)=c ## LL</Elem>
+            <Elem>__INTMAX_MAX__=0x7fffffffffffffffLL</Elem>
+            <Elem>__INTMAX_TYPE__=long long int</Elem>
+            <Elem>__INTPTR_MAX__=0x7fffffff</Elem>
+            <Elem>__INTPTR_TYPE__=int</Elem>
+            <Elem>__INT_FAST16_MAX__=0x7fffffff</Elem>
+            <Elem>__INT_FAST16_TYPE__=int</Elem>
+            <Elem>__INT_FAST32_MAX__=0x7fffffff</Elem>
+            <Elem>__INT_FAST32_TYPE__=int</Elem>
+            <Elem>__INT_FAST64_MAX__=0x7fffffffffffffffLL</Elem>
+            <Elem>__INT_FAST64_TYPE__=long long int</Elem>
+            <Elem>__INT_LEAST64_MAX__=0x7fffffffffffffffLL</Elem>
+            <Elem>__INT_LEAST64_TYPE__=long long int</Elem>
+            <Elem>__LACCUM_EPSILON__=0x1P-31LK</Elem>
+            <Elem>__LACCUM_FBIT__=31</Elem>
+            <Elem>__LACCUM_IBIT__=32</Elem>
+            <Elem>__LACCUM_MAX__=0X7FFFFFFFFFFFFFFFP-31LK</Elem>
+            <Elem>__LACCUM_MIN__=(-0X1P31LK-0X1P31LK)</Elem>
+            <Elem>__LDBL_DENORM_MIN__=4.9406564584124654e-324L</Elem>
+            <Elem>__LDBL_DIG__=15</Elem>
+            <Elem>__LDBL_EPSILON__=2.2204460492503131e-16L</Elem>
+            <Elem>__LDBL_MANT_DIG__=53</Elem>
+            <Elem>__LDBL_MAX_10_EXP__=308</Elem>
+            <Elem>__LDBL_MAX_EXP__=1024</Elem>
+            <Elem>__LDBL_MAX__=1.7976931348623157e+308L</Elem>
+            <Elem>__LDBL_MIN_10_EXP__=(-307)</Elem>
+            <Elem>__LDBL_MIN_EXP__=(-1021)</Elem>
+            <Elem>__LDBL_MIN__=2.2250738585072014e-308L</Elem>
+            <Elem>__LFRACT_EPSILON__=0x1P-31LR</Elem>
+            <Elem>__LFRACT_FBIT__=31</Elem>
+            <Elem>__LFRACT_IBIT__=0</Elem>
+            <Elem>__LFRACT_MAX__=0X7FFFFFFFP-31LR</Elem>
+            <Elem>__LFRACT_MIN__=(-0.5LR-0.5LR)</Elem>
+            <Elem>__LLACCUM_EPSILON__=0x1P-31LLK</Elem>
+            <Elem>__LLACCUM_FBIT__=31</Elem>
+            <Elem>__LLACCUM_IBIT__=32</Elem>
+            <Elem>__LLACCUM_MAX__=0X7FFFFFFFFFFFFFFFP-31LLK</Elem>
+            <Elem>__LLACCUM_MIN__=(-0X1P31LLK-0X1P31LLK)</Elem>
+            <Elem>__LLFRACT_EPSILON__=0x1P-63LLR</Elem>
+            <Elem>__LLFRACT_FBIT__=63</Elem>
+            <Elem>__LLFRACT_IBIT__=0</Elem>
+            <Elem>__LLFRACT_MAX__=0X7FFFFFFFFFFFFFFFP-63LLR</Elem>
+            <Elem>__LLFRACT_MIN__=(-0.5LLR-0.5LLR)</Elem>
+            <Elem>__LONG_MAX__=0x7fffffffL</Elem>
+            <Elem>__PTRDIFF_MAX__=0x7fffffff</Elem>
+            <Elem>__PTRDIFF_TYPE__=int</Elem>
+            <Elem>__QQ_FBIT__=7</Elem>
+            <Elem>__QQ_IBIT__=0</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__SACCUM_EPSILON__=0x1P-7HK</Elem>
+            <Elem>__SACCUM_FBIT__=7</Elem>
+            <Elem>__SACCUM_IBIT__=8</Elem>
+            <Elem>__SACCUM_MAX__=0X7FFFP-7HK</Elem>
+            <Elem>__SACCUM_MIN__=(-0X1P7HK-0X1P7HK)</Elem>
+            <Elem>__SA_FBIT__=15</Elem>
+            <Elem>__SA_IBIT__=16</Elem>
+            <Elem>__SFRACT_EPSILON__=0x1P-7HR</Elem>
+            <Elem>__SFRACT_FBIT__=7</Elem>
+            <Elem>__SFRACT_IBIT__=0</Elem>
+            <Elem>__SFRACT_MAX__=0X7FP-7HR</Elem>
+            <Elem>__SFRACT_MIN__=(-0.5HR-0.5HR)</Elem>
+            <Elem>__SIZEOF_LONG_DOUBLE__=8</Elem>
+            <Elem>__SIZEOF_LONG__=4</Elem>
+            <Elem>__SIZEOF_POINTER__=4</Elem>
+            <Elem>__SIZEOF_PTRDIFF_T__=4</Elem>
+            <Elem>__SIZEOF_SIZE_T__=4</Elem>
+            <Elem>__SIZE_MAX__=0xffffffffU</Elem>
+            <Elem>__SIZE_TYPE__=unsigned int</Elem>
+            <Elem>__SQ_FBIT__=31</Elem>
+            <Elem>__SQ_IBIT__=0</Elem>
+            <Elem>__TA_FBIT__=63</Elem>
+            <Elem>__TA_IBIT__=64</Elem>
+            <Elem>__THUMBEL__=1</Elem>
+            <Elem>__THUMB_INTERWORK__=1</Elem>
+            <Elem>__TQ_FBIT__=127</Elem>
+            <Elem>__TQ_IBIT__=0</Elem>
+            <Elem>__UACCUM_EPSILON__=0x1P-16UK</Elem>
+            <Elem>__UACCUM_FBIT__=16</Elem>
+            <Elem>__UACCUM_IBIT__=16</Elem>
+            <Elem>__UACCUM_MAX__=0XFFFFFFFFP-16UK</Elem>
+            <Elem>__UACCUM_MIN__=0.0UK</Elem>
+            <Elem>__UDA_FBIT__=32</Elem>
+            <Elem>__UDA_IBIT__=32</Elem>
+            <Elem>__UDQ_FBIT__=64</Elem>
+            <Elem>__UDQ_IBIT__=0</Elem>
+            <Elem>__UFRACT_EPSILON__=0x1P-16UR</Elem>
+            <Elem>__UFRACT_FBIT__=16</Elem>
+            <Elem>__UFRACT_IBIT__=0</Elem>
+            <Elem>__UFRACT_MAX__=0XFFFFP-16UR</Elem>
+            <Elem>__UFRACT_MIN__=0.0UR</Elem>
+            <Elem>__UHA_FBIT__=8</Elem>
+            <Elem>__UHA_IBIT__=8</Elem>
+            <Elem>__UHQ_FBIT__=16</Elem>
+            <Elem>__UHQ_IBIT__=0</Elem>
+            <Elem>__UINT64_C(c)=c ## ULL</Elem>
+            <Elem>__UINT64_MAX__=0xffffffffffffffffULL</Elem>
+            <Elem>__UINT64_TYPE__=long long unsigned int</Elem>
+            <Elem>__UINTMAX_C(c)=c ## ULL</Elem>
+            <Elem>__UINTMAX_MAX__=0xffffffffffffffffULL</Elem>
+            <Elem>__UINTMAX_TYPE__=long long unsigned int</Elem>
+            <Elem>__UINTPTR_MAX__=0xffffffffU</Elem>
+            <Elem>__UINTPTR_TYPE__=unsigned int</Elem>
+            <Elem>__UINT_FAST16_MAX__=0xffffffffU</Elem>
+            <Elem>__UINT_FAST16_TYPE__=unsigned int</Elem>
+            <Elem>__UINT_FAST32_MAX__=0xffffffffU</Elem>
+            <Elem>__UINT_FAST32_TYPE__=unsigned int</Elem>
+            <Elem>__UINT_FAST64_MAX__=0xffffffffffffffffULL</Elem>
+            <Elem>__UINT_FAST64_TYPE__=long long unsigned int</Elem>
+            <Elem>__UINT_LEAST64_MAX__=0xffffffffffffffffULL</Elem>
+            <Elem>__UINT_LEAST64_TYPE__=long long unsigned int</Elem>
+            <Elem>__ULACCUM_EPSILON__=0x1P-32ULK</Elem>
+            <Elem>__ULACCUM_FBIT__=32</Elem>
+            <Elem>__ULACCUM_IBIT__=32</Elem>
+            <Elem>__ULACCUM_MAX__=0XFFFFFFFFFFFFFFFFP-32ULK</Elem>
+            <Elem>__ULACCUM_MIN__=0.0ULK</Elem>
+            <Elem>__ULFRACT_EPSILON__=0x1P-32ULR</Elem>
+            <Elem>__ULFRACT_FBIT__=32</Elem>
+            <Elem>__ULFRACT_IBIT__=0</Elem>
+            <Elem>__ULFRACT_MAX__=0XFFFFFFFFP-32ULR</Elem>
+            <Elem>__ULFRACT_MIN__=0.0ULR</Elem>
+            <Elem>__ULLACCUM_EPSILON__=0x1P-32ULLK</Elem>
+            <Elem>__ULLACCUM_FBIT__=32</Elem>
+            <Elem>__ULLACCUM_IBIT__=32</Elem>
+            <Elem>__ULLACCUM_MAX__=0XFFFFFFFFFFFFFFFFP-32ULLK</Elem>
+            <Elem>__ULLACCUM_MIN__=0.0ULLK</Elem>
+            <Elem>__ULLFRACT_EPSILON__=0x1P-64ULLR</Elem>
+            <Elem>__ULLFRACT_FBIT__=64</Elem>
+            <Elem>__ULLFRACT_IBIT__=0</Elem>
+            <Elem>__ULLFRACT_MAX__=0XFFFFFFFFFFFFFFFFP-64ULLR</Elem>
+            <Elem>__ULLFRACT_MIN__=0.0ULLR</Elem>
+            <Elem>__UQQ_FBIT__=8</Elem>
+            <Elem>__UQQ_IBIT__=0</Elem>
+            <Elem>__USACCUM_EPSILON__=0x1P-8UHK</Elem>
+            <Elem>__USACCUM_FBIT__=8</Elem>
+            <Elem>__USACCUM_IBIT__=8</Elem>
+            <Elem>__USACCUM_MAX__=0XFFFFP-8UHK</Elem>
+            <Elem>__USACCUM_MIN__=0.0UHK</Elem>
+            <Elem>__USA_FBIT__=16</Elem>
+            <Elem>__USA_IBIT__=16</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+            <Elem>__USFRACT_EPSILON__=0x1P-8UHR</Elem>
+            <Elem>__USFRACT_FBIT__=8</Elem>
+            <Elem>__USFRACT_IBIT__=0</Elem>
+            <Elem>__USFRACT_MAX__=0XFFP-8UHR</Elem>
+            <Elem>__USFRACT_MIN__=0.0UHR</Elem>
+            <Elem>__USQ_FBIT__=32</Elem>
+            <Elem>__USQ_IBIT__=0</Elem>
+            <Elem>__UTA_FBIT__=64</Elem>
+            <Elem>__UTA_IBIT__=64</Elem>
+            <Elem>__UTQ_FBIT__=128</Elem>
+            <Elem>__UTQ_IBIT__=0</Elem>
+            <Elem>__VFP_FP__=1</Elem>
+            <Elem>__WCHAR_MAX__=0xffffffffU</Elem>
+            <Elem>__WCHAR_MIN__=0U</Elem>
+            <Elem>__WCHAR_TYPE__=unsigned int</Elem>
+            <Elem>__WCHAR_UNSIGNED__=1</Elem>
+            <Elem>__arm__=1</Elem>
+            <Elem>__thumb2__=1</Elem>
+            <Elem>__thumb__=1</Elem>
+          </preprocessorList>
+          <undefinedList>
+            <Elem>__ARM_ARCH_EXT_IDIV__</Elem>
+            <Elem>__ARM_FEATURE_IDIV</Elem>
+            <Elem>__ARM_FEATURE_QRDMX</Elem>
+          </undefinedList>
+        </ccTool>
+      </item>
+      <item path="main_class.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>oscar/include</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/hal</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/arm-linux-gnueabihf/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/debug</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/ext</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/core</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/flann</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/imgcodecs</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/videoio</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/highgui</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include-fixed</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/linux</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/backward</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/imgproc</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/photo</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/video</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/objdetect</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include/opencv2/calib3d</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/c++/5/arm-linux-gnueabihf</pElem>
+            <pElem>../image_proc_agent/externals/OpenCV3.0.0.linux.x86/build/arm-obj_rel/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>OSC_HOST=1</Elem>
+            <Elem>__ACCUM_EPSILON__=0x1P-15K</Elem>
+            <Elem>__ACCUM_FBIT__=15</Elem>
+            <Elem>__ACCUM_IBIT__=16</Elem>
+            <Elem>__ACCUM_MAX__=0X7FFFFFFFP-15K</Elem>
+            <Elem>__ACCUM_MIN__=(-0X1P15K-0X1P15K)</Elem>
+            <Elem>__APCS_32__=1</Elem>
+            <Elem>__ARMEL__=1</Elem>
+            <Elem>__ARM_32BIT_STATE=1</Elem>
+            <Elem>__ARM_ARCH=7</Elem>
+            <Elem>__ARM_ARCH_7A__=1</Elem>
+            <Elem>__ARM_ARCH_ISA_ARM=1</Elem>
+            <Elem>__ARM_ARCH_ISA_THUMB=2</Elem>
+            <Elem>__ARM_ARCH_PROFILE=65</Elem>
+            <Elem>__ARM_ASM_SYNTAX_UNIFIED__=1</Elem>
+            <Elem>__ARM_EABI__=1</Elem>
+            <Elem>__ARM_FEATURE_CLZ=1</Elem>
+            <Elem>__ARM_FEATURE_DSP=1</Elem>
+            <Elem>__ARM_FEATURE_LDREX=15</Elem>
+            <Elem>__ARM_FEATURE_QBIT=1</Elem>
+            <Elem>__ARM_FEATURE_SAT=1</Elem>
+            <Elem>__ARM_FEATURE_SIMD32=1</Elem>
+            <Elem>__ARM_FEATURE_UNALIGNED=1</Elem>
+            <Elem>__ARM_FP=12</Elem>
+            <Elem>__ARM_PCS_VFP=1</Elem>
+            <Elem>__ARM_SIZEOF_MINIMAL_ENUM=4</Elem>
+            <Elem>__ARM_SIZEOF_WCHAR_T=4</Elem>
+            <Elem>__BIGGEST_ALIGNMENT__=8</Elem>
+            <Elem>__CHAR_UNSIGNED__=1</Elem>
+            <Elem>__DA_FBIT__=31</Elem>
+            <Elem>__DA_IBIT__=32</Elem>
+            <Elem>__DBL_DENORM_MIN__=double(4.9406564584124654e-324L)</Elem>
+            <Elem>__DBL_EPSILON__=double(2.2204460492503131e-16L)</Elem>
+            <Elem>__DBL_MAX__=double(1.7976931348623157e+308L)</Elem>
+            <Elem>__DBL_MIN__=double(2.2250738585072014e-308L)</Elem>
+            <Elem>__DECIMAL_DIG__=17</Elem>
+            <Elem>__DQ_FBIT__=63</Elem>
+            <Elem>__DQ_IBIT__=0</Elem>
+            <Elem>__FLT_DENORM_MIN__=1.4012984643248171e-45F</Elem>
+            <Elem>__FLT_EPSILON__=1.1920928955078125e-7F</Elem>
+            <Elem>__FLT_MAX__=3.4028234663852886e+38F</Elem>
+            <Elem>__FLT_MIN__=1.1754943508222875e-38F</Elem>
+            <Elem>__FRACT_EPSILON__=0x1P-15R</Elem>
+            <Elem>__FRACT_FBIT__=15</Elem>
+            <Elem>__FRACT_IBIT__=0</Elem>
+            <Elem>__FRACT_MAX__=0X7FFFP-15R</Elem>
+            <Elem>__FRACT_MIN__=(-0.5R-0.5R)</Elem>
+            <Elem>__GXX_TYPEINFO_EQUALITY_INLINE=0</Elem>
+            <Elem>__HA_FBIT__=7</Elem>
+            <Elem>__HA_IBIT__=8</Elem>
+            <Elem>__HQ_FBIT__=15</Elem>
+            <Elem>__HQ_IBIT__=0</Elem>
+            <Elem>__INT64_C(c)=c ## LL</Elem>
+            <Elem>__INT64_MAX__=0x7fffffffffffffffLL</Elem>
+            <Elem>__INT64_TYPE__=long long int</Elem>
+            <Elem>__INTMAX_C(c)=c ## LL</Elem>
+            <Elem>__INTMAX_MAX__=0x7fffffffffffffffLL</Elem>
+            <Elem>__INTMAX_TYPE__=long long int</Elem>
+            <Elem>__INTPTR_MAX__=0x7fffffff</Elem>
+            <Elem>__INTPTR_TYPE__=int</Elem>
+            <Elem>__INT_FAST16_MAX__=0x7fffffff</Elem>
+            <Elem>__INT_FAST16_TYPE__=int</Elem>
+            <Elem>__INT_FAST32_MAX__=0x7fffffff</Elem>
+            <Elem>__INT_FAST32_TYPE__=int</Elem>
+            <Elem>__INT_FAST64_MAX__=0x7fffffffffffffffLL</Elem>
+            <Elem>__INT_FAST64_TYPE__=long long int</Elem>
+            <Elem>__INT_LEAST64_MAX__=0x7fffffffffffffffLL</Elem>
+            <Elem>__INT_LEAST64_TYPE__=long long int</Elem>
+            <Elem>__LACCUM_EPSILON__=0x1P-31LK</Elem>
+            <Elem>__LACCUM_FBIT__=31</Elem>
+            <Elem>__LACCUM_IBIT__=32</Elem>
+            <Elem>__LACCUM_MAX__=0X7FFFFFFFFFFFFFFFP-31LK</Elem>
+            <Elem>__LACCUM_MIN__=(-0X1P31LK-0X1P31LK)</Elem>
+            <Elem>__LDBL_DENORM_MIN__=4.9406564584124654e-324L</Elem>
+            <Elem>__LDBL_DIG__=15</Elem>
+            <Elem>__LDBL_EPSILON__=2.2204460492503131e-16L</Elem>
+            <Elem>__LDBL_MANT_DIG__=53</Elem>
+            <Elem>__LDBL_MAX_10_EXP__=308</Elem>
+            <Elem>__LDBL_MAX_EXP__=1024</Elem>
+            <Elem>__LDBL_MAX__=1.7976931348623157e+308L</Elem>
+            <Elem>__LDBL_MIN_10_EXP__=(-307)</Elem>
+            <Elem>__LDBL_MIN_EXP__=(-1021)</Elem>
+            <Elem>__LDBL_MIN__=2.2250738585072014e-308L</Elem>
+            <Elem>__LFRACT_EPSILON__=0x1P-31LR</Elem>
+            <Elem>__LFRACT_FBIT__=31</Elem>
+            <Elem>__LFRACT_IBIT__=0</Elem>
+            <Elem>__LFRACT_MAX__=0X7FFFFFFFP-31LR</Elem>
+            <Elem>__LFRACT_MIN__=(-0.5LR-0.5LR)</Elem>
+            <Elem>__LLACCUM_EPSILON__=0x1P-31LLK</Elem>
+            <Elem>__LLACCUM_FBIT__=31</Elem>
+            <Elem>__LLACCUM_IBIT__=32</Elem>
+            <Elem>__LLACCUM_MAX__=0X7FFFFFFFFFFFFFFFP-31LLK</Elem>
+            <Elem>__LLACCUM_MIN__=(-0X1P31LLK-0X1P31LLK)</Elem>
+            <Elem>__LLFRACT_EPSILON__=0x1P-63LLR</Elem>
+            <Elem>__LLFRACT_FBIT__=63</Elem>
+            <Elem>__LLFRACT_IBIT__=0</Elem>
+            <Elem>__LLFRACT_MAX__=0X7FFFFFFFFFFFFFFFP-63LLR</Elem>
+            <Elem>__LLFRACT_MIN__=(-0.5LLR-0.5LLR)</Elem>
+            <Elem>__LONG_MAX__=0x7fffffffL</Elem>
+            <Elem>__PTRDIFF_MAX__=0x7fffffff</Elem>
+            <Elem>__PTRDIFF_TYPE__=int</Elem>
+            <Elem>__QQ_FBIT__=7</Elem>
+            <Elem>__QQ_IBIT__=0</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__SACCUM_EPSILON__=0x1P-7HK</Elem>
+            <Elem>__SACCUM_FBIT__=7</Elem>
+            <Elem>__SACCUM_IBIT__=8</Elem>
+            <Elem>__SACCUM_MAX__=0X7FFFP-7HK</Elem>
+            <Elem>__SACCUM_MIN__=(-0X1P7HK-0X1P7HK)</Elem>
+            <Elem>__SA_FBIT__=15</Elem>
+            <Elem>__SA_IBIT__=16</Elem>
+            <Elem>__SFRACT_EPSILON__=0x1P-7HR</Elem>
+            <Elem>__SFRACT_FBIT__=7</Elem>
+            <Elem>__SFRACT_IBIT__=0</Elem>
+            <Elem>__SFRACT_MAX__=0X7FP-7HR</Elem>
+            <Elem>__SFRACT_MIN__=(-0.5HR-0.5HR)</Elem>
+            <Elem>__SIZEOF_LONG_DOUBLE__=8</Elem>
+            <Elem>__SIZEOF_LONG__=4</Elem>
+            <Elem>__SIZEOF_POINTER__=4</Elem>
+            <Elem>__SIZEOF_PTRDIFF_T__=4</Elem>
+            <Elem>__SIZEOF_SIZE_T__=4</Elem>
+            <Elem>__SIZE_MAX__=0xffffffffU</Elem>
+            <Elem>__SIZE_TYPE__=unsigned int</Elem>
+            <Elem>__SQ_FBIT__=31</Elem>
+            <Elem>__SQ_IBIT__=0</Elem>
+            <Elem>__TA_FBIT__=63</Elem>
+            <Elem>__TA_IBIT__=64</Elem>
+            <Elem>__THUMBEL__=1</Elem>
+            <Elem>__THUMB_INTERWORK__=1</Elem>
+            <Elem>__TQ_FBIT__=127</Elem>
+            <Elem>__TQ_IBIT__=0</Elem>
+            <Elem>__UACCUM_EPSILON__=0x1P-16UK</Elem>
+            <Elem>__UACCUM_FBIT__=16</Elem>
+            <Elem>__UACCUM_IBIT__=16</Elem>
+            <Elem>__UACCUM_MAX__=0XFFFFFFFFP-16UK</Elem>
+            <Elem>__UACCUM_MIN__=0.0UK</Elem>
+            <Elem>__UDA_FBIT__=32</Elem>
+            <Elem>__UDA_IBIT__=32</Elem>
+            <Elem>__UDQ_FBIT__=64</Elem>
+            <Elem>__UDQ_IBIT__=0</Elem>
+            <Elem>__UFRACT_EPSILON__=0x1P-16UR</Elem>
+            <Elem>__UFRACT_FBIT__=16</Elem>
+            <Elem>__UFRACT_IBIT__=0</Elem>
+            <Elem>__UFRACT_MAX__=0XFFFFP-16UR</Elem>
+            <Elem>__UFRACT_MIN__=0.0UR</Elem>
+            <Elem>__UHA_FBIT__=8</Elem>
+            <Elem>__UHA_IBIT__=8</Elem>
+            <Elem>__UHQ_FBIT__=16</Elem>
+            <Elem>__UHQ_IBIT__=0</Elem>
+            <Elem>__UINT64_C(c)=c ## ULL</Elem>
+            <Elem>__UINT64_MAX__=0xffffffffffffffffULL</Elem>
+            <Elem>__UINT64_TYPE__=long long unsigned int</Elem>
+            <Elem>__UINTMAX_C(c)=c ## ULL</Elem>
+            <Elem>__UINTMAX_MAX__=0xffffffffffffffffULL</Elem>
+            <Elem>__UINTMAX_TYPE__=long long unsigned int</Elem>
+            <Elem>__UINTPTR_MAX__=0xffffffffU</Elem>
+            <Elem>__UINTPTR_TYPE__=unsigned int</Elem>
+            <Elem>__UINT_FAST16_MAX__=0xffffffffU</Elem>
+            <Elem>__UINT_FAST16_TYPE__=unsigned int</Elem>
+            <Elem>__UINT_FAST32_MAX__=0xffffffffU</Elem>
+            <Elem>__UINT_FAST32_TYPE__=unsigned int</Elem>
+            <Elem>__UINT_FAST64_MAX__=0xffffffffffffffffULL</Elem>
+            <Elem>__UINT_FAST64_TYPE__=long long unsigned int</Elem>
+            <Elem>__UINT_LEAST64_MAX__=0xffffffffffffffffULL</Elem>
+            <Elem>__UINT_LEAST64_TYPE__=long long unsigned int</Elem>
+            <Elem>__ULACCUM_EPSILON__=0x1P-32ULK</Elem>
+            <Elem>__ULACCUM_FBIT__=32</Elem>
+            <Elem>__ULACCUM_IBIT__=32</Elem>
+            <Elem>__ULACCUM_MAX__=0XFFFFFFFFFFFFFFFFP-32ULK</Elem>
+            <Elem>__ULACCUM_MIN__=0.0ULK</Elem>
+            <Elem>__ULFRACT_EPSILON__=0x1P-32ULR</Elem>
+            <Elem>__ULFRACT_FBIT__=32</Elem>
+            <Elem>__ULFRACT_IBIT__=0</Elem>
+            <Elem>__ULFRACT_MAX__=0XFFFFFFFFP-32ULR</Elem>
+            <Elem>__ULFRACT_MIN__=0.0ULR</Elem>
+            <Elem>__ULLACCUM_EPSILON__=0x1P-32ULLK</Elem>
+            <Elem>__ULLACCUM_FBIT__=32</Elem>
+            <Elem>__ULLACCUM_IBIT__=32</Elem>
+            <Elem>__ULLACCUM_MAX__=0XFFFFFFFFFFFFFFFFP-32ULLK</Elem>
+            <Elem>__ULLACCUM_MIN__=0.0ULLK</Elem>
+            <Elem>__ULLFRACT_EPSILON__=0x1P-64ULLR</Elem>
+            <Elem>__ULLFRACT_FBIT__=64</Elem>
+            <Elem>__ULLFRACT_IBIT__=0</Elem>
+            <Elem>__ULLFRACT_MAX__=0XFFFFFFFFFFFFFFFFP-64ULLR</Elem>
+            <Elem>__ULLFRACT_MIN__=0.0ULLR</Elem>
+            <Elem>__UQQ_FBIT__=8</Elem>
+            <Elem>__UQQ_IBIT__=0</Elem>
+            <Elem>__USACCUM_EPSILON__=0x1P-8UHK</Elem>
+            <Elem>__USACCUM_FBIT__=8</Elem>
+            <Elem>__USACCUM_IBIT__=8</Elem>
+            <Elem>__USACCUM_MAX__=0XFFFFP-8UHK</Elem>
+            <Elem>__USACCUM_MIN__=0.0UHK</Elem>
+            <Elem>__USA_FBIT__=16</Elem>
+            <Elem>__USA_IBIT__=16</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+            <Elem>__USFRACT_EPSILON__=0x1P-8UHR</Elem>
+            <Elem>__USFRACT_FBIT__=8</Elem>
+            <Elem>__USFRACT_IBIT__=0</Elem>
+            <Elem>__USFRACT_MAX__=0XFFP-8UHR</Elem>
+            <Elem>__USFRACT_MIN__=0.0UHR</Elem>
+            <Elem>__USQ_FBIT__=32</Elem>
+            <Elem>__USQ_IBIT__=0</Elem>
+            <Elem>__UTA_FBIT__=64</Elem>
+            <Elem>__UTA_IBIT__=64</Elem>
+            <Elem>__UTQ_FBIT__=128</Elem>
+            <Elem>__UTQ_IBIT__=0</Elem>
+            <Elem>__VFP_FP__=1</Elem>
+            <Elem>__WCHAR_MAX__=0xffffffffU</Elem>
+            <Elem>__WCHAR_MIN__=0U</Elem>
+            <Elem>__WCHAR_TYPE__=unsigned int</Elem>
+            <Elem>__WCHAR_UNSIGNED__=1</Elem>
+            <Elem>__arm__=1</Elem>
+            <Elem>__thumb2__=1</Elem>
+            <Elem>__thumb__=1</Elem>
+          </preprocessorList>
+          <undefinedList>
+            <Elem>__ARM_ARCH_EXT_IDIV__</Elem>
+            <Elem>__ARM_FEATURE_IDIV</Elem>
+            <Elem>__ARM_FEATURE_QRDMX</Elem>
+          </undefinedList>
+        </ccTool>
+      </item>
+      <item path="oscar/bmp/bmp.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+        </cTool>
+      </item>
+      <item path="oscar/cam/cam_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/cam</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/cam/cam_multibuffer.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/cam</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/cam/cam_shared.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm-generic</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/linux</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm</pElem>
+            <pElem>../oscar/cam</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/cam/cam_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm-generic</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/linux</pElem>
+            <pElem>../oscar/cam</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/cfg/cfg.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+        </cTool>
+      </item>
+      <item path="oscar/cpld/cpld_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/cpld</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/cpld/cpld_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>../oscar/cpld</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/dma/dma_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="4">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/dma</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/dma/dma_shared.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/dma</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/dma/dma_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/dma</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/dspl/dspl_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="4">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/dspl</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/dspl/dspl_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/dspl</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/frd/frd.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+        </cTool>
+      </item>
+      <item path="oscar/gpio/gpio_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/gpio</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/gpio/gpio_shared.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/gpio</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/gpio/gpio_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>../oscar/gpio</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/hsm/hsm.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+        </cTool>
+      </item>
+      <item path="oscar/ipc/ipc_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="4">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/ipc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/ipc/ipc_shared.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm-generic</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/netinet</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/linux</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/ipc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/ipc/ipc_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/linux</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/asm-generic</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/ipc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/jpg/jpg.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/jpg</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/jpg/jpg_dct.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/jpg</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/jpg/jpg_encoder.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/jpg</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/jpg/jpg_huffman.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/jpg</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/jpg/jpg_marker.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/jpg</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/jpg/jpg_quant.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/jpg</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/jpg/jpg_readYUV.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/jpg</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/log/log_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="4">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/log</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/log/log_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/log</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/oscar.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/sim/sim_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/sim</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/sim/sim_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>../oscar/sim</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/srd/srd_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/srd</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/srd/srd_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>../oscar/srd</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/sup/sup_host.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="4">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/sup</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/sup/sup_target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/sup</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/swr/swr.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+        </cTool>
+      </item>
+      <item path="oscar/vis/DebayerBilinearBGR.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/DebayerBilinearBGR_host.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="4">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/DebayerBilinearBGR_target.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/DebayerBilinearShared_host.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="4">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/bayer_fast.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/bayer_lincorr.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/conversions.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/filters.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/morphology.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/segmentation.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/transform.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/vector_debayer_grey_target.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar/include</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="oscar/vis/vis.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+          <incDir>
+            <pElem>../oscar/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/sys</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/bits</pElem>
+            <pElem>/usr/arm-linux-gnueabihf/include/gnu</pElem>
+            <pElem>/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include</pElem>
+            <pElem>../oscar</pElem>
+            <pElem>../oscar/vis</pElem>
+          </incDir>
+        </cTool>
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

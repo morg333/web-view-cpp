@@ -6,8 +6,7 @@
 #ifndef CAMERA_H_
 #define CAMERA_H_
 
-#include <leancv.h>
-
+#include "opencv.hpp"
 #include "includes.h"
 
 
@@ -53,14 +52,18 @@ public:
 	 * returns the image or NULL on error
 	 * Picture is aligned to PICTURE_ALIGNMENT
 	 */
-	IplImage* ReadLatestPicture();
+	cv::Mat* ReadLatestPicture();
 	
 	
 	/*! @brief Read the current captured picture.
 	 *  like ReadLatestPicture, but waits for image to be captured
 	 *  call CapturePicture and ReadPicture if you want the most actual picture
 	 */
-	IplImage* ReadPicture(uint16 max_age=0, uint16 timeout=0);
+	cv::Mat* ReadPicture(uint16 max_age=0, uint16 timeout=0);
+        
+        /*! @brief Read the last captured picture.
+	 */
+	cv::Mat* GetLastPicture() {return m_img;}    
 	
 	
 	/*! @brief setup a capture an return immediately */
@@ -99,13 +102,10 @@ public:
 	static uint32 AlignSize(uint32 size);
 	
 private:
-	IplImage* HandlePictureColoringAndSize(uint8* pic_data);
+	cv::Mat* HandlePictureColoringAndSize(uint8* pic_data);
 	/* set new imageheader if channel_count is not the same or size is not same as from camera */
-	void AdjustImageHeader(IplImage** img, int channel_count);
-	IplImage* m_img;
-	
-	uint8* m_img_data;
-	uint8* m_al_img_data; /*! @brief aligned pointer to m_img_data */
+	void AdjustImageHeader(cv::Mat*& img, int channel_count);
+	cv::Mat* m_img;
 	
 	uint8* m_frame_buffer_ids;
 	uint8_t* m_frame_buffers;

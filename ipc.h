@@ -34,13 +34,14 @@ struct WEB_SETTINGS {
 
 enum HTML_HEADER_TYPE {
 	HEADER_TEXT_PLAIN,
-	HEADER_IMAGE_BMP
+	HEADER_IMAGE_BMP,
+        HEADER_IMAGE_JPG
 };
 
 
 class CIPC {
 public:
-	CIPC(CCamera& camera);
+	CIPC(CCamera& camera, CImageProcessor& img_process);
 	~CIPC();
 	
 	OSC_ERR Init();
@@ -65,7 +66,7 @@ private:
 	OSC_ERR ReadArgument(char ** pBuffer, char ** pKey, char ** pValue);
 	OSC_ERR WriteArgument(const char * pKey, const char * pValue);
 	OSC_ERR WriteArgument(const char * pKey, int value);
-	OSC_ERR WriteBMP(const IplImage* img);
+	OSC_ERR WriteImage(const cv::Mat img);
 	int IpcWrite(const void* buf, size_t count); /* write to socket, returns > 0 on success */
 	int m_fd; //file handle
 	
@@ -74,6 +75,8 @@ private:
 	
 	
 	CCamera& m_camera;
+        CImageProcessor& m_img_process;
+        
 	int m_socket_fd;
 	
 	static const int m_buffer_count=1024;
@@ -82,7 +85,6 @@ private:
 	
 	bool m_bInit;
 	WEB_SETTINGS m_web_settings;
-	CImageProcessor m_img_process;
 };
 
 

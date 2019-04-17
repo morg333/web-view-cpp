@@ -48,11 +48,11 @@ LIBS_target := oscar/library/libosc_target
 CFLAGS := -c -Wall -Ioscar/include
 
 ifeq '$(CONFIG_USE_OPENCV)' 'y'
-CFLAGS += -I$(CONFIG_OPENCV_PATH)/include/opencv
-OPENCV_LIBS_host := -L$(CONFIG_OPENCV_PATH)/build-host/src/.libs -lcvaux -lcv -lcxcore -lpthread -ldl -lrt -lz
-OPENCV_LIBS_target := -L$(CONFIG_OPENCV_PATH)/build-target/src/.libs -lbfdsp -lcvaux -lcv -lcxcore -lpthread -lrt
+-include MakeOpenCV.mk
 else
+OPENCV_INC_host :=
 OPENCV_LIBS_host := 
+OPENCV_INC_target :=
 OPENCV_LIBS_target := 
 endif
 
@@ -87,14 +87,14 @@ CFLAGS += -std=gnu99
 GCC := gcc
 endif
 
-CC_host := $(GCC) $(CFLAGS) -DOSC_HOST -D'APP_NAME="$(APP_NAME)"'
+CC_host := $(GCC) $(CFLAGS) $(OPENCV_INC_host) -DOSC_HOST -D'APP_NAME="$(APP_NAME)"'
 LD_host := $(GCC) -fPIC
 
 ifeq '$(CONFIG_BOARD)' 'raspi-cam'
- CC_target := arm-linux-gnueabihf-$(GCC) $(CFLAGS) -DOSC_HOST -D'APP_NAME="$(APP_NAME)"'
+ CC_target := arm-linux-gnueabihf-$(GCC) $(CFLAGS) $(OPENCV_INC_target) -DOSC_HOST -D'APP_NAME="$(APP_NAME)"'
  LD_target := arm-linux-gnueabihf-$(GCC) -fPIC
 else
- CC_target := bfin-uclinux-$(GCC) $(CFLAGS) -DOSC_TARGET -D'APP_NAME="$(APP_NAME)"'
+ CC_target := bfin-uclinux-$(GCC) $(CFLAGS) $(OPENCV_INC_target) -DOSC_TARGET -D'APP_NAME="$(APP_NAME)"'
  LD_target := bfin-uclinux-$(GCC) -elf2flt="-s 1048576"
 endif
 
@@ -227,5 +227,5 @@ endif
 
 # Cleans the module.
 clean:
-	rm -rf build *.gdb $(BINARIES) $(APP_NAME).app cgi/cgi_*
+	rm -rf build *.gdb $(BINARIES) $(APP_NAME).app #cgi/cgi_* (FIXME: do not remove to allow make deploy for full target build)
 	$(foreach i, $(SUB_PRODUCTS), make -C $i clean)

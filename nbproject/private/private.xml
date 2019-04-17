@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <code-assistance-data xmlns="http://www.netbeans.org/ns/make-project-private/1">
+        <code-model-enabled>true</code-model-enabled>
+    </code-assistance-data>
+    <data xmlns="http://www.netbeans.org/ns/make-project-private/1">
+        <activeConfTypeElem>0</activeConfTypeElem>
+        <activeConfIndexElem>1</activeConfIndexElem>
+    </data>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/pi/web-view-cpp/www/index.html</file>
+            <file>file:/home/pi/web-view-cpp/cgi/cgi.h</file>
+            <file>file:/home/pi/web-view-cpp/image_processing.cpp</file>
+            <file>file:/home/pi/web-view-cpp/camera.cpp</file>
+            <file>file:/home/pi/web-view-cpp/ipc.cpp</file>
+            <file>file:/home/pi/web-view-cpp/MakeOpenCV.mk</file>
+            <file>file:/home/pi/web-view-cpp/oscar/cam/cam_shared.c</file>
+            <file>file:/home/pi/web-view-cpp/main_class.cpp</file>
+            <file>file:/home/pi/web-view-cpp/image_processing.h</file>
+            <file>file:/home/pi/web-view-cpp/camera.h</file>
+            <file>file:/home/pi/web-view-cpp/ipc.h</file>
+            <file>file:/home/pi/web-view-cpp/oscar/cam/cam_target.c</file>
+        </group>
+    </open-files>
+</project-private>

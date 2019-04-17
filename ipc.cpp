@@ -5,9 +5,7 @@
 #include <iostream>
 using namespace std;
 
-
-#include <leancv.h>
-
+#include "opencv.hpp"
 
 
 #include "includes.h"
@@ -34,7 +32,7 @@ using namespace std;
 
 
 
-CIPC::CIPC(CCamera& camera) : m_camera(camera), m_bInit(false) {
+CIPC::CIPC(CCamera& camera,CImageProcessor& img_process) : m_camera(camera), m_img_process(img_process), m_bInit(false) {
 	img_count=0;
 }
 
@@ -140,6 +138,18 @@ void CIPC::WriteHtmlHeader(HTML_HEADER_TYPE type, int content_length) {
 		IpcWrite(m_buffer, strlen(m_buffer));
 		
 		break;
+        case HEADER_IMAGE_JPG:
+		m_bHeader_written=true;
+		
+		sprintf(m_buffer,
+				"Content-Length: %i\r\n" \
+				"Content-Type: image/ jpeg\r\n" \
+				"\r\n"
+				, content_length);
+		
+		IpcWrite(m_buffer, strlen(m_buffer));
+		
+		break;
 	case HEADER_TEXT_PLAIN:
 		m_bHeader_written=true;
 		
@@ -183,7 +193,7 @@ void CIPC::ProcessRequest(char* request) {
 						m_camera.setColorType(ColorType_debayered);
 				} else if(strcmp(key, "perspective") == 0) {
 					m_camera.setPerspective(atoi(value));
-				}
+				} 
 			} else {
 				*request=0;
 			}
@@ -208,35 +218,33 @@ void CIPC::ProcessRequest(char* request) {
 		}
 		WriteArgument("colorType", pEnumBuf);
 		WriteArgument("perspective", m_camera.getPerspective());
-		WriteArgument("autoExposure", m_camera.getAutoExposure() ? 1 : 0);
+		WriteArgument("autoExposure", m_camera.getAutoExposure() ? 1 : 0);                
 		
 	} else if (strncmp(header, "GetImage", 8) == 0) {
 		
-		/* read current picture and capture next */
-		IplImage* img=m_camera.ReadLatestPicture();
-		OSC_ERR e=m_camera.CapturePicture();
+		cv::Mat* img = m_camera.GetLastPicture();
 		
-		if(e!=SUCCESS) OscLog(ERROR, "Could not Capture Picture (Error=%i)", e);
-		
-		if(img) {
-			//lcvBmpWrite(img, "img.bmp");
-			
+		if(img != NULL && !img->empty()) {
 			++img_count;
-			
-			uint32 startCyc=OscSupCycGet();
-			m_img_process.DoProcess(&img);
-			uint32 delta_time_us=OscSupCycToMicroSecs(OscSupCycGet() - startCyc);
-			OscLog(INFO, "Image processing required %uus\n", delta_time_us);
-			
-			IplImage* img_write;
+						
+			cv::Mat img_write;
 			if(m_camera.getPerspective() == 0) {
 				/* we show the camera image */
-				img_write=img;
+				img_write=*img;
 			} else {
-				img_write=m_img_process.GetProcImage(m_camera.getPerspective()-1);
+				cv::Mat* img_proc=m_img_process.GetProcImage(m_camera.getPerspective()-1);
+                                /* in case image is empty -> show camera image*/
+                                if(img_proc->empty()) {
+                                    img_write=*img;
+                                } else {
+                                    /* convert to uint8 */
+                                    double min_val, max_val;
+                                    cv::minMaxLoc(*img_proc, &min_val, &max_val);
+                                    img_proc->convertTo(img_write, CV_MAKETYPE(CV_8U,img_proc->depth()), 255.0/(max_val - min_val), -min_val * 255.0/(max_val - min_val));
+                                }
 			}
 
-			if(WriteBMP(img_write) !=SUCCESS) {
+			if(WriteImage(img_write) !=SUCCESS) {
 				OscLog(ERROR, "Image could not be sent\n");
 			}
 			
@@ -248,11 +256,15 @@ void CIPC::ProcessRequest(char* request) {
 		WriteHtmlHeader(HEADER_TEXT_PLAIN);
 		
 		struct OscSystemInfo * pInfo;
-		OscCfgGetSystemInfo(&pInfo);
+		if(OscCfgGetSystemInfo(&pInfo) == SUCCESS) {
+                  /*  WriteArgument("cameraModel", pInfo->hardware.board.revision);
+                    WriteArgument("imageSensor", (char*)"Color");
+                    WriteArgument("uClinuxVersion", pInfo->software.uClinux.version);*/
 		
-		WriteArgument("cameraModel", (char*)"Raspberry Pi Camera");
-		WriteArgument("imageSensor", (char*)"Color");
-		WriteArgument("uClinuxVersion", (char*)"0.9.0");
+                    WriteArgument("cameraModel", (char*)"Raspberry Pi Camera");
+                    WriteArgument("imageSensor", (char*)"Color");
+                    WriteArgument("uClinuxVersion", (char*)"0.9.0");
+                }
 	}
 }
 
@@ -310,23 +322,21 @@ OSC_ERR CIPC::WriteArgument(const char * pKey, const char * pValue) {
 	return(SUCCESS);
 }
 
-OSC_ERR CIPC::WriteBMP(const IplImage* img) {
+OSC_ERR CIPC::WriteImage(const cv::Mat img) {
 	
-	char* header;
-	int header_size=lcvBmpHeader(img, &header);
-	if(header_size <= 0) return(EGENERAL);
+        std::vector<int> qualityType;
+        qualityType.push_back(CV_IMWRITE_JPEG_QUALITY);
+        qualityType.push_back(90);
+
+        std::vector<uchar> buf;
+        cv::imencode(".jpg", img, buf, qualityType);
+    
+	WriteHtmlHeader(HEADER_IMAGE_JPG, buf.size());
 	
-	if(img->width % 4 != 0) return(EINVALID_PARAMETER);
-	
-	WriteHtmlHeader(HEADER_IMAGE_BMP, header_size+img->imageSize);
-	
-	//write image header
-	if(IpcWrite(header, (size_t)header_size) <= 0) return(EGENERAL);
 	//write image data
-	for(int row=0; row<img->height; ++row) {
-		if(IpcWrite(img->imageData + img->widthStep*(img->height-row-1), (size_t)img->widthStep) <=0)
+	if(IpcWrite(buf.data(), (size_t)buf.size()) <=0)
 			return(EGENERAL);
-	}
+	
 	return(SUCCESS);
 }
 

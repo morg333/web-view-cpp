@@ -5,7 +5,7 @@
 #ifndef IMAGE_PROCESSING_H_
 #define IMAGE_PROCESSING_H_
 
-#include <leancv.h>
+#include "opencv.hpp"
 
 #include "includes.h"
 #include "camera.h"
@@ -17,15 +17,12 @@ public:
 	CImageProcessor();
 	~CImageProcessor();
 	
-	int DoProcess(IplImage** image);
+	int DoProcess(cv::Mat* image);
 
-	IplImage* GetProcImage(uint32 i);
+	cv::Mat* GetProcImage(uint32 i);
 
 private:
-	char* m_tmp_img_data;
-	char* m_tmp_img;
-	
-	IplImage* m_proc_image[3];/* we have three processing images for visualization available */
+	cv::Mat* m_proc_image[3];/* we have three processing images for visualization available */
 };
 
 

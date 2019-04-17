@@ -421,16 +421,17 @@ function updateCycle() {
 			var img = $(new Image());
 			
 			img.load(function() { 
-				$("#image").replaceWith(this); 
-				this.id="image";
-				online();
+				//$("#image").replaceWith(this); 
+				//this.id="image";
+                                online();
 				loadImage(); //load next image here instead with timer. prevents overloading the (poor) browser
 			});
 			
 			img.error(offline);
 			
 			++tmp_img_val;
-			img.attr("src", "/cgi-bin/cgi?GetImage_"+tmp_img_val); //preload the next image
+                        $("#imageWindow1").attr("src", "/cgi-bin/cgi?GetImage_"+tmp_img_val);
+			img.attr("src", "/cgi-bin/cgi?GetImage_"+tmp_img_val); //preload the next image                                                				
 		}
 		
 	}
