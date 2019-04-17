@@ -10,18 +10,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/pi/web-view-cpp/www/index.html</file>
-            <file>file:/home/pi/web-view-cpp/cgi/cgi.h</file>
-            <file>file:/home/pi/web-view-cpp/image_processing.cpp</file>
-            <file>file:/home/pi/web-view-cpp/camera.cpp</file>
-            <file>file:/home/pi/web-view-cpp/ipc.cpp</file>
-            <file>file:/home/pi/web-view-cpp/MakeOpenCV.mk</file>
-            <file>file:/home/pi/web-view-cpp/oscar/cam/cam_shared.c</file>
-            <file>file:/home/pi/web-view-cpp/main_class.cpp</file>
-            <file>file:/home/pi/web-view-cpp/image_processing.h</file>
-            <file>file:/home/pi/web-view-cpp/camera.h</file>
-            <file>file:/home/pi/web-view-cpp/ipc.h</file>
-            <file>file:/home/pi/web-view-cpp/oscar/cam/cam_target.c</file>
+            <file>file:/home/pi/tmp/web-view-cpp/main.cpp</file>
+            <file>file:/home/pi/tmp/web-view-cpp/image_processing.cpp</file>
+            <file>file:/home/pi/tmp/web-view-cpp/main_class.cpp</file>
         </group>
     </open-files>
 </project-private>

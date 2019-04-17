@@ -14,10 +14,6 @@
             </sourceRootList>
             <confList>
                 <confElem>
-                    <name>Default</name>
-                    <type>0</type>
-                </confElem>
-                <confElem>
                     <name>Debug_Host</name>
                     <type>0</type>
                 </confElem>

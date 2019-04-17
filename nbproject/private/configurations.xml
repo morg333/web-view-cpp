@@ -202,6 +202,8 @@
         <in>oscar.c</in>
         <in>oscar.h</in>
       </df>
+      <df name="web_view_cpp.app">
+      </df>
       <df name="www">
         <df name="cgi-bin">
         </df>
@@ -229,53 +231,6 @@
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
-    <conf name="Default" type="0">
-      <toolsSet>
-        <developmentServer>localhost</developmentServer>
-        <platform>2</platform>
-      </toolsSet>
-      <compile>
-        <compiledirpicklist>
-          <compiledirpicklistitem>.</compiledirpicklistitem>
-          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
-        </compiledirpicklist>
-        <compiledir>${AUTO_FOLDER}</compiledir>
-        <compilecommandpicklist>
-          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
-          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
-        </compilecommandpicklist>
-        <compilecommand>${AUTO_COMPILE}</compilecommand>
-      </compile>
-      <dbx_gdbdebugger version="1">
-        <gdb_pathmaps>
-        </gdb_pathmaps>
-        <gdb_interceptlist>
-          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
-        </gdb_interceptlist>
-        <gdb_options>
-          <DebugOptions>
-            <option name="symbol_file" value="./app_host"/>
-          </DebugOptions>
-        </gdb_options>
-        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
-      </dbx_gdbdebugger>
-      <nativedebugger version="1">
-        <engine>gdb</engine>
-      </nativedebugger>
-      <runprofile version="9">
-        <runcommandpicklist>
-          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
-          <runcommandpicklistitem>./app_host</runcommandpicklistitem>
-        </runcommandpicklist>
-        <runcommand>./app_host</runcommand>
-        <rundir>.</rundir>
-        <buildfirst>false</buildfirst>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
     <conf name="Debug_Host" type="0">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
