@@ -119,7 +119,7 @@ APPS := $(patsubst SOURCES_%, %, $(filter SOURCES_%, $(.VARIABLES)))
 ifeq '$(CONFIG_ENABLE_SIMULATION)' 'y'
 LIBS_target := $(LIBS_target)_sim
 endif
-ifeq '$(CONFIG_ENABLE_DEBUG)' 'n'
+ifeq '$(CONFIG_ENABLE_DEBUG)' 'y'
 LIBS_host := $(addsuffix _dbg, $(LIBS_host))
 LIBS_target := $(addsuffix _dbg, $(LIBS_target))
 OSC_CC_LIBS_host := $(addsuffix _dbg, $(OSC_CC_LIBS_host))
@@ -162,6 +162,14 @@ else
 	ssh root@$(CONFIG_TARGET_IP) $(DEPLOY_DIR)$(APP_NAME).app/run.sh || true
 endif
 
+rundbg:
+ifeq '$(CONFIG_BOARD)' 'raspi-cam'
+	ssh pi@$(CONFIG_TARGET_IP) 'killall app;  gdbserver localhost:8888 /home/pi/$(APP_NAME).app/app' || true
+else
+	ssh root@$(CONFIG_TARGET_IP) $(DEPLOY_DIR)$(APP_NAME).app/run.sh || true
+endif
+
+
 settime:
 ifeq '$(CONFIG_BOARD)' 'raspi-cam'
 	ssh pi@192.168.1.10 sudo date -s @`( date -u +"%s" )`
@@ -182,9 +190,13 @@ ifeq '$(CONFIG_USE_OSCAR_CC)' 'y'
 endif
 
 ifeq '$(CONFIG_PRIVATE_FRAMEWORK)' 'n'
-	@ ! [ -e "oscar" ] || [ -h "oscar" ] && ln -sfn $(CONFIG_FRAMEWORK_PATH) oscar || echo "The symlink to the lgx module could not be created as the file ./lgx already exists and is something other than a symlink. Pleas remove it and run 'make reconfigure' to create the symlink."
+	@ ! [ -e "oscar" ] || [ -h "oscar" ] && ln -sfn $(CONFIG_FRAMEWORK_PATH) oscar || echo "The symlink to the oscar module could not be created."
 endif
 	@ ! [ -d "oscar" ] || $(MAKE) -C oscar config
+
+ifeq '$(CONFIG_USE_OPENCV)' 'y'
+	@ ! [ -e "opencv" ] || [ -h "opencv" ] && ln -sfn $(CONFIG_OPENCV_PATH)/OpenCV4.1.1 opencv || echo "The symlink to the opencv module could not be created."
+endif
 	
 oscar:
 	$(MAKE) -C oscar

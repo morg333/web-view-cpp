@@ -14,4 +14,5 @@
 # files used by the build system
 /build
 /oscar
+/opencv
 /.config
