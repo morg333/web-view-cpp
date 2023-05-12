@@ -53,6 +53,7 @@ int CImageProcessor::DoProcess(cv::Mat* image) {
 			//diffImage = cv::abs(mPrevImage - *image);	//same procut, just slightly different code
 
 			cv::abs(diffImage);
+			
 
 
 			//modify diff image so noise is not present
@@ -61,6 +62,7 @@ int CImageProcessor::DoProcess(cv::Mat* image) {
 		}
 		else
 		{
+			diffImage = *image * 0;		//output at least a black image with correct pixel dimensions
 		}
 
 		mPrevImage = grayImage.clone();		//generate image for next round
