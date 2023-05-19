@@ -71,13 +71,8 @@ int CImageProcessor::DoProcess(cv::Mat* image) {
 // ---------------------------
 // ---- Init -----------------
 // ---------------------------
-	//because if defined in IF statement, it might not have been called before...
-	//init for binary Image
-	cv::Mat binaryImage;
-	//init for region Labeling
-	cv::Mat labelImage;
-	//init for bounding box image
-	cv::Mat resultImage = grayImage.clone();
+	cv::Mat graySmooth;	 //for TP-Filtering
+	cv::Mat imgDx, imgDy;  //for partial derivation
 
 
 // ---------------------------
@@ -87,12 +82,22 @@ int CImageProcessor::DoProcess(cv::Mat* image) {
 	{
 		// -- do all the processing in here --
 
+	// ---- TP-Filtering ----
+		cv::blur(grayImage, graySmooth, cv::Size(5,5));	//create smooth image with filter of 5x5
+
+	// ---- partial derivation ----
+		cv::Sobel(graySmooth, imgDx, -1, 1, 0, 3, 1, 128);
+		cv::Sobel(graySmooth, imgDy, -1, 0, 1, 3, 1, 128);
+		
 	// ---- processXY ----
 		
-
+		
 	// ---- processXY ----
 		
-
+		
+	// ---- processXY ----
+		
+		
 
 
 	// ---- processXY ----
@@ -114,9 +119,9 @@ int CImageProcessor::DoProcess(cv::Mat* image) {
 // ---------------------------
 // ---- Output ---------------
 // ---------------------------
-	*m_proc_image[0] = labelImage;
-	*m_proc_image[1] = mBkgrImage;
-	*m_proc_image[2] = resultImage;
+	*m_proc_image[0] = imgDx;
+	*m_proc_image[1] = imgDy;
+	*m_proc_image[2] = graySmooth;
 
 
 
