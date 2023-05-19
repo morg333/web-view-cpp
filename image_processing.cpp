@@ -27,6 +27,13 @@ cv::Mat* CImageProcessor::GetProcImage(uint32 i) {
 
 
 
+
+
+
+
+
+
+
 /*********************************************************************************************************
  * 	
  *  	TESTAT - EBV - FS23
@@ -40,62 +47,145 @@ cv::Mat* CImageProcessor::GetProcImage(uint32 i) {
 
 
 int CImageProcessor::DoProcess(cv::Mat* image) {
-
-	cv::Mat grayImage;
-	
+	//check for error
 	if(!image) return(EINVALID_PARAMETER);	
-        
-	// ---- make a grayscale image regardless of the image ----
-        if(image->channels() > 1) {
-			cv::cvtColor(*image, grayImage, cv::COLOR_RGB2GRAY);	//if color image, convert to grayscale img
-			//colorImage = image->clone();
-		}
-		else {
-			grayImage = *image;
-			//cv::cvtColor(*image, coloorImage, cv::COLOR_GRAY2RGB);
-		}
+
+
+// ---------------------------
+// ---- Prepare Data ---------
+// ---------------------------
+	cv::Mat grayImage;
+	cv::Mat colorImage;
+
+	// make a grayscale image regardless of the image
+	if(image->channels() > 1) {
+		cv::cvtColor(*image, grayImage, cv::COLOR_RGB2GRAY);	//if color image, convert to grayscale img
+		colorImage = image->clone();
+	}
+	else {
+		grayImage = *image;
+		cv::cvtColor(*image, colorImage, cv::COLOR_GRAY2RGB);
+	}
+
+
+// ---------------------------
+// ---- Init -----------------
+// ---------------------------
+	//because if defined in IF statement, it might not have been called before...
+	//init for binary Image
+	cv::Mat binaryImage;
+	//init for region Labeling
+	cv::Mat labelImage;
+	//init for bounding box image
+	cv::Mat resultImage = grayImage.clone();
+
+
+// ---------------------------
+// ---- Do the Processing ----
+// ---------------------------
+	if(mPrevImage.size() != cv::Size())	//is data fine? has it allready passed once?$
+	{
+		// -- do all the processing in here --
+
+	// ---- processXY ----
+		
+
+	// ---- processXY ----
+		
 
 
 
-		cv::Mat diffImage;
-		cv::Mat mask;
-
-		if (mPrevImage.size() != cv::Size())	//is data fine? has it allready passed once
-		{
-			//mPrevImage = grayImage;
-			//mPrevImage *= 0;
-			//mPrevImage += (0.5 * 128);
-
-			cv::absdiff(mPrevImage, grayImage, diffImage);	//create difference between this and last image
-			//diffImage = cv::abs(mPrevImage - grayImage);	//same procut, just slightly different code
-
-			cv::abs(diffImage);
-			
+	// ---- processXY ----
+		
 
 
-			//modify diff image so noise is not present
-			diffImage.at<uint8>(0,0)=255;		//set one pixel to max value
-			diffImage.at<uint8>(1,0)=0;			//set one pixel to min value
-		}
-		else
-		{
-			diffImage = grayImage * 0;		//output at least a black image with correct pixel dimensions
-		}
+	}	
+	else	//if the first time
+	{
+		//#todo output a black image for the output if it was the first time
+		//diffImage = grayImage * 0;		//output at least a black image with correct pixel dimensions
+	}
+
+// ---------------------------
+// ---- Age and save ---------
+// ---------------------------
+	mPrevImage = grayImage.clone();		//generate image for next round
+
+// ---------------------------
+// ---- Output ---------------
+// ---------------------------
+	*m_proc_image[0] = labelImage;
+	*m_proc_image[1] = mBkgrImage;
+	*m_proc_image[2] = resultImage;
 
 
 
 
 
-	// -- init -- because if defined in IF statement, it might not have been called before...
-		//init for binary Image
-		cv::Mat binaryImage;
-		//init for region Labeling
-		cv::Mat labelImage;
-		//init for bounding box image
-		cv::Mat resultImage = grayImage.clone();
 
-		if(mPrevImage.size() != cv::Size()){
-			//image Processing
+
+
+
+
+
+
+
+
+
+
+		//#todo finishing touches
+		//modify diff image so noise is not present
+		//diffImage.at<uint8>(0,0)=255;		//set one pixel to max value
+		//diffImage.at<uint8>(1,0)=0;			//set one pixel to min value
+
+	// ---- 3) Visualisierung übungen ---
+		//*m_proc_image[0] = labelImage;
+		//*m_proc_image[1] = binaryImage;
+		//*m_proc_image[2] = resultImage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		/*		UNUSED CODE
+
+		#define USE_SIMPLECONTOUR (1)
+		// ---- Testat gedöns ----
+#if (USE_SIMPLECONTOUR)
+			double alpha = 0.9;
+			cv::addWeighted(mBkgrImage, alpha, grayImage, 1-alpha, 0, mBkgrImage);
+#else
+			double alpha = 0.9;
+			for(unsigned int idx = 0 ; idx < contours.size(); idx++ ) {
+				//area
+				double area = cv::contourArea(contours[idx]);
+				//bounding rectangle
+				cv::Rect rect = cv::boundingRect(contours[idx]);
+				//center of gravity
+				// center of mass
+				cv::Moments moment = cv::moments(contours[idx]);
+				double cx = moment.m10 / moment.m00;
+				double cy = moment.m01 / moment.m00;
+				//to draw counter to index idx in image
+				cv::drawContours(resultImage, contours, idx, cv::Scalar(255), 1, 8 );
+			}
+#endif
+
+
+
+// code for Processinc
 
 		// ---- a) Difference Image ----
 			cv::Mat diffImage;
@@ -129,37 +219,13 @@ int CImageProcessor::DoProcess(cv::Mat* image) {
 			//draw centerPoint onto image
 			cv::Point2d cent(cx, cy);
 			cv::circle(resultImage, cent, 5, cv::Scalar(128, 0, 0), -1);
+			}	//end Labeling
 
-			//..do sth more with values..
-			}
-
-		// ---- Image ----
-
-			double alpha = 0.9;
-			cv::addWeighted(mBkgrImage, alpha, gray.mage, 1-alpha, 0, mBkgrImage);
+*/
 
 
-		// ---- Image ----
-			
-
-		}
-		mPrevImage = grayImage.clone();		//generate image for next round
 
 
-	// ---- 3) Visualisierung ---
-		*m_proc_image[0] = labelImage;
-		*m_proc_image[1] = binaryImage;
-		*m_proc_image[2] = resultImage;
-
-
-//testing
-        //cv::subtract(cv::Scalar::all(255), *image,*m_proc_image[0]);
-		//*m_proc_image[1] = grayImage;
-		//*m_proc_image[2] = diffImage;
-        
-		// use *m_proc_image[ ... ] 0 up to 2 for output image
-      //  cv::imwrite("dx.png", *m_proc_image[0]);
-      //  cv::imwrite("dy.png", *m_proc_image[1]);
 
 	return(SUCCESS);
 }
