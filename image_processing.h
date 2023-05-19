@@ -26,6 +26,9 @@ private:
 	
 	cv::Mat mPrevImage;
 
+	cv::Mat mBkgrImage[5];	//background and 4 bins from 1-4;
+
+
 };
 
 

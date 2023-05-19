@@ -23,19 +23,36 @@ cv::Mat* CImageProcessor::GetProcImage(uint32 i) {
 	return m_proc_image[i];
 }
 
+
+
+
+
+/*********************************************************************************************************
+ * 	
+ *  	TESTAT - EBV - FS23
+ *  	BY ODERMATT MARCO
+ * 	
+ * 		DOES DO THINGS WITH IMAGES
+ * 		BINNING AND STUFF OFC.
+ * 		
+ * 
+*********************************************************************************************************/
+
+
 int CImageProcessor::DoProcess(cv::Mat* image) {
 
 	cv::Mat grayImage;
 	
 	if(!image) return(EINVALID_PARAMETER);	
         
-		//	make gray	
-
-        if(image->channels()>1) {
+	// ---- make a grayscale image regardless of the image ----
+        if(image->channels() > 1) {
 			cv::cvtColor(*image, grayImage, cv::COLOR_RGB2GRAY);	//if color image, convert to grayscale img
+			//colorImage = image->clone();
 		}
 		else {
 			grayImage = *image;
+			//cv::cvtColor(*image, coloorImage, cv::COLOR_GRAY2RGB);
 		}
 
 
@@ -49,8 +66,8 @@ int CImageProcessor::DoProcess(cv::Mat* image) {
 			//mPrevImage *= 0;
 			//mPrevImage += (0.5 * 128);
 
-			cv::absdiff(mPrevImage, *image, diffImage);	//create difference between this and last image
-			//diffImage = cv::abs(mPrevImage - *image);	//same procut, just slightly different code
+			cv::absdiff(mPrevImage, grayImage, diffImage);	//create difference between this and last image
+			//diffImage = cv::abs(mPrevImage - grayImage);	//same procut, just slightly different code
 
 			cv::abs(diffImage);
 			
@@ -62,7 +79,7 @@ int CImageProcessor::DoProcess(cv::Mat* image) {
 		}
 		else
 		{
-			diffImage = *image * 0;		//output at least a black image with correct pixel dimensions
+			diffImage = grayImage * 0;		//output at least a black image with correct pixel dimensions
 		}
 
 
@@ -75,14 +92,14 @@ int CImageProcessor::DoProcess(cv::Mat* image) {
 		//init for region Labeling
 		cv::Mat labelImage;
 		//init for bounding box image
-		cv::Mat resultImage = image->clone();
+		cv::Mat resultImage = grayImage.clone();
 
 		if(mPrevImage.size() != cv::Size()){
 			//image Processing
 
 		// ---- a) Difference Image ----
 			cv::Mat diffImage;
-			cv::absdiff(*image, mPrevImage, diffImage);
+			cv::absdiff(grayImage, mPrevImage, diffImage);
 
 		// ---- b) Binarisierung ----
 			double threshold = 50;
@@ -117,6 +134,10 @@ int CImageProcessor::DoProcess(cv::Mat* image) {
 			}
 
 		// ---- Image ----
+
+			double alpha = 0.9;
+			cv::addWeighted(mBkgrImage, alpha, gray.mage, 1-alpha, 0, mBkgrImage);
+
 
 		// ---- Image ----
 			
