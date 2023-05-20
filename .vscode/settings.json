@@ -3,6 +3,7 @@
         "any": "cpp",
         "functional": "cpp",
         "new": "cpp",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "cmath": "cpp"
     }
 }

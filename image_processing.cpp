@@ -59,12 +59,12 @@ int CImageProcessor::DoProcess(cv::Mat* image) {
 
 	// make a grayscale image regardless of the image
 	if(image->channels() > 1) {
-		cv::cvtColor(*image, grayImage, cv::COLOR_RGB2GRAY);	//if color image, convert to grayscale img
+		cv::cvtColor(*image, grayImage, cv::COLOR_BGR2GRAY);	//if color image, convert to grayscale img
 		colorImage = image->clone();
 	}
 	else {
 		grayImage = *image;
-		cv::cvtColor(*image, colorImage, cv::COLOR_GRAY2RGB);
+		cv::cvtColor(*image, colorImage, cv::COLOR_GRAY2BGR);
 	}
 
 
@@ -73,6 +73,9 @@ int CImageProcessor::DoProcess(cv::Mat* image) {
 // ---------------------------
 	cv::Mat graySmooth;	 //for TP-Filtering
 	cv::Mat imgDx, imgDy;  //for partial derivation
+	int threshold = 50;  //threshhold value for edge detection
+	cv::Mat dirImage(grayImage.size(), CV_8U);	//for Binning
+	uint8 colorMap[4][3] = {{255, 0, 0}, {0, 255, 0}, {0, 0, 255}, {255, 255, 0}};  //colors for showing Binning in color
 
 
 // ---------------------------
@@ -86,11 +89,59 @@ int CImageProcessor::DoProcess(cv::Mat* image) {
 		cv::blur(grayImage, graySmooth, cv::Size(5,5));	//create smooth image with filter of 5x5
 
 	// ---- partial derivation ----
-		cv::Sobel(graySmooth, imgDx, -1, 1, 0, 3, 1, 128);
-		cv::Sobel(graySmooth, imgDy, -1, 0, 1, 3, 1, 128);
+		//cv::Sobel(graySmooth, imgDx, -1, 1, 0, 3, 1, 128);
+		//cv::Sobel(graySmooth, imgDy, -1, 0, 1, 3, 1, 128);
+		cv::Sobel(graySmooth, imgDx, CV_16S, 1, 0, 3, 1, 0);  //we rather take it in 16bit to avoid saturation
+		cv::Sobel(graySmooth, imgDy, CV_16S, 0, 1);  //simplified through default values
 		
-	// ---- processXY ----
-		
+	// ---- binning ----
+		for(int rows = 0; rows < imgDx.rows; rows++) {
+			for(int cols = 0; cols < imgDx.cols; cols++) {
+				double dx = imgDx.at<int16_t>(rows, cols);
+				double dy = imgDy.at<int16_t>(rows, cols);
+				double dr2 = dx*dx + dy*dy;
+				int index = 0;
+				if(dr2 > threshold*threshold)  //is value significant in magnitude?
+				{	//find the fitting bin
+					double alpha = atan2(dy, dx);
+
+					#if (0)	//simply does not work...
+					//index = alpha*10;	//testing failed
+					if((alpha > ((-1)*M_PI)) && (alpha <= ((-3/4)*M_PI))){
+						index = 13;
+					}else if((alpha > ((-3/4)*M_PI)) && (alpha <= ((-1/4)*M_PI))){
+						index = 4;
+					}else if((alpha > ((-1/4)*M_PI)) && (alpha <= ((1/4)*M_PI))){
+						index = 1;
+					}else if((alpha > ((1/4)*M_PI)) && (alpha <= ((3/4)*M_PI))){
+						index = 2;
+					}else if((alpha > ((3/4)*M_PI)) && (alpha <= ((1)*M_PI))){
+						index = 23;
+					}else{
+						index = 0;
+					}
+					//index = alpha+M_PI;
+					//index = ...??....;			//code tbd
+					#endif
+
+					//rearrange alpha to shift 45deg
+					alpha += (M_PI * 1/4);
+					if(alpha>M_PI)
+					{
+					//	alpha -= (7/4 * M_PI);
+					}
+					//teacher code, thank you
+					index = 1 + (int) ((alpha + M_PI) / (M_PI/2 ));
+
+					colorImage.at<cv::Vec3b>(rows, cols) = cv::Vec3b(colorMap[index - 1]);
+				}
+				dirImage.at<uint8>(rows, cols) = index*1;
+				//dirImage.at<uint8>(0,0)=0;			//set one pixel to min value
+				//dirImage.at<uint8>(1,0)=255;		//set one pixel to max value
+
+
+			}
+		}
 		
 	// ---- processXY ----
 		
@@ -120,8 +171,8 @@ int CImageProcessor::DoProcess(cv::Mat* image) {
 // ---- Output ---------------
 // ---------------------------
 	*m_proc_image[0] = imgDx;
-	*m_proc_image[1] = imgDy;
-	*m_proc_image[2] = graySmooth;
+	*m_proc_image[1] = dirImage;
+	*m_proc_image[2] = colorImage;
 
 
 
