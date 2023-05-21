@@ -26,7 +26,10 @@ private:
 	
 	cv::Mat mPrevImage;	//gloval, so it carrys over to next itteration
 
-	cv::Mat mBkgrImage;	//background and 4 bins from 1-4;
+	//cv::Mat mBkgrImage;	//background and 4 bins from 1-4;
+
+	cv::Mat* bkgrModel[5];	//background and 4 bins from 1-4;
+	
 
 
 };

@@ -76,7 +76,10 @@ int CImageProcessor::DoProcess(cv::Mat* image) {
 	int threshold = 30;  //threshhold value for edge detection
 	cv::Mat dirImage(grayImage.size(), CV_8U);	//for Binning
 	uint8 colorMap[4][3] = {{255, 0, 0}, {0, 255, 0}, {0, 0, 255}, {255, 255, 0}};  //colors for showing Binning in color
-
+	uint8 MaxIndex = 50;  //max value of background counter
+	cv::Mat fgrImage = grayImage.clone();  //foreground image
+	cv::Mat detectImage = colorImage.clone();  //foreground image
+	int MinArea = 10*10;  //min size for drawing bounding box
 
 // ---------------------------
 // ---- Do the Processing ----
@@ -101,56 +104,193 @@ int CImageProcessor::DoProcess(cv::Mat* image) {
 				double dy = imgDy.at<int16_t>(rows, cols);
 				double dr2 = dx*dx + dy*dy;
 				int index = 0;
+				//find the fitting bin
 				if(dr2 > threshold*threshold)  //is value significant in magnitude?
-				{	//find the fitting bin
+				{	
 					double alpha = atan2(dy, dx);
 
-					#if (0)	//simply does not work...
-					//index = alpha*10;	//testing failed
-					if((alpha > ((-1)*M_PI)) && (alpha <= ((-3/4)*M_PI))){
-						index = 13;
-					}else if((alpha > ((-3/4)*M_PI)) && (alpha <= ((-1/4)*M_PI))){
-						index = 4;
-					}else if((alpha > ((-1/4)*M_PI)) && (alpha <= ((1/4)*M_PI))){
-						index = 1;
-					}else if((alpha > ((1/4)*M_PI)) && (alpha <= ((3/4)*M_PI))){
-						index = 2;
-					}else if((alpha > ((3/4)*M_PI)) && (alpha <= ((1)*M_PI))){
-						index = 23;
-					}else{
-						index = 0;
-					}
-					//index = alpha+M_PI;
-					//index = ...??....;			//code tbd
-					#endif
-
-					//rearrange alpha to shift 45deg
+					//rearrange alpha to shift 45deg + arrange bin in increasing order
 					alpha += (M_PI * 1/4);
 					if(alpha < 0)
 					{
 						alpha += (2 * M_PI);
 					}
-					index = 1 + (int) ((alpha) / (M_PI/2 ));
+					index = 1 + (int) ((alpha) / (M_PI/2 ));  //sort out bins of the size Pi/2
 
-					//teacher code, thank you
-					//index = 1 + (int) ((alpha + M_PI) / (M_PI/2 ));
-
-					colorImage.at<cv::Vec3b>(rows, cols) = cv::Vec3b(colorMap[index - 1]);
+					//set corresponding color pixel to color value of bin
+					colorImage.at<cv::Vec3b>(rows, cols) = cv::Vec3b(colorMap[index - 1]);  //if inside if - background is colored
 				}
-				dirImage.at<uint8>(rows, cols) = index*1;
-				//dirImage.at<uint8>(0,0)=0;			//set one pixel to min value
-				//dirImage.at<uint8>(1,0)=255;		//set one pixel to max value
+				//set corresponding pixel to value of bin
+				dirImage.at<uint8>(rows, cols) = index;  //if outside if - background is Black
 
 
+			//--- update background values ---
+				//decrement all counters
+				if( bkgrModel[0]->at<uint8>(rows, cols) >= 1 )
+					bkgrModel[0]->at<uint8>(rows, cols) --;
+				if( bkgrModel[1]->at<uint8>(rows, cols) >= 1 )
+					bkgrModel[1]->at<uint8>(rows, cols) --;
+				if( bkgrModel[2]->at<uint8>(rows, cols) >= 1 )
+					bkgrModel[2]->at<uint8>(rows, cols) --;
+				if( bkgrModel[3]->at<uint8>(rows, cols) >= 1 )
+					bkgrModel[3]->at<uint8>(rows, cols) --;
+				if( bkgrModel[4]->at<uint8>(rows, cols) >= 1 )
+					bkgrModel[4]->at<uint8>(rows, cols) --;
+
+				//increment specific counter
+				if( bkgrModel[index]->at<uint8>(rows, cols) < MaxIndex )
+					bkgrModel[index]->at<uint8>(rows, cols) += 2;
+				
+				//find max bin value  //#todo make this part more efficient
+				uint8 maxBin;
+				if ( bkgrModel[0]->at<uint8>(rows, cols) < bkgrModel[1]->at<uint8>(rows, cols) )
+				{
+					if ( bkgrModel[1]->at<uint8>(rows, cols) < bkgrModel[2]->at<uint8>(rows, cols) )
+					{
+						if ( bkgrModel[2]->at<uint8>(rows, cols) < bkgrModel[3]->at<uint8>(rows, cols) )
+						{
+							if ( bkgrModel[3]->at<uint8>(rows, cols) < bkgrModel[4]->at<uint8>(rows, cols) )
+							{
+								maxBin = 4;
+							}
+							else
+							{
+								maxBin = 3;
+							}
+						}
+						else
+						{
+							if ( bkgrModel[2]->at<uint8>(rows, cols) < bkgrModel[4]->at<uint8>(rows, cols) )
+							{
+								maxBin = 4;
+							}
+							else
+							{
+								maxBin = 2;
+							}
+						}
+					}
+					else
+					{
+						if ( bkgrModel[1]->at<uint8>(rows, cols) < bkgrModel[3]->at<uint8>(rows, cols) )
+						{
+							if ( bkgrModel[3]->at<uint8>(rows, cols) < bkgrModel[4]->at<uint8>(rows, cols) )
+							{
+								maxBin = 4;
+							}
+							else
+							{
+								maxBin = 3;
+							}
+						}
+						else
+						{
+							if ( bkgrModel[1]->at<uint8>(rows, cols) < bkgrModel[4]->at<uint8>(rows, cols) )
+							{
+								maxBin = 4;
+							}
+							else
+							{
+								maxBin = 1;
+							}
+						}
+					}
+				}else
+				{
+					if ( bkgrModel[0]->at<uint8>(rows, cols) < bkgrModel[2]->at<uint8>(rows, cols) )
+					{
+						if ( bkgrModel[2]->at<uint8>(rows, cols) < bkgrModel[3]->at<uint8>(rows, cols) )
+						{
+							if ( bkgrModel[3]->at<uint8>(rows, cols) < bkgrModel[4]->at<uint8>(rows, cols) )
+							{
+								maxBin = 4;
+							}
+							else
+							{
+								maxBin = 3;
+							}
+						}
+						else
+						{
+							if ( bkgrModel[2]->at<uint8>(rows, cols) < bkgrModel[4]->at<uint8>(rows, cols) )
+							{
+								maxBin = 4;
+							}
+							else
+							{
+								maxBin = 2;
+							}
+						}
+					}
+					else
+					{
+						if ( bkgrModel[0]->at<uint8>(rows, cols) < bkgrModel[3]->at<uint8>(rows, cols) )
+						{
+							if ( bkgrModel[3]->at<uint8>(rows, cols) < bkgrModel[4]->at<uint8>(rows, cols) )
+							{
+								maxBin = 4;
+							}
+							else
+							{
+								maxBin = 3;
+							}
+						}
+						else
+						{
+							if ( bkgrModel[0]->at<uint8>(rows, cols) < bkgrModel[4]->at<uint8>(rows, cols) )
+							{
+								maxBin = 4;
+							}
+							else
+							{
+								maxBin = 0;
+							}
+						}
+					}
+				}
+				
+				//draw foreground pixels
+				uint8 currentBin = index;
+				fgrImage.at<uint8>(rows, cols) = ( ( bkgrModel[maxBin]->at<uint8>(rows, cols) > (MaxIndex/2) ) && (currentBin != maxBin) );
+			}		 
+		} //foreach bit end
+		
+	// ---- morphologic operations ----
+		cv::Mat kernel;
+		kernel = cv::Mat::ones(5, 5, CV_8UC1);
+		cv::morphologyEx(fgrImage, fgrImage, cv::MORPH_OPEN, kernel);
+		kernel = cv::Mat::ones(20, 20, CV_8UC1);
+		cv::morphologyEx(fgrImage, fgrImage, cv::MORPH_CLOSE, kernel);
+		
+	// ---- contour ----
+		std::vector<std::vector<cv::Point> > contours;
+		std::vector<cv::Vec4i> hierarchy;
+		cv::findContours( fgrImage, contours, hierarchy, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE );
+		for(unsigned int idx = 0 ; idx < contours.size(); idx++ ) {
+			//area
+			double area = cv::contourArea(contours[idx]);
+			if(area > MinArea)
+			{
+				//bounding rectangle
+				cv::Rect rect = cv::boundingRect(contours[idx]);
+				//center of gravity
+				// center of mass
+				cv::Moments moment = cv::moments(contours[idx]);
+				double cx = moment.m10 / moment.m00;
+				double cy = moment.m01 / moment.m00;
+				//to draw counter to index idx in image
+				cv::drawContours(detectImage, contours, idx, cv::Scalar(255), 1, 8 );
+				//draw center of mass #todo exclude drawing, if it is on a border
+				cv::drawMarker(detectImage, cv::Point(cx,cy), cv::Scalar(255), 1, 10, 3, 8);
+				//detectImage.at<cv::Vec3b>(cx,cy) = {255, 0, 0};
+				/*
+				detectImage.at<cv::Vec3b>(cx-1,cy-1) = {0, 255, 255};
+				detectImage.at<cv::Vec3b>(cx-1,cy+1) = {0, 255, 255};
+				detectImage.at<cv::Vec3b>(cx+1,cy-1) = {0, 255, 255};
+				detectImage.at<cv::Vec3b>(cx+1,cy+1) = {0, 255, 255};
+				*/
 			}
 		}
-		
-	// ---- processXY ----
-		
-		
-	// ---- processXY ----
-		
-		
 
 
 	// ---- processXY ----
@@ -160,6 +300,19 @@ int CImageProcessor::DoProcess(cv::Mat* image) {
 	}	
 	else	//if the first time
 	{
+		for(int i0 = 0; i0 < 5; i0++)
+		{
+			bkgrModel[i0] = new cv::Mat(grayImage.size(), CV_8U);
+			bkgrModel[i0]->setTo((MaxIndex/2));
+/*
+			for(int rows = 0; rows < imgDx.rows; rows++) {
+				for(int cols = 0; cols < imgDx.cols; cols++) {
+					bkgrModel[i0]->at<uint8>(rows, cols) = 24;
+				}
+			}
+*/			
+		}
+
 		//#todo output a black image for the output if it was the first time
 		//diffImage = grayImage * 0;		//output at least a black image with correct pixel dimensions
 	}
@@ -172,9 +325,9 @@ int CImageProcessor::DoProcess(cv::Mat* image) {
 // ---------------------------
 // ---- Output ---------------
 // ---------------------------
-	*m_proc_image[0] = imgDx;
-	*m_proc_image[1] = dirImage;
-	*m_proc_image[2] = colorImage;
+	*m_proc_image[0] = colorImage;
+	*m_proc_image[1] = fgrImage;
+	*m_proc_image[2] = detectImage;
 
 
 
