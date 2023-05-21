@@ -73,7 +73,7 @@ int CImageProcessor::DoProcess(cv::Mat* image) {
 // ---------------------------
 	cv::Mat graySmooth;	 //for TP-Filtering
 	cv::Mat imgDx, imgDy;  //for partial derivation
-	int threshold = 50;  //threshhold value for edge detection
+	int threshold = 30;  //threshhold value for edge detection
 	cv::Mat dirImage(grayImage.size(), CV_8U);	//for Binning
 	uint8 colorMap[4][3] = {{255, 0, 0}, {0, 255, 0}, {0, 0, 255}, {255, 255, 0}};  //colors for showing Binning in color
 
@@ -126,12 +126,14 @@ int CImageProcessor::DoProcess(cv::Mat* image) {
 
 					//rearrange alpha to shift 45deg
 					alpha += (M_PI * 1/4);
-					if(alpha>M_PI)
+					if(alpha < 0)
 					{
-					//	alpha -= (7/4 * M_PI);
+						alpha += (2 * M_PI);
 					}
+					index = 1 + (int) ((alpha) / (M_PI/2 ));
+
 					//teacher code, thank you
-					index = 1 + (int) ((alpha + M_PI) / (M_PI/2 ));
+					//index = 1 + (int) ((alpha + M_PI) / (M_PI/2 ));
 
 					colorImage.at<cv::Vec3b>(rows, cols) = cv::Vec3b(colorMap[index - 1]);
 				}
