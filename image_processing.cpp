@@ -81,6 +81,8 @@ int CImageProcessor::DoProcess(cv::Mat* image) {
 	cv::Mat detectImage = colorImage.clone();  //foreground image
 	int MinArea = 10*10;  //min size for drawing bounding box
 
+	//measure time of Processing
+	int64 startTic = cv::getTickCount();
 // ---------------------------
 // ---- Do the Processing ----
 // ---------------------------
@@ -328,6 +330,18 @@ int CImageProcessor::DoProcess(cv::Mat* image) {
 	*m_proc_image[0] = colorImage;
 	*m_proc_image[1] = fgrImage;
 	*m_proc_image[2] = detectImage;
+
+// ---------------------------
+// ---- Time Measurement -----
+// ---------------------------
+	int64 endTic = cv::getTickCount();
+
+	double deltaTime = (double) ( endTic - startTic )/cv::getTickFrequency();
+	std::cout << "time:" << (int) (1000*deltaTime) << " ms" << std::endl;
+
+
+
+	
 
 
 
